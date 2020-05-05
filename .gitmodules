@@ -1,0 +1,6 @@
+[submodule "stm32_bootloader"]
+	path = stm32_bootloader
+	url = https://github.com/hwnBEAST/stm32_bootloader
+[submodule "FreeRTOS_modification"]
+	path = FreeRTOS_modification
+	url = https://github.com/hwnBEAST/FreeRTOS_modification
