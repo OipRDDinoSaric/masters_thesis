@@ -1,6 +1,3 @@
-[submodule "FreeRTOS_modification"]
-	path = FreeRTOS_modification
-	url = https://github.com/hwnBEAST/FreeRTOS_modification
 [submodule "custom_bootloader"]
 	path = custom_bootloader
 	url = git@github.com:hwnBEAST/custom_bootloader.git
