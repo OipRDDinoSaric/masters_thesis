@@ -1,0 +1,19 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.8.16)  16 AUG 2020 21:20
+entering extended mode
+**literatura.tex
+
+! Emergency stop.
+<*> literatura.tex
+                  
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 2 strings out of 480791
+ 20 string characters out of 2907057
+ 238887 words of memory out of 3000000
+ 16119 multiletter control sequences out of 15000+200000
+ 532338 words of font info for 24 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.
