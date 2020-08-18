@@ -5,10 +5,9 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Downes(2002)]{downes2002shortams}
-Michael Downes.
-\newblock \emph{{Short Math Guide for \LaTeX{}}}.
-\newblock American Mathematical Society, 2002.
-\newblock URL \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
+\bibitem[fun()]{func_safety_brief}
+Briefing paper: Functional safety essential to overall safety.
+\newblock URL
+  \url{https://basecamp.iec.ch/download/functional-safety-essential-to-overall-safety/}.
 
 \end{thebibliography}

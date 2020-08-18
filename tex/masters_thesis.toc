@@ -1,3 +1,7 @@
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}Conclusion}{1}%
-\contentsline {chapter}{Bibliography}{2}%
+\contentsline {chapter}{\numberline {1}Functional safety in embedded systems}{1}%
+\contentsline {chapter}{\numberline {2}Cortex R additions over cortex M}{2}%
+\contentsline {chapter}{\numberline {3}FreeRTOS functional safety additions}{3}%
+\contentsline {chapter}{\numberline {4}Secure bootloader}{4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{5}%
+\contentsline {chapter}{Bibliography}{6}%

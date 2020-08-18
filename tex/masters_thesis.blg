@@ -3,50 +3,64 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: masters_thesis.aux
 Reallocating 'name_of_file' (item size: 1) to 26 items.
 A level-1 auxiliary file: chapters/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: chapters/funtional_safety.aux
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: chapters/cortex_r_additions.aux
+Reallocating 'name_of_file' (item size: 1) to 35 items.
+A level-1 auxiliary file: chapters/freertos_modification.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: chapters/custom_bootloader.aux
 Reallocating 'name_of_file' (item size: 1) to 24 items.
 A level-1 auxiliary file: chapters/conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: fer.bst
 Database file #1: literatura.bib
+Warning--to sort, need author or key in func_safety_brief
+Warning--empty author in func_safety_brief
+Warning--empty journal in func_safety_brief
+Warning--empty year in func_safety_brief
+Warning--empty year in func_safety_brief
 You've used 1 entry,
             2773 wiz_defined-function locations,
-            602 strings with 5097 characters,
-and the built_in function-call counts, 325 in all, are:
-= -- 29
-> -- 10
-< -- 1
-+ -- 4
-- -- 3
-* -- 19
-:= -- 59
-add.period$ -- 4
+            603 strings with 5222 characters,
+and the built_in function-call counts, 292 in all, are:
+= -- 24
+> -- 0
+< -- 0
++ -- 1
+- -- 0
+* -- 27
+:= -- 34
+add.period$ -- 2
 call.type$ -- 1
 change.case$ -- 3
 chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 17
-empty$ -- 26
-format.name$ -- 4
-if$ -- 60
+cite$ -- 8
+duplicate$ -- 19
+empty$ -- 34
+format.name$ -- 0
+if$ -- 59
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 14
-num.names$ -- 4
-pop$ -- 7
+missing$ -- 1
+newline$ -- 12
+num.names$ -- 0
+pop$ -- 15
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 2
 quote$ -- 0
-skip$ -- 12
+skip$ -- 11
 stack$ -- 0
-substring$ -- 2
-swap$ -- 2
+substring$ -- 3
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 11
-warning$ -- 0
-while$ -- 3
+warning$ -- 5
+while$ -- 0
 width$ -- 0
-write$ -- 21
+write$ -- 16
+(There were 5 warnings)
