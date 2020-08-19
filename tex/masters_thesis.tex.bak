@@ -4,6 +4,11 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{grffile}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
+\usepackage{dirtree}
+\usepackage{float}
 
 \begin{document}
 
@@ -22,7 +27,7 @@
 \izvornik
 
 % Dodavanje zahvale ili prazne stranice. Ako ne želite dodati zahvalu, naredbu ostavite radi prazne stranice.
-\zahvala{Thanks to my parents for supporting me financially and giving me an opportunity of studying away from home. Thanks to my aunt Dijana and my friends for supporting me emotionally. Thanks to all the helpful current and former students from the college forums and to the Youtubers that made understanding the concepts much easier.}
+\zahvala{Thanks to my parents for supporting me financially and giving me an opportunity of studying away from home. Thanks to my aunt Dijana and my friends for supporting me emotionally. Thanks to all the helpful current and former students from the college forums. Finnally, thanks to the Youtubers that made understanding the college curriculum much easier.}
 
 \tableofcontents
 \listoffigures
@@ -33,6 +38,7 @@
 \include{chapters/freertos_modification}
 \include{chapters/custom_bootloader}
 \include{chapters/conclusion}
+\include{chapters/tmp}
 
 \bibliography{literatura}
 \bibliographystyle{fer}

@@ -18,49 +18,59 @@ Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: fer.bst
 Database file #1: literatura.bib
 Warning--to sort, need author or key in func_safety_brief
+Warning--to sort, need author or key in bootloader_intro
+Warning--to sort, need author, organization, or key in stm32f407_ref_man
+Warning--empty author in bootloader_intro
+Warning--empty journal in bootloader_intro
+Warning--empty year in bootloader_intro
+Warning--empty year in bootloader_intro
 Warning--empty author in func_safety_brief
 Warning--empty journal in func_safety_brief
 Warning--empty year in func_safety_brief
 Warning--empty year in func_safety_brief
-You've used 1 entry,
+Warning--empty year in stm32f407_ref_man
+Warning--empty journal in barr_c
+Warning--empty year in barr_c
+Warning--empty year in barr_c
+You've used 4 entries,
             2773 wiz_defined-function locations,
-            603 strings with 5222 characters,
-and the built_in function-call counts, 292 in all, are:
-= -- 24
-> -- 0
-< -- 0
-+ -- 1
-- -- 0
-* -- 27
-:= -- 34
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 3
-chr.to.int$ -- 1
-cite$ -- 8
-duplicate$ -- 19
-empty$ -- 34
-format.name$ -- 0
-if$ -- 59
+            615 strings with 5750 characters,
+and the built_in function-call counts, 1089 in all, are:
+= -- 97
+> -- 10
+< -- 1
++ -- 7
+- -- 3
+* -- 91
+:= -- 127
+add.period$ -- 9
+call.type$ -- 4
+change.case$ -- 12
+chr.to.int$ -- 4
+cite$ -- 26
+duplicate$ -- 74
+empty$ -- 127
+format.name$ -- 4
+if$ -- 232
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 12
-num.names$ -- 0
-pop$ -- 15
+missing$ -- 3
+newline$ -- 25
+num.names$ -- 4
+pop$ -- 56
 preamble$ -- 1
-purify$ -- 2
+purify$ -- 9
 quote$ -- 0
-skip$ -- 11
+skip$ -- 41
 stack$ -- 0
-substring$ -- 3
-swap$ -- 0
+substring$ -- 11
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 11
-warning$ -- 5
-while$ -- 0
+type$ -- 44
+warning$ -- 15
+while$ -- 3
 width$ -- 0
-write$ -- 16
-(There were 5 warnings)
+write$ -- 45
+(There were 15 warnings)

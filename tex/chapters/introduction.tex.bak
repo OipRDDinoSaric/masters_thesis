@@ -1,6 +1,6 @@
 \chapter*{Introduction} 
 
-In a world with increasing number of electronic systems in hazardous environment, the correct operation of active systems is ever more important for ensuring less catastrophes. In year 2000, Air France Concorde flight crashed soon after its take-of killing 113 people, in 2005 Texas City refinery exploded killing 15 people and injuring 180. Similar disasters were the motivation for the  creation of functinal safety principles. 
+In a world with increasing number of electronic systems in hazardous environment, the correct operation of active systems is ever more important for ensuring less catastrophes. In year 2000, Air France Concorde flight crashed soon after its take-of killing 113 people, in 2005 Texas City refinery exploded killing 15 people and injuring 180. Similar disasters to these were the motivation for the  creation of functional safety principles. 
 \begin{figure}[hbt]
     \centering
     \begin{minipage}{.5\textwidth}
@@ -22,5 +22,5 @@ Functional safety is the part of the overall safety that depends on a system or 
 Motivation of this paper is exploring how are principles of functional safety applied to the engineering projects. Investigate how and why redundancy is implemented in hardware and software. As a part of that, redundant microcontrollers are explored and compared to non-redundant counterparts. Additionally, functional safety additions to FreeRTOS operating system are implemented. Modifications add task replication and a option to measure execution time of tasks. Finally, secure bootloader is added, bootloader has a command shell interface and has option of updating the current application.
 
 The thesis is organized in the following way.
-Chapter \ref{functional_safety} gives brief introduction of functional safety process. Moreover, chapter gives a overview of how is hardware of embedded systems designed to support redundancy. \textbf{TODO} what is done to software. 
+Chapter \ref{functional_safety} gives brief introduction of functional safety process. Moreover, chapter gives a overview of how is hardware of embedded systems designed to support redundancy.
 Chapter \ref{cortex_r_additions} investigates ARM Cortex R microcontroller inner workings and what do they add over Cortex M. Chapter \ref{freertos_modification} gives overview of added safety functions to the FreeRTOS kernel and gives a brief overview of FreeRTOS's inner workings. Chapter \ref{custom_bootloader} explains how the developed secure bootloader functions and its features.

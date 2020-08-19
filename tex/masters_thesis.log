@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  18 AUG 2020 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  19 AUG 2020 23:45
 entering extended mode
 **./masters_thesis.tex
 (masters_thesis.tex
@@ -309,30 +309,129 @@ y)
 Package grffile Info: This package is an empty stub for compatibility on input 
 line 40.
 )
+("C:\Program Files\MiKTeX\tex/latex/listings\listings.sty"
+\lst@mode=\count270
+\lst@gtempboxa=\box48
+\lst@token=\toks26
+\lst@length=\count271
+\lst@currlwidth=\dimen177
+\lst@column=\count272
+\lst@pos=\count273
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count274
+\lst@lineno=\count275
+\lst@maxwidth=\dimen180
+
+("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count276
+\lst@skipnumbers=\count277
+\lst@framebox=\box49
+)
+("C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen181
+\ar@mcellbox=\box50
+\extrarowheight=\dimen182
+\NC@list=\toks27
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box51
+)
+\everycr=\toks28
+\minrowclearance=\skip57
+)
+\rownum=\count278
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count279
+\multirow@dima=\skip59
+\bigstrutjot=\dimen183
+)
+("C:\Program Files\MiKTeX\tex/latex/dirtree\dirtree.sty"
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+
+("C:\Program Files\MiKTeX\tex/generic/dirtree\dirtree.tex"
+`dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen184
+\DT@width=\dimen185
+\DT@sep=\dimen186
+\DT@all=\dimen187
+\DT@rulewidth=\dimen188
+\DT@dotwidth=\dimen189
+\DTbaselineskip=\dimen190
+\DT@counti=\count280
+\DT@countii=\count281
+\DT@countiii=\count282
+\DT@countiv=\count283
+\DT@indent=\dimen191
+\DT@parskip=\dimen192
+\DT@baselineskip=\dimen193
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+)
+("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks29
+\float@box=\box52
+\@float@everytoks=\toks30
+\@floatcapt=\box53
+)
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count270
-\l__pdf_internal_box=\box48
+\l__kernel_color_stack_int=\count285
+\l__pdf_internal_box=\box54
 )
 (masters_thesis.aux (chapters/introduction.aux) (chapters/funtional_safety.aux)
 (chapters/cortex_r_additions.aux) (chapters/freertos_modification.aux)
-(chapters/custom_bootloader.aux) (chapters/conclusion.aux))
+(chapters/custom_bootloader.aux) (chapters/conclusion.aux)
+No file chapters/tmp.aux.
+)
 \openout1 = `masters_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -370,67 +469,70 @@ LaTeX Font Info:    ... okay on input line 8.
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
-\scratchdimen=\dimen177
-\scratchbox=\box49
-\nofMPsegments=\count272
-\nofMParguments=\count273
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count274
-\MPscratchDim=\dimen178
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count286
+\scratchdimen=\dimen194
+\scratchbox=\box55
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen195
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks32
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 19
+\c@lstlisting=\count292
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 24
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+4.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+4.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-19.
+24.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-19.
+24.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 19.
+(Font)              <14.4> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 19.
+(Font)              <10> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+(Font)              <7> on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
@@ -439,24 +541,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/PredatorBEAST/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-2.
+7.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1] [3] (masters_thesis.toc)
+) [1] [3] (masters_thesis.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 6.
+)
 \tf@toc=\write3
 \openout3 = `masters_thesis.toc'.
 
 [4
 
-] (masters_thesis.lof
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
-)
+] (masters_thesis.lof)
 \tf@lof=\write4
 \openout4 = `masters_thesis.lof'.
 
@@ -511,58 +613,107 @@ Chapter 3.
 
  (chapters/custom_bootloader.tex
 Chapter 4.
-) [4
+[4
 
 
 
 ]
+<images/bootloader_flow.png, id=48, 509.905pt x 275.0275pt>
+File: images/bootloader_flow.png Graphic file (type png)
+<use images/bootloader_flow.png>
+Package pdftex.def Info: images/bootloader_flow.png  used on input line 54.
+(pdftex.def)             Requested size: 352.81552pt x 190.30634pt.
+ [5]
+<images/bootloader_cmd_err.png, id=54, 201.75375pt x 60.225pt>
+File: images/bootloader_cmd_err.png Graphic file (type png)
+<use images/bootloader_cmd_err.png>
+Package pdftex.def Info: images/bootloader_cmd_err.png  used on input line 61.
+(pdftex.def)             Requested size: 176.40439pt x 52.65813pt.
+
+Overfull \hbox (12.32036pt too wide) in paragraph at lines 71--92
+[][] 
+ []
+
+[6 <./images/bootloader_flow.png> <./images/bootloader_cmd_err.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+11.
+
+("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [7]) [8] [9]
 \openout2 = `chapters/conclusion.aux'.
 
- (chapters/conclusion.tex
+
+(chapters/conclusion.tex
 Chapter 5.
-) [5
+) [10
 
 
 
 ] (masters_thesis.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+Underfull \hbox (badness 5908) in paragraph at lines 9--12
+[]\T1/lmr/m/n/12 Bootloader: What you need to know about the sys-tem boot man-
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 9--12
+\T1/lmr/m/n/12 ager.  URL $\T1/lmtt/m/n/12 https : / / www . ionos . com / digi
+talguide / server / configuration /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 []\T1/lmr/m/n/12 Briefing pa-per: Func-tional safety es-sen-tial to over-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 \T1/lmr/m/n/12 all safety.  URL $\T1/lmtt/m/n/12 https : / / basecamp . iec . c
 h / download /
  []
 
-) [6
+
+Underfull \hbox (badness 4242) in paragraph at lines 19--22
+[]\T1/lmr/m/it/12 STM32F407 ref-er-ence man-ual\T1/lmr/m/n/12 .  URL $\T1/lmtt/
+m/n/12 https : / / www . st . com / resource / en /
+ []
 
 
-] [7] (masters_thesis.aux (chapters/introduction.aux)
+Overfull \hbox (437.39659pt too wide) in paragraph at lines 19--22
+\T1/lmtt/m/n/12 reference _ manual / dm00031020-[]stm32f405-[]415-[]stm32f407-[
+]417-[]stm32f427-[]437-[]and-[]stm32f429-[]439-[]advanced-[]arm-[]based-[]32-[]
+bit-[]mcus-[]stmicroelectronics .
+ []
+
+) [11
+
+
+] [12] (masters_thesis.aux (chapters/introduction.aux)
 (chapters/funtional_safety.aux) (chapters/cortex_r_additions.aux)
 (chapters/freertos_modification.aux) (chapters/custom_bootloader.aux)
 (chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 6320 strings out of 480790
- 93145 string characters out of 2907031
- 347567 words of memory out of 3000000
- 22156 multiletter control sequences out of 15000+200000
- 597488 words of font info for 75 fonts, out of 3000000 for 9000
+ 8750 strings out of 480790
+ 124903 string characters out of 2907031
+ 395331 words of memory out of 3000000
+ 24538 multiletter control sequences out of 15000+200000
+ 603876 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,8n,47p,909b,435s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.e
-nc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTe
-X/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr
-i12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/lm/lmtto10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb
-8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on masters_thesis.pdf (14 pages, 367294 bytes).
+ 46i,18n,47p,909b,1588s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.
+enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
+TeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/
+lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtto10.pfb
+><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files
+/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on masters_thesis.pdf (19 pages, 406140 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,13 +1,29 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[boo()]{bootloader_intro}
+Bootloader: What you need to know about the system boot manager.
+\newblock URL
+  \url{https://www.ionos.com/digitalguide/server/configuration/what-is-a-bootloader/}.
+
 \bibitem[fun()]{func_safety_brief}
 Briefing paper: Functional safety essential to overall safety.
 \newblock URL
   \url{https://basecamp.iec.ch/download/functional-safety-essential-to-overall-safety/}.
+
+\bibitem[stm()]{stm32f407_ref_man}
+\emph{STM32F407 reference manual}.
+\newblock URL
+  \url{https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf}.
+
+\bibitem[Barr()]{barr_c}
+Michael Barr.
+\newblock Barr-c:2018 embedded c coding standard.
+\newblock URL
+  \url{https://barrgroup.com/sites/default/files/barr_c_coding_standard_2018.pdf}.
 
 \end{thebibliography}

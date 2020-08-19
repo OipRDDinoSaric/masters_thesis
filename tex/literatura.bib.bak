@@ -2,18 +2,24 @@
     title = {Briefing paper: Functional safety essential to overall safety},
     url = {https://basecamp.iec.ch/download/functional-safety-essential-to-overall-safety/}
 }
-
-@Manual{downes2002shortams,
-  title = 	 {{Short Math Guide for \LaTeX{}}},
-  author = 	 {Downes,, Michael},
-  organization = {American Mathematical Society},
-  year = 	 {2002},
-  url = 	 {ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}
+@article{bootloader_intro,
+    title = {Bootloader: What you need to know about the system boot manager},
+    url = {https://www.ionos.com/digitalguide/server/configuration/what-is-a-bootloader/}
+}
+@article{barr_c,
+    author = {Michael Barr},
+    institution = {Barr Group},
+    title = {BARR-C:2018 Embedded C Coding Standard},
+    url = {https://barrgroup.com/sites/default/files/barr_c_coding_standard_2018.pdf}
 }
 
-@Book{ungar2002uvod,
-  author = 	 {Šime Ungar},
-  title = 	 {{Uvod u \TeX{} s naglaskom na \LaTeX 2$\epsilon$}},
-  publisher = 	 {Odjel za matematiku, Sveučilište J.J.\ Strossmayera u Osijeku},
-  year = 	 {2002}
+@manual{stm32f407_ref_man,
+    institution = {STMicroelectronics},
+    title = {STM32F407 reference manual},
+    url = {https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf}
+}
+@manual{bootloader_tutorial,
+    institution = {STMicroelectronics},
+    title = {FastBit Embedded Brain Academy},
+    url = {https://www.udemy.com/course/stm32f4-arm-cortex-mx-custom-bootloader-development/}
 }

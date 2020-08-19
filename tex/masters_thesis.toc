@@ -3,5 +3,12 @@
 \contentsline {chapter}{\numberline {2}Cortex R additions over cortex M}{2}%
 \contentsline {chapter}{\numberline {3}FreeRTOS functional safety additions}{3}%
 \contentsline {chapter}{\numberline {4}Secure bootloader}{4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{5}%
-\contentsline {chapter}{Bibliography}{6}%
+\contentsline {section}{\numberline {4.1}What is a bootloader?}{4}%
+\contentsline {section}{\numberline {4.2}Developed bootloader overview}{4}%
+\contentsline {section}{\numberline {4.3}The bootloader's architecture}{5}%
+\contentsline {section}{\numberline {4.4}Flash memory organization}{6}%
+\contentsline {section}{\numberline {4.5}Application boot record}{7}%
+\contentsline {section}{\numberline {4.6}User application modifications}{8}%
+\contentsline {section}{\numberline {4.7}Supported functions}{9}%
+\contentsline {chapter}{\numberline {5}Conclusion}{10}%
+\contentsline {chapter}{Bibliography}{11}%
