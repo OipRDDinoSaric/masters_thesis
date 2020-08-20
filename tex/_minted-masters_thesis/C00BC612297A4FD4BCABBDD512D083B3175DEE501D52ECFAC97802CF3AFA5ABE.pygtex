@@ -1,0 +1,47 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Task to be created.}
+\PYG{k+kt}{void} \PYG{n+nf}{vTaskCode}\PYG{p}{(} \PYG{k+kt}{void} \PYG{o}{*} \PYG{n}{pvParameters} \PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{for}\PYG{p}{(} \PYG{p}{;;} \PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Task code goes here.}
+
+        \PYG{n}{vTaskSyncAndCompare}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{xCompareValue}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// NOTE: This function is called from the redundant task and not daemon.}
+\PYG{k+kt}{uint8\PYGZus{}t} \PYG{n+nf}{ucCompareErrorCb} \PYG{p}{(}\PYG{n}{CompareValue\PYGZus{}t} \PYG{o}{*} \PYG{n}{pxCompareValues}\PYG{p}{,} \PYG{k+kt}{uint8\PYGZus{}t} \PYG{n}{ucLen}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// Iterate through compare values.}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{uint8\PYGZus{}t} \PYG{n}{iii} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{iii} \PYG{o}{\PYGZlt{}} \PYG{n}{ucLen}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{pxCompareValue}\PYG{p}{[}\PYG{n}{iii}\PYG{p}{]}
+        \PYG{p}{.}
+        \PYG{p}{.}
+        \PYG{p}{.}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k}{return} \PYG{n}{pdTRUE}\PYG{p}{;} \PYG{c+c1}{// Signaling to delete the redundant task.}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// Function that creates a task.}
+\PYG{k+kt}{void} \PYG{n+nf}{vOtherFunction}\PYG{p}{(} \PYG{k+kt}{void} \PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{k}{static} \PYG{k+kt}{uint8\PYGZus{}t} \PYG{n}{ucParameterToPass}\PYG{p}{;}
+\PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{xHandle} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}
+
+    \PYG{c+c1}{// Create the task, storing the handle.  Note that the passed parameter ucParameterToPass}
+    \PYG{c+c1}{// must exist for the lifetime of the task, so in this case is declared static.  If it was just an}
+    \PYG{c+c1}{// an automatic stack variable it might no longer exist, or at least have been corrupted, by the time}
+    \PYG{c+c1}{// the new task attempts to access it.}
+    \PYG{n}{xTaskCreateReplicated}\PYG{p}{(} \PYG{n}{vTaskCode}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}NAME\PYGZdq{}}\PYG{p}{,} \PYG{n}{STACK\PYGZus{}SIZE}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{ucParameterToPass}\PYG{p}{,} \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{xHandle}\PYG{p}{,} \PYG{n}{taskREPLICATED\PYGZus{}RECOVERY}\PYG{p}{,} \PYG{n}{ucCompareErrorCb} \PYG{p}{);}
+    \PYG{n}{configASSERT}\PYG{p}{(} \PYG{n}{xHandle} \PYG{p}{);}
+
+    \PYG{c+c1}{// Use the handle to delete the task.}
+    \PYG{k}{if}\PYG{p}{(} \PYG{n}{xHandle} \PYG{o}{!=} \PYG{n+nb}{NULL} \PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{vTaskDelete}\PYG{p}{(} \PYG{n}{xHandle} \PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

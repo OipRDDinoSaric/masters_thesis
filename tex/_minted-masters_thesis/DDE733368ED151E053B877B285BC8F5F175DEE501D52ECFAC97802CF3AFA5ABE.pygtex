@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{vTimedTask}\PYG{p}{(} \PYG{k+kt}{void} \PYG{o}{*} \PYG{n}{pvParameters} \PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{for}\PYG{p}{(} \PYG{p}{;;} \PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Task code goes here.}
+
+        \PYG{n}{vTaskTimedReset}\PYG{p}{(}\PYG{n+nb}{NULL}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

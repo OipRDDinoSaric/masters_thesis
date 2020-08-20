@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n}{xTaskCreateReplicated}\PYG{p}{(} \PYG{n}{TaskFunction\PYGZus{}t} \PYG{n}{pxTaskCode}\PYG{p}{,}
+                                  \PYG{k}{const} \PYG{k+kt}{char} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pcName}\PYG{p}{,}
+                                  \PYG{k}{const} \PYG{n}{configSTACK\PYGZus{}DEPTH\PYGZus{}TYPE} \PYG{n}{usStackDepth}\PYG{p}{,}
+                                  \PYG{k+kt}{void} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pvParameters}\PYG{p}{,}
+                                  \PYG{n}{UBaseType\PYGZus{}t} \PYG{n}{uxPriority}\PYG{p}{,}
+                                  \PYG{n}{TaskHandle\PYGZus{}t} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pxCreatedTask}\PYG{p}{,}
+                                  \PYG{k+kt}{uint8\PYGZus{}t} \PYG{n}{ucReplicatedType}\PYG{p}{,}
+                                  \PYG{n}{RedundantValueErrorCb\PYGZus{}t} \PYG{n}{pxRedundantValueErrorCb} \PYG{p}{)}
+\end{Verbatim}

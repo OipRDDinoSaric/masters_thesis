@@ -17,9 +17,9 @@ Reallocating 'name_of_file' (item size: 1) to 11 items.
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: fer.bst
 Database file #1: literatura.bib
+Warning--to sort, need author, organization, or key in stm32f407_ref_man
 Warning--to sort, need author or key in func_safety_brief
 Warning--to sort, need author or key in bootloader_intro
-Warning--to sort, need author, organization, or key in stm32f407_ref_man
 Warning--empty author in bootloader_intro
 Warning--empty journal in bootloader_intro
 Warning--empty year in bootloader_intro

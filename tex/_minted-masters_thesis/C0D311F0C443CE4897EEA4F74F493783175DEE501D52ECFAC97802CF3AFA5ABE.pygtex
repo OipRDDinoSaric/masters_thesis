@@ -1,0 +1,139 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{xTaskCreateTimed}\PYG{p}{(} \PYG{n}{TaskFunction\PYGZus{}t} \PYG{n}{pxTaskCode}\PYG{p}{,}
+                    \PYG{k}{const} \PYG{k+kt}{char} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pcName}\PYG{p}{,}
+                    \PYG{k}{const} \PYG{n}{configSTACK\PYGZus{}DEPTH\PYGZus{}TYPE} \PYG{n}{usStackDepth}\PYG{p}{,}
+                    \PYG{k+kt}{void} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pvParameters}\PYG{p}{,}
+                    \PYG{n}{UBaseType\PYGZus{}t} \PYG{n}{uxPriority}\PYG{p}{,}
+                    \PYG{n}{TaskHandle\PYGZus{}t} \PYG{o}{*} \PYG{k}{const} \PYG{n}{pxCreatedTask}\PYG{p}{,}
+                    \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xOverrunTime}\PYG{p}{,}
+                    \PYG{n}{WorstTimeTimerCb\PYGZus{}t} \PYG{n}{pxOverrunTimerCb}\PYG{p}{,}
+                    \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xOverflowTime}\PYG{p}{,}
+                    \PYG{n}{WorstTimeTimerCb\PYGZus{}t} \PYG{n}{pxOverflowTimerCb} \PYG{p}{)}
+
+\PYG{n}{Create} \PYG{n}{a} \PYG{n}{new} \PYG{n}{timed} \PYG{n}{task} \PYG{n}{and} \PYG{n}{add} \PYG{n}{it} \PYG{n}{to} \PYG{n}{the} \PYG{n}{list} \PYG{n}{of} \PYG{n}{tasks} \PYG{n}{that} \PYG{n}{are} \PYG{n}{ready} \PYG{n}{to}
+\PYG{n}{run}\PYG{p}{.}
+
+\PYG{n}{Overrun} \PYG{n}{timer} \PYG{n}{is} \PYG{n}{synchronous} \PYG{n}{with} \PYG{n}{the} \PYG{n}{task} \PYG{n}{and} \PYG{n}{its} \PYG{n}{counter} \PYG{n}{is} \PYG{n}{incremented}
+\PYG{n}{only} \PYG{n}{when} \PYG{n}{timed} \PYG{n}{task} \PYG{n}{is} \PYG{n}{in} \PYG{n}{running} \PYG{n}{state}\PYG{p}{.} \PYG{n}{Overrun} \PYG{n}{callback} \PYG{n}{is} \PYG{n}{called} \PYG{n}{from}
+\PYG{n}{timer} \PYG{n}{daemon}\PYG{p}{.} \PYG{n}{When} \PYG{n}{timed} \PYG{n}{task} \PYG{n}{overruns} \PYG{n}{it} \PYG{n}{sends} \PYG{n}{a} \PYG{n}{signal} \PYG{n}{to} \PYG{n}{the} \PYG{n}{timer} \PYG{n}{daemon}
+\PYG{n}{and} \PYG{n}{when} \PYG{n}{callback} \PYG{n}{is} \PYG{n}{called} \PYG{n}{is} \PYG{n}{dependent} \PYG{n}{on} \PYG{n}{daemon}\PYG{err}{\PYGZsq{}}\PYG{n}{s} \PYG{n}{priority}\PYG{p}{.} \PYG{n}{If} \PYG{n}{overrun}
+\PYG{n}{timer} \PYG{n}{is} \PYG{n}{not} \PYG{n}{used} \PYG{n}{send} \PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{xOverrunTime} \PYG{n}{or} \PYG{n+nb}{NULL} \PYG{k}{for} \PYG{n}{the} \PYG{n}{callback}\PYG{p}{.}
+
+\PYG{n}{Overflow} \PYG{n}{timer} \PYG{n}{is} \PYG{n}{asynchronous} \PYG{n}{with} \PYG{n}{the} \PYG{n}{task} \PYG{n}{and} \PYG{n}{its} \PYG{n}{counter} \PYG{n}{is} \PYG{n}{incremented}
+\PYG{n}{every} \PYG{n}{tick} \PYG{n}{regardless} \PYG{n}{of} \PYG{n}{the} \PYG{n}{state}\PYG{p}{.} \PYG{n}{Callback} \PYG{n}{is} \PYG{n}{called} \PYG{n}{from} \PYG{n}{timer} \PYG{n}{daemon} \PYG{n}{and}
+\PYG{n}{its} \PYG{n}{punctuality} \PYG{n}{is} \PYG{n}{dependent} \PYG{n}{on} \PYG{n}{timer} \PYG{n}{daemon}\PYG{err}{\PYGZsq{}}\PYG{n}{s} \PYG{n}{priority}\PYG{p}{.} \PYG{n}{If} \PYG{n}{overflow} \PYG{n}{timer}
+\PYG{n}{is} \PYG{n}{not} \PYG{n}{used} \PYG{n}{send} \PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{xOverflowTime} \PYG{n}{or} \PYG{n+nb}{NULL} \PYG{k}{for} \PYG{n}{the} \PYG{n}{callback}\PYG{p}{.}
+
+\PYG{n}{Internally}\PYG{p}{,} \PYG{n}{within} \PYG{n}{the} \PYG{n}{FreeRTOS} \PYG{n}{implementation}\PYG{p}{,} \PYG{n}{tasks} \PYG{n}{use} \PYG{n}{two} \PYG{n}{blocks} \PYG{n}{of}
+\PYG{n}{memory}\PYG{p}{.}  \PYG{n}{The} \PYG{n}{first} \PYG{n}{block} \PYG{n}{is} \PYG{n}{used} \PYG{n}{to} \PYG{n}{hold} \PYG{n}{the} \PYG{n}{task}\PYG{err}{\PYGZsq{}}\PYG{n}{s} \PYG{n}{data} \PYG{n}{structures}\PYG{p}{.}  \PYG{n}{The}
+\PYG{n}{second} \PYG{n}{block} \PYG{n}{is} \PYG{n}{used} \PYG{n}{by} \PYG{n}{the} \PYG{n}{task} \PYG{n}{as} \PYG{n}{its} \PYG{n}{stack}\PYG{p}{.}  \PYG{n}{If} \PYG{n}{a} \PYG{n}{task} \PYG{n}{is} \PYG{n}{created} \PYG{n}{using}
+\PYG{n}{xTaskCreateTimed}\PYG{p}{()} \PYG{n}{then} \PYG{n}{both} \PYG{n}{blocks} \PYG{n}{of} \PYG{n}{memory} \PYG{n}{are} \PYG{n}{automatically} \PYG{n}{dynamically}
+\PYG{n}{allocated} \PYG{n}{inside} \PYG{n}{the} \PYG{n}{xTaskCreate}\PYG{p}{()} \PYG{n}{function}\PYG{p}{.}  \PYG{p}{(}\PYG{n}{see}
+\PYG{n+nl}{http}\PYG{p}{:}\PYG{c+c1}{//www.freertos.org/a00111.html). Static version of the function is not}
+\PYG{n}{implemented}\PYG{p}{.}
+
+\PYG{n}{Input} \PYG{n+nl}{paramters}\PYG{p}{:}
+ \PYG{o}{\PYGZhy{}} \PYG{n}{pvTaskCode} \PYG{o}{\PYGZhy{}} \PYG{n}{Pointer} \PYG{n}{to} \PYG{n}{the} \PYG{n}{task} \PYG{n}{entry} \PYG{n}{function}\PYG{p}{.}  \PYG{n}{Tasks}
+\PYG{n}{must} \PYG{n}{be} \PYG{n}{implemented} \PYG{n}{to} \PYG{n}{never} \PYG{k}{return} \PYG{p}{(}\PYG{n}{i}\PYG{p}{.}\PYG{n}{e}\PYG{p}{.} \PYG{n}{continuous} \PYG{n}{loop}\PYG{p}{).}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{pcName} \PYG{o}{\PYGZhy{}} \PYG{n}{A} \PYG{n}{descriptive} \PYG{n}{name} \PYG{k}{for} \PYG{n}{the} \PYG{n}{task}\PYG{p}{.}  \PYG{n}{This} \PYG{n}{is} \PYG{n}{mainly} \PYG{n}{used} \PYG{n}{to}
+\PYG{n}{facilitate} \PYG{n}{debugging}\PYG{p}{.}  \PYG{n}{Max} \PYG{n}{length} \PYG{n}{defined} \PYG{n}{by} \PYG{n}{configMAX\PYGZus{}TASK\PYGZus{}NAME\PYGZus{}LEN} \PYG{o}{\PYGZhy{}} \PYG{k}{default} \PYG{n}{is} \PYG{l+m+mf}{16.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{usStackDepth} \PYG{o}{\PYGZhy{}}\PYG{n}{The} \PYG{n}{size} \PYG{n}{of} \PYG{n}{the} \PYG{n}{task} \PYG{n}{stack} \PYG{n}{specified} \PYG{n}{as} \PYG{n}{the} \PYG{n}{number} \PYG{n}{of}
+\PYG{n}{variables} \PYG{n}{the} \PYG{n}{stack} \PYG{n}{can} \PYG{n}{hold} \PYG{o}{\PYGZhy{}} \PYG{n}{not} \PYG{n}{the} \PYG{n}{number} \PYG{n}{of} \PYG{n}{bytes}\PYG{p}{.}  \PYG{n}{For} \PYG{n}{example}\PYG{p}{,} \PYG{k}{if}
+\PYG{n}{the} \PYG{n}{stack} \PYG{n}{is} \PYG{l+m+mi}{16} \PYG{n}{bits} \PYG{n}{wide} \PYG{n}{and} \PYG{n}{usStackDepth} \PYG{n}{is} \PYG{n}{defined} \PYG{n}{as} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+m+mi}{200} \PYG{n}{bytes}
+\PYG{n}{will} \PYG{n}{be} \PYG{n}{allocated} \PYG{k}{for} \PYG{n}{stack} \PYG{n}{storage}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{pvParameters} \PYG{o}{\PYGZhy{}} \PYG{n}{Pointer} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{used} \PYG{n}{as} \PYG{n}{the} \PYG{n}{parameter} \PYG{k}{for} \PYG{n}{the} \PYG{n}{task}
+\PYG{n}{being} \PYG{n}{created}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{uxPriority} \PYG{o}{\PYGZhy{}} \PYG{n}{The} \PYG{n}{priority} \PYG{n}{at} \PYG{n}{which} \PYG{n}{the} \PYG{n}{task} \PYG{n}{should} \PYG{n}{run}\PYG{p}{.}  \PYG{n}{Systems} \PYG{n}{that}
+\PYG{n}{include} \PYG{n}{MPU} \PYG{n}{support} \PYG{n}{can} \PYG{n}{optionally} \PYG{n}{create} \PYG{n}{tasks} \PYG{n}{in} \PYG{n}{a} \PYG{n}{privileged} \PYG{p}{(}\PYG{n}{system}\PYG{p}{)}
+\PYG{n}{mode} \PYG{n}{by} \PYG{n}{setting} \PYG{n}{bit} \PYG{n}{portPRIVILEGE\PYGZus{}BIT} \PYG{n}{of} \PYG{n}{the} \PYG{n}{priority} \PYG{n}{parameter}\PYG{p}{.}  \PYG{n}{For}
+\PYG{n}{example}\PYG{p}{,} \PYG{n}{to} \PYG{n}{create} \PYG{n}{a} \PYG{n}{privileged} \PYG{n}{task} \PYG{n}{at} \PYG{n}{priority} \PYG{l+m+mi}{2} \PYG{n}{the} \PYG{n}{uxPriority} \PYG{n}{parameter}
+\PYG{n}{should} \PYG{n}{be} \PYG{n}{set} \PYG{n}{to} \PYG{p}{(} \PYG{l+m+mi}{2} \PYG{o}{|} \PYG{n}{portPRIVILEGE\PYGZus{}BIT} \PYG{p}{).}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{pvCreatedTask} \PYG{o}{\PYGZhy{}} \PYG{n}{Used} \PYG{n}{to} \PYG{n}{pass} \PYG{n}{back} \PYG{n}{a} \PYG{n}{handle} \PYG{n}{by} \PYG{n}{which} \PYG{n}{the} \PYG{n}{created} \PYG{n}{task}
+\PYG{n}{can} \PYG{n}{be} \PYG{n}{referenced}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{xOverrunTime} \PYG{o}{\PYGZhy{}} \PYG{n}{Runtime} \PYG{n}{of} \PYG{n}{the} \PYG{n}{task} \PYG{n}{after} \PYG{n}{which} \PYG{n}{callback} \PYG{n}{will} \PYG{n}{be} \PYG{n}{called}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{pxOverrunTimerCb} \PYG{o}{\PYGZhy{}} \PYG{n}{Pointer} \PYG{n}{to} \PYG{n}{the} \PYG{n}{function} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{called} \PYG{k}{if} \PYG{n}{task}
+\PYG{n}{runs} \PYG{n}{longer} \PYG{n}{than} \PYG{n}{xOverrunTime} \PYG{n}{without} \PYG{n}{reseting} \PYG{n}{the} \PYG{n}{timed} \PYG{n}{task}\PYG{p}{.} \PYG{n}{Overrun} \PYG{n}{timer}
+\PYG{n}{is} \PYG{n}{synchronous} \PYG{n}{with} \PYG{n}{the} \PYG{n}{task} \PYG{n}{and} \PYG{n}{its} \PYG{n}{tick} \PYG{n}{is} \PYG{n}{only} \PYG{n}{incremented} \PYG{n}{when} \PYG{n}{timed}
+\PYG{n}{task} \PYG{n}{is} \PYG{n}{in} \PYG{n}{running} \PYG{n}{state}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{xOverflowTime} \PYG{o}{\PYGZhy{}} \PYG{n}{Asynchronous} \PYG{n}{timer} \PYG{n}{time}\PYG{p}{.} \PYG{n}{After} \PYG{n}{xOverflowTime}
+\PYG{n}{pxOverflowTimerCb} \PYG{n}{will} \PYG{n}{be} \PYG{n}{called}\PYG{p}{.}
+
+\PYG{o}{\PYGZhy{}} \PYG{n}{pxOverflowTimerCb} \PYG{o}{\PYGZhy{}} \PYG{n}{Pointer} \PYG{n}{to} \PYG{n}{the} \PYG{n}{function} \PYG{n}{that} \PYG{n}{will} \PYG{n}{be} \PYG{n}{called} \PYG{n}{after}
+\PYG{n}{xOverflowTime}\PYG{p}{.} \PYG{n}{Overflow} \PYG{n}{timer} \PYG{n}{is} \PYG{n}{asynchronous} \PYG{n}{from} \PYG{n}{the} \PYG{n}{task} \PYG{n}{and} \PYG{n}{its} \PYG{n}{value} \PYG{n}{is}
+\PYG{n}{incremented} \PYG{n}{every} \PYG{n}{tick}\PYG{p}{.}
+
+\PYG{n}{Returns} \PYG{n}{pdPASS} \PYG{k}{if} \PYG{n}{the} \PYG{n}{task} \PYG{n}{was} \PYG{n}{successfully} \PYG{n}{created} \PYG{n}{and} \PYG{n}{added} \PYG{n}{to} \PYG{n}{a} \PYG{n}{ready}
+\PYG{n}{list}\PYG{p}{,} \PYG{n}{otherwise} \PYG{n}{an} \PYG{n}{error} \PYG{n}{code} \PYG{n}{defined} \PYG{n}{in} \PYG{n}{the} \PYG{n}{file} \PYG{n}{projdefs}\PYG{p}{.}\PYG{n}{h}
+\PYG{n}{Example} \PYG{n+nl}{usage}\PYG{p}{:}
+
+ \PYG{c+c1}{// Task to be created.}
+ \PYG{k+kt}{void} \PYG{n}{vTaskTimedCode}\PYG{p}{(} \PYG{k+kt}{void} \PYG{o}{*} \PYG{n}{pvParameters} \PYG{p}{)}
+ \PYG{p}{\PYGZob{}}
+     \PYG{k}{for}\PYG{p}{(} \PYG{p}{;;} \PYG{p}{)}
+     \PYG{p}{\PYGZob{}}
+         \PYG{c+c1}{// Task code goes here.}
+
+         \PYG{c+c1}{// Reset the timer.}
+         \PYG{n}{vTaskTimedReset}\PYG{p}{(}\PYG{n+nb}{NULL}\PYG{p}{);}
+     \PYG{p}{\PYGZcb{}}
+ \PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// Function to be called if timer overflows.}
+\PYG{k+kt}{void} \PYG{n+nf}{vTaskOverflowCallback} \PYG{p}{(} \PYG{n}{WorstTimeTimerHandle\PYGZus{}t} \PYG{n}{xTimer} \PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// Timeout callback code.}
+
+    \PYG{c+c1}{// Maybe task deletion is needed. Calling vTaskDelete automatically deletes}
+    \PYG{c+c1}{// the timer too. Do NOT delete the timer directly. That will cause}
+    \PYG{c+c1}{// undefined behavior when deleting the task.}
+    \PYG{n}{vTaskDelete}\PYG{p}{(} \PYG{n}{xTimerGetTaskHandle}\PYG{p}{(} \PYG{n}{xTimer} \PYG{p}{)} \PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// Function to be called if timer overflows.}
+\PYG{k+kt}{void} \PYG{n+nf}{vTaskOverrunCallback} \PYG{p}{(} \PYG{n}{WorstTimeTimerHandle\PYGZus{}t} \PYG{n}{xTimer} \PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+
+    \PYG{c+c1}{// Timeout callback code.}
+
+    \PYG{c+c1}{// Maybe task deletion is needed. Calling vTaskDelete automatically deletes}
+    \PYG{c+c1}{// the timer too. Do NOT delete the timer directly. That will cause}
+    \PYG{c+c1}{// undefined behavior when deleting the task.}
+    \PYG{n}{vTaskDelete}\PYG{p}{(} \PYG{n}{xTimerGetTaskHandle}\PYG{p}{(} \PYG{n}{xTimer} \PYG{p}{)} \PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+ \PYG{c+c1}{// Function that creates a task.}
+ \PYG{k+kt}{void} \PYG{n+nf}{vOtherFunction}\PYG{p}{(} \PYG{k+kt}{void} \PYG{p}{)}
+ \PYG{p}{\PYGZob{}}
+ \PYG{k}{static} \PYG{k+kt}{uint8\PYGZus{}t} \PYG{n}{ucParameterToPass}\PYG{p}{;}
+ \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{xHandle} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}
+
+     \PYG{c+c1}{// Create the task, storing the handle.  Note that the passed parameter ucParameterToPass}
+     \PYG{c+c1}{// must exist for the lifetime of the task, so in this case is declared static.  If it was just an}
+     \PYG{c+c1}{// an automatic stack variable it might no longer exist, or at least have been corrupted, by the time}
+     \PYG{c+c1}{// the new task attempts to access it.}
+     \PYG{n}{xTaskCreate}\PYG{p}{(} \PYG{n}{vTaskCode}\PYG{p}{,}
+                  \PYG{l+s}{\PYGZdq{}NAME\PYGZdq{}}\PYG{p}{,}
+                  \PYG{n}{STACK\PYGZus{}SIZE}\PYG{p}{,}
+                  \PYG{o}{\PYGZam{}}\PYG{n}{ucParameterToPass}\PYG{p}{,}
+                  \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                  \PYG{o}{\PYGZam{}}\PYG{n}{xHandle}\PYG{p}{,}
+                  \PYG{n}{pdMS\PYGZus{}TO\PYGZus{}TICKS}\PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{*} \PYG{l+m+mi}{1000}\PYG{p}{),}
+                  \PYG{n}{vTaskOverrunCallback}\PYG{p}{,}
+                  \PYG{n}{pdMS\PYGZus{}TO\PYGZus{}TICKS}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{l+m+mi}{1000}\PYG{p}{),}
+                  \PYG{n}{vTaskOverflowCallback} \PYG{p}{);}
+     \PYG{n}{configASSERT}\PYG{p}{(} \PYG{n}{xHandle} \PYG{p}{);}
+
+     \PYG{c+c1}{// Use the handle to delete the task.}
+     \PYG{k}{if}\PYG{p}{(} \PYG{n}{xHandle} \PYG{o}{!=} \PYG{n+nb}{NULL} \PYG{p}{)}
+     \PYG{p}{\PYGZob{}}
+         \PYG{n}{vTaskDelete}\PYG{p}{(} \PYG{n}{xHandle} \PYG{p}{);}
+     \PYG{p}{\PYGZcb{}}
+ \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

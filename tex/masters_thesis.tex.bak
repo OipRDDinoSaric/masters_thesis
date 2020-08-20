@@ -9,6 +9,16 @@
 \usepackage{multirow}
 \usepackage{dirtree}
 \usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{minted}
+
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
 
 \begin{document}
 
@@ -38,7 +48,6 @@
 \include{chapters/freertos_modification}
 \include{chapters/custom_bootloader}
 \include{chapters/conclusion}
-\include{chapters/tmp}
 
 \bibliography{literatura}
 \bibliographystyle{fer}

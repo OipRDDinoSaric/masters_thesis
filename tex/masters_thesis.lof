@@ -1,11 +1,11 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Texas refinery disaster\relax }}{vi}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Air France Concorde disaster\relax }}{vi}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Texas refinery disaster\relax }}{vii}{figure.caption.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Air France Concorde disaster\relax }}{vii}{figure.caption.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{5}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces State machine of the bootloader\relax }}{6}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Example of an error from error state\relax }}{6}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{20}{figure.caption.5}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces State machine of the bootloader\relax }}{21}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Example of an error from error state\relax }}{21}{figure.caption.7}%
 \addvspace {10\p@ }

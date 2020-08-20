@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n}{vTaskTimedReset}\PYG{p}{(} \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{pxTaskHandle} \PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{xTimerIsTimerActiveFromISR}\PYG{p}{(} \PYG{n}{TimerHandle\PYGZus{}t} \PYG{n}{xTimer} \PYG{p}{);}
+\end{Verbatim}
