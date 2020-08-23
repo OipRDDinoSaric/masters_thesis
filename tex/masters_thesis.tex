@@ -13,6 +13,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{minted}
+\usepackage{todonotes}
 
 \lstset{
 basicstyle=\small\ttfamily,
@@ -20,15 +21,14 @@ columns=flexible,
 breaklines=true
 }
 
+\newcommand{\todoi}[1]{\todo[inline]{#1}}
+
 \begin{document}
 
-% TODO: Navedite broj rada.
 \thesisnumber{1981}
 
-% TODO: Navedite naslov rada.
 \title{Software and Hardware Architecture for Redundant Embedded Systems}
 
-% TODO: Navedite vaše ime i prezime.
 \author{Dino Šarić}
 
 \maketitle
@@ -37,14 +37,17 @@ breaklines=true
 \izvornik
 
 % Dodavanje zahvale ili prazne stranice. Ako ne želite dodati zahvalu, naredbu ostavite radi prazne stranice.
-\zahvala{Thanks to my parents for supporting me financially and giving me an opportunity of studying away from home. Thanks to my aunt Dijana and my friends for supporting me emotionally. Thanks to all the helpful current and former students from the college forums. Finnally, thanks to the Youtubers that made understanding the college curriculum much easier.}
+\zahvala{Thanks to my parents for supporting me financially and giving me an opportunity of studying away from home. Thanks to my aunt Dijana and my friends for supporting me emotionally. Thanks to my mentor izv. prof. dr. sc. Hrvoje Džapo and his assistant Ivan Pavić mag. ing. for friendly, fast and diligent approach during the studies and the writing of the thesis. Thanks to all the helpful current and former students from the college forums. Finally, thanks to the Youtubers that made understanding the college curriculum much easier.}
 
 \tableofcontents
 \listoffigures
 
+\listoftodos
+
 \include{chapters/introduction}
-\include{chapters/funtional_safety}
+\include{chapters/functional_safety}
 \include{chapters/cortex_r_additions}
+\include{chapters/freertos_kernel}
 \include{chapters/freertos_modification}
 \include{chapters/custom_bootloader}
 \include{chapters/conclusion}
@@ -52,7 +55,6 @@ breaklines=true
 \bibliography{literatura}
 \bibliographystyle{fer}
 
-% TODO: Navedite naslov na engleskom jeziku.
 \begin{abstract}
 Abstract.
 
@@ -65,7 +67,5 @@ Sažetak.
 
 \kljucnerijeci{Ključne riječi, odvojene zarezima.}
 \end{sazetak}
-
-
 
 \end{document}

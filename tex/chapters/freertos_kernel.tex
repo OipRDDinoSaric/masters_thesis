@@ -1,0 +1,89 @@
+\chapter{FreeRTOS kernel}
+\label{freertos_kernel}
+
+\section{Introduction}
+
+FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller pletforms and has MIT open source licence hence the free in the name. \citep{freertos_licence}
+
+Operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for scheduler routines.
+
+FreeRTOS is ideally suited to deeply embedded real-time applications that use
+microcontrollers or small microprocessors. This type of application normally includes a mix of
+both hard and soft real-time requirements. \citep{freertos_mastering}
+
+Soft real-time requirements are those that state a time deadline—but breaching the deadline
+would not render the system useless. For example, responding to keystrokes too slowly might
+make a system seem annoyingly unresponsive without actually making it unusable. \citep{freertos_mastering}
+
+Hard real-time requirements are those that state a time deadline—and breaching the deadline
+would result in absolute failure of the system. For example, a driver’s airbag has the potential
+to do more harm than good if it responded to crash sensor inputs too slowly. \citep{freertos_mastering}
+
+\noindent FreeRTOS features:
+
+\begin{itemize}
+    
+    \item Pre-emptive or co-operative operation
+    \item Very flexible task priority assignment
+    \item Flexible, fast and light weight task notification mechanism
+    \item Queues
+    \item Binary and counting semaphores
+    \item Mutexes
+    \item Recursive mutexes
+    \item Software timers
+    \item Event groups
+    \item Tick hook functions
+    \item Idle hook functions
+    \item Stack overflow checking
+    \item Trace recording
+    \item Task run-time statistics gathering
+    \item Optional comemercial licensing and support
+    \item Full interrupt nesting model (on some architectures)
+    \item Tick-less capability for extreme low power applications
+    \item Software manages interrrupt stack when appropriate (could save RAM space)
+    
+\end{itemize}
+
+\noindent FreeRTOS file structure is shown in \autoref{fig:freertos_structure}.
+
+\begin{figure}[H]
+\dirtree{%
+.1 Source.
+.2 include.
+.3 FreeRTOS.h.
+.3 list.h - Primary structure used inside the kernel.
+.3 message\textunderscore buffer.h.
+.3 portable.h.
+.3 projdefs.h.
+.3 queue.h.
+.3 semphr.h - Semaphores.
+.3 stream\textunderscore buffer.h.
+.3 task.h.
+.3 timers.h - Software timers. 
+.2 portable.
+.3 [compiler] e.g{. GCC}.
+.4 [architecture] e.g{. ARM\textunderscore CM4F}.
+.5 port.c - Architecture and compiler specific.
+.5 portmacro.c.
+.3 MemMang.
+.4 heap\textunderscore X.c - X is a heap number used.
+.2 croutine.c.
+.2 event\textunderscore groups.c.
+.2 list.c.
+.2 queue.c.
+.2 stream\textunderscore buffer.c.
+.2 tasks.c - Tasks and scheduler implementation.
+.2 timers.c.
+}
+\caption{FreeRTOS file structure}
+\label{fig:freertos_structure}
+\end{figure}
+
+\section{Inner working of the tasks}
+
+\todoi{Inner working of tasks}
+
+
+\section{Inner working of the timers}
+
+\todoi{Inner working of timers}

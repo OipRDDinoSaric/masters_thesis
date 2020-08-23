@@ -3,7 +3,7 @@
 
 \section{What is a bootloader?}
 
-Bootloaders are usually the first pieces of code that run, they run just before the user's application e.g. an operating system. They are used to manage the memory. It is highly processor and board specific. The term “bootloader” is a shortened form of the words “bootstrap loader”. The term stems from the fact that the boot manager is the key component in starting up the computer, so it can be likened to the support of a bootstrap when putting a boot on.\citep{bootloader_intro} 
+Bootloaders are usually the first pieces of code that run, they run just before the user's application e.g. an operating system. They are used to manage the memory. It is highly processor and board specific. The term “bootloader” is a shortened form of the words “bootstrap loader”. The term stems from the fact that the boot manager is the key component in starting up the computer, so it can be likened to the support of a bootstrap when putting a boot on.\citep{bootloader_intro}
 
 \section{Developed bootloader overview}
 
@@ -144,7 +144,7 @@ Because the program expects the main stack pointer and reset handler vector to b
 To sum up, before bootloader jumps to the user application it must set the MSP to the one of the user's application then it jumps to the application's reset handler. Vector offset register can be set be the bootloader or in the user's application, former is chosen in this project.
 
 
-\section{Functions reference}
+\section{Command reference}
 
 Important notices:
 
@@ -159,7 +159,7 @@ Important notices:
 
 \end{itemize}
 
-\noindent List of all functions:
+\noindent List of all commands:
 
 \begin{itemize}
 

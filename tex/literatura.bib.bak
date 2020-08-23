@@ -23,3 +23,12 @@
     title = {FastBit Embedded Brain Academy},
     url = {https://www.udemy.com/course/stm32f4-arm-cortex-mx-custom-bootloader-development/}
 }
+@manual{freertos_mastering,
+    author = {Richard Barry},
+    title = {Mastering the FreeRTOS™ Real Time Kernel},
+    url = {https://www.freertos.org/wp-content/uploads/2018/07/161204_Mastering_the_FreeRTOS_Real_Time_Kernel-A_Hands-On_Tutorial_Guide.pdf}
+}
+@manual{freertos_licence,
+    title = {Mastering the FreeRTOS™ Real Time Kernel},
+    url = {https://www.freertos.org/a00114.html}
+}
