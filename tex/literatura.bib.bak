@@ -32,3 +32,9 @@
     title = {Mastering the FreeRTOS™ Real Time Kernel},
     url = {https://www.freertos.org/a00114.html}
 }
+
+@manual{freertos_inner_workings,
+    author = {Rich Goyette},
+    title = {An Analysis and Description od the Inner Workings of the FreeRTOS Kernel},
+    url = {http://richardgoyette.com/Research/Papers/FreeRTOSPaper.pdf}
+}

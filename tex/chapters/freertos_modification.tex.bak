@@ -90,7 +90,7 @@ Timer callback functions are called by the timer daemon and its priority determi
 
 Redundancy is a common term with safety hardware, but the redundancy can be achieved with the software. As is demonstrated with the replicated tasks. As the name suggests, when replicated tasks are created they make more parallel instances and they compare outputs of each other to assure no errors happened. 
 
-Hardware redundancy has the advantage of detecting the fault as early as possible at the cost of increased hardware. On the other hand, software redundancy is useful when the system cost is the restriction. As no additional hardware is needed. 
+Hardware redundancy has the advantage of detecting the fault as early as possible at the cost of increased hardware. On the other hand, software redundancy is useful when the system cost is the restriction ss no additional hardware is needed. 
 
 \noindent Two types of replicated tasks are implemented:
 \begin{itemize}

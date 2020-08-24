@@ -5,16 +5,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces FreeRTOS file structure\relax }}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces FreeRTOS task states\citep [p~10]{freertos_inner_workings}\relax }}{5}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Scheduler algorithm\citep [p~23]{freertos_inner_workings}\relax }}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces vTaskIncrementTick algorithm\citep [p~23]{freertos_inner_workings}\relax }}{8}{figure.caption.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Starting of the overflow timer from the file task.c\relax }}{7}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Incrementing of the overrun timer from the file task.c\relax }}{7}{figure.caption.12}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Starting of the overrun timer from the file task.c\relax }}{8}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Timed task with overrun timeout of 30 ms\relax }}{8}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Timed task with overflow timeout of 20 ms\relax }}{8}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Timed task with both timers that resets in time\relax }}{9}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Replicated task with redundancy\relax }}{10}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Starting of the overflow timer from the file task.c\relax }}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Incrementing of the overrun timer from the file task.c\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Starting of the overrun timer from the file task.c\relax }}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Timed task with overrun timeout of 30 ms\relax }}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Timed task with overflow timeout of 20 ms\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Timed task with both timers that resets in time\relax }}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Replicated task with redundancy\relax }}{14}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{26}{figure.caption.18}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces State machine of the bootloader\relax }}{27}{figure.caption.19}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of an error from error state\relax }}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces State machine of the bootloader\relax }}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of an error from error state\relax }}{31}{figure.caption.21}%
 \addvspace {10\p@ }

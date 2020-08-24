@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -35,5 +35,12 @@ Richard Barry.
 \newblock \emph{Mastering the FreeRTOS™ Real Time Kernel}.
 \newblock URL
   \url{https://www.freertos.org/wp-content/uploads/2018/07/161204_Mastering_the_FreeRTOS_Real_Time_Kernel-A_Hands-On_Tutorial_Guide.pdf}.
+
+\bibitem[Goyette()]{freertos_inner_workings}
+Rich Goyette.
+\newblock \emph{An Analysis and Description od the Inner Workings of the
+  FreeRTOS Kernel}.
+\newblock URL
+  \url{http://richardgoyette.com/Research/Papers/FreeRTOSPaper.pdf}.
 
 \end{thebibliography}

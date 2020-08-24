@@ -79,11 +79,81 @@ to do more harm than good if it responded to crash sensor inputs too slowly. \ci
 \label{fig:freertos_structure}
 \end{figure}
 
-\section{Inner working of the tasks}
+\section{Inner workings of the tasks}
+ 
 
-\todoi{Inner working of tasks}
+Every FreeRTOS task has a stack and a task control block, or short TCB. Kernel uses the TCB to manage tasks. A TCB contains all information necessary to completely describe the state of a task. \citep{freertos_inner_workings} A FreeRTOS task can exist in five states: running, blocked, ready, suspended and deleted. A state diagram is shown in \autoref{fig:freertos_task_states}.
 
+\begin{figure}[H]
 
-\section{Inner working of the timers}
+      \centering
+      \includegraphics[width=0.7\linewidth]{images/freertos_task_states.png}
+      \caption{FreeRTOS task states\citep[p~10]{freertos_inner_workings}}
+      \label{fig:freertos_task_states}
+    
+\end{figure}
 
-\todoi{Inner working of timers}
+When a new task is created its TCB is populated. New tasks are immediately placed in a ready list. Whole scheduling is comprised of a lot of lists.
+
+Ready list is arranged in order of priority with tasks of equal priority being serviced round robin. Ready list is not actually  a signle list, rather a configMAX\textunderscore PRIORITIES number of lists. Each priority level has a list for it. When scheduler looks for the next task it walks from the tasks with highest priority to the one with the lowest. Variable pxCurrentTCB points to a process in the ready list that is currently running.
+
+The tasks in FreeRTOS can be blocked when accessing a resource that is not currently available. The scheduler blocks the tasks when they attempt to read from an empty container or write into a full one. This is also true for the semaphores, as they are a queue of size one in the background.
+
+As indicated earlier, access attempts against queues can be blocking or non-blocking.
+The distinction is made via the xTicksToWait variable which is passed into the queue
+access request as an argument. If xTicksToWait is 0, and the queue is empty/full, the
+task does not block. Otherwise, the task will block for a period of xTicksToWait
+scheduler ticks or until an event on the queue frees up the resource.
+
+Tasks can also be blocked without a use of containers. FreeRTOS provied vTaskDelay and vTaskDelayUntil functions for this purpose. When a task is delayed it is put onto a delay list. On every tick, scheduler checks if one of the tasks from the delay lists are unblocked. If they are, they are moved to the ready list.
+
+Any task or, in fact, all tasks except the one currently running (and those servicing ISRs)
+can be placed in the Suspended state indefinitely. Tasks that are placed in this state are
+not waiting on events and do not consume any resource or kernel attention until they are
+moved out of the Suspended state. When unsuspended, they are returned to the Ready state.
+
+Finally, tasks can also be deleted. When delete is requested task is put in a deleted state. Deleted state is required because tasks are not deleted immediately after the call. Rather tasks are deleted, and its resources released, from the IDLE task. IDLE task has the lowest possible priority so this job may take some time.
+
+\section{Inner workings of the scheduler}
+
+This section gives a brief overview of a FreeRTOS scheduler.
+
+\autoref{fig:freertos_scheduler_overview} shows an overview of the scheduler algorithm. The scheduler operates as a timer interrupt service routine that is called once every tick. Tick period is defined by configTICK\textunderscore RATE\textunderscore HZ. 
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_overview.png}
+      \caption{Scheduler algorithm\citep[p~23]{freertos_inner_workings}}
+      \label{fig:freertos_scheduler_overview}
+    
+\end{figure}
+
+Context saving is done for the current task. Needed registers are saved on top of the task's stack. It is worth noting, when a task is first created its task is artificially filled. After saving the context scheduler increments the tick and checks if any other task with higher priority has been unblocked, or there is a task with same priority ready. Finally, context is restored and scheduler returns from the interrupt.  
+
+\autoref{fig:freertos_scheduler_increment} shows the algorithm for vTaskIncrementTisk. vTaskIncrementTick is called once each clock tick by the HAL (whenever the timer ISR occurs). The right hand
+branch of the algorithm deals with normal scheduler operation while the left hand branch
+executes when the scheduler is suspended. As discussed earlier, the right hand branch
+simply increments the tick count and then checks to see if the clock has overflowed. If
+that’s the case, then the DelayedTask and OverflowDelayedTask list pointers are
+swapped and a global counter tracking the number of overflows is incremented. An
+increase in the tick count may have caused a delayed task to wake so check is performed.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_increment.png}
+      \caption{vTaskIncrementTick algorithm\citep[p~23]{freertos_inner_workings}}
+      \label{fig:freertos_scheduler_increment}
+    
+\end{figure}
+
+More about the scheduler can be found in \citep{freertos_inner_workings}.
+
+\section{Inner workings of the timers}
+
+Similarly to tasks FreeRTOS timer have a control block. Timer's control block contains timers period, name, does it auto reload and list item. List item is used when a timer is put in a list.  Active timers are stored in current timer list in order of expiry time, first element is the one that will expire first.
+
+When timers are included from the configuration, scheduler on start up  creates the timer daemon service (its priority is modifiable with configTIMER\textunderscore TASK\textunderscore PRIORITY). Timer daemon has a job of processing the expired timers and receiving the commands. All commands controlling the timers the commands are not sent directly to the requested timer, rather all commands are sent to the queue to be later processed by the timer's daemon.
+
+Timer deamon normally just waits for unblocking of the next timer or a new commands from the queue. When a timer expires daemon is woken up, it processes the timer, checks again for received commands and goes back to waiting. If a new commands has arrived the same is expected, first the commands is processed than the task goes back to waiting.
