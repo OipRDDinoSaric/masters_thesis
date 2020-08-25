@@ -1,6 +1,24 @@
 \chapter{Functional safety in embedded systems}
 \label{functional_safety}
 
-\todoi{Opis functional safety-a, definicija, proces...}
+\section{IEC standards}
 
-\todoi{HW}
+\todoi{IEC 61508}
+
+\section{Terminology}
+
+\todoi{Functional safety terminology, SIL, SIF, SIS...}
+
+\section{Certification process}
+
+\todoi{Procjena etc.}
+
+\section{Embedded processors redundancy - lockstep}
+
+Consider a system with one processing unit. Such system is obviously non-redundant from the
+aspect of instruction execution. Lockstep is redundancy mechanism for increasing the system reliability
+by introducing at least one redundant processing unit. Redundant processing unit replicates the behavior of
+the original processing unit. Depending on number of processing units lockstep can provide fault-detection, if there are less than three processing units in a system, or both fault-detection and
+fault-tolerance with more than two processing units in a system. \citep{ipavic_lockstep}
+
+Locksteped processors can get upto SIL3, but not SIL4 as a use of on-chip redundancy is limited by IEC 61508 standard to SIL3. Therefore, although it may seem, lockstep is certainly not panacea in all safety systems and certain amount of work is needed to justify its usage. Nevertheless, for all safety integrity levels, but SIL4 lockstep is often used extensively (e.g. automotive applications). \citep{ipavic_lockstep}

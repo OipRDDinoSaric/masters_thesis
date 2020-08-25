@@ -1,3 +1,8 @@
-\contentsline {todo}{Opis functional safety-a, definicija, proces...}{1}{section*.6}%
-\contentsline {todo}{HW}{1}{section*.7}%
-\contentsline {todo}{section}{43}{section*.23}%
+\contentsline {todo}{IEC 61508}{1}{section*.6}%
+\contentsline {todo}{Functional safety terminology, SIL, SIF, SIS...}{1}{section*.7}%
+\contentsline {todo}{Procjena etc.}{1}{section*.8}%
+\contentsline {todo}{dual code lockstep, mention delayed lockstep CPU compare}{3}{section*.9}%
+\contentsline {todo}{dual code lockstep}{3}{section*.10}%
+\contentsline {todo}{od Ganitis-a uzmi primjer}{3}{section*.11}%
+\contentsline {todo}{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages}{3}{section*.12}%
+\contentsline {todo}{section}{44}{section*.28}%

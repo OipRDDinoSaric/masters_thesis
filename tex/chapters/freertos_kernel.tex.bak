@@ -5,9 +5,9 @@
 
 FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller pletforms and has MIT open source licence hence the free in the name. \citep{freertos_licence}
 
-Operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for scheduler routines.
+Operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for the scheduler routines.
 
-FreeRTOS is ideally suited to deeply embedded real-time applications that use
+FreeRTOS is ideally suited for deeply embedded real-time applications that use
 microcontrollers or small microprocessors. This type of application normally includes a mix of
 both hard and soft real-time requirements. \citep{freertos_mastering}
 
@@ -95,7 +95,7 @@ Every FreeRTOS task has a stack and a task control block, or short TCB. Kernel u
 
 When a new task is created its TCB is populated. New tasks are immediately placed in a ready list. Whole scheduling is comprised of a lot of lists.
 
-Ready list is arranged in order of priority with tasks of equal priority being serviced round robin. Ready list is not actually  a signle list, rather a configMAX\textunderscore PRIORITIES number of lists. Each priority level has a list for it. When scheduler looks for the next task it walks from the tasks with highest priority to the one with the lowest. Variable pxCurrentTCB points to a process in the ready list that is currently running.
+Ready list is arranged in order of priority with tasks of equal priority being serviced round robin. Ready list is not actually  a single list, rather a configMAX\textunderscore PRIORITIES number of lists. Each priority level has a list for it. When scheduler looks for the next task it walks from the tasks with highest priority to the one with the lowest. Variable pxCurrentTCB points to a process in the ready list that is currently running.
 
 The tasks in FreeRTOS can be blocked when accessing a resource that is not currently available. The scheduler blocks the tasks when they attempt to read from an empty container or write into a full one. This is also true for the semaphores, as they are a queue of size one in the background.
 
@@ -124,7 +124,7 @@ This section gives a brief overview of a FreeRTOS scheduler.
 
       \centering
       \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_overview.png}
-      \caption{Scheduler algorithm\citep[p~23]{freertos_inner_workings}}
+      \caption{Scheduler algorithm\citep[p~20]{freertos_inner_workings}}
       \label{fig:freertos_scheduler_overview}
     
 \end{figure}
@@ -143,7 +143,7 @@ increase in the tick count may have caused a delayed task to wake so check is pe
 
       \centering
       \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_increment.png}
-      \caption{vTaskIncrementTick algorithm\citep[p~23]{freertos_inner_workings}}
+      \caption{vTaskIncrementTick algorithm\citep[p~31]{freertos_inner_workings}}
       \label{fig:freertos_scheduler_increment}
     
 \end{figure}
@@ -152,11 +152,8 @@ More about the scheduler can be found in \citep{freertos_inner_workings}.
 
 \section{Inner workings of the timers}
 
-Similarly to tasks FreeRTOS timer have a control block. Timer's control block contains timers period, name, does it auto reload and list item. List item is used when a timer is put in a list.  Active timers are stored in current timer list in order of expiry time, first element is the one that will expire first.
+Similarly to tasks, FreeRTOS timers have a control block. Timer's control block contains timers period, name, does it auto reload and list item. Active timers are stored in current timer list in order of expiry time, first element is the one that will expire first.
 
-When timers are included from the configuration, scheduler on start up  creates the timer daemon service (its priority is modifiable with configTIMER_TASK_PRIORITY). Timer daemon has a job of processing the expired timers and receiving the commands. All commands controlling the timers the commands are not sent directly to the requested timer, rather all commands are sent to the queue to be later processed by the timer's daemon.
+When timers are included from the configuration, scheduler on start up  creates the timer daemon service (its priority is modifiable with configTIMER\textunderscore TASK\textunderscore PRIORITY). Timer daemon has a job of processing the expired timers and receiving the commands. All commands controlling the timers the commands are not sent directly to the requested timer, rather all commands are sent to the queue to be later processed by the timer's daemon.
 
-Timer deamon normally just waits for unblocking of the next timer or a new commands from the queue
-
-
-\todoi{Inner working of timers}
+Timer daemon normally just waits for unblocking of the next timer or a new commands from the queue. When a timer expires daemon is woken up, it processes the timer, checks again for received commands and goes back to waiting. If a new commands has arrived the same is expected, first the commands is processed than the task goes back to waiting.
