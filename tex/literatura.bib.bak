@@ -1,21 +1,28 @@
-@article{func_safety_brief,
+@misc{func_safety_brief,
+    author = {IEC - International Electrotechnical Comission},
     title = {Briefing paper: Functional safety essential to overall safety},
+    year = {2020},
     url = {https://basecamp.iec.ch/download/functional-safety-essential-to-overall-safety/}
 }
-@article{bootloader_intro,
+@misc{bootloader_intro,
     title = {Bootloader: What you need to know about the system boot manager},
+    author = {IONOS},
+    year = {2020},
     url = {https://www.ionos.com/digitalguide/server/configuration/what-is-a-bootloader/}
 }
-@article{barr_c,
+@book{barr_c,
     author = {Michael Barr},
-    institution = {Barr Group},
+    organization = {Barr Group},
     title = {BARR-C:2018 Embedded C Coding Standard},
+    year = {2018},
+    publisher = {Barr Group},
     url = {https://barrgroup.com/sites/default/files/barr_c_coding_standard_2018.pdf}
 }
 
 @manual{stm32f407_ref_man,
-    institution = {STMicroelectronics},
+    organization = {STMicroelectronics},
     title = {STM32F407 reference manual},
+    year = {20119},
     url = {https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf}
 }
 @manual{bootloader_tutorial,
@@ -25,27 +32,49 @@
 @manual{freertos_mastering,
     author = {Richard Barry},
     title = {Mastering the FreeRTOS™ Real Time Kernel},
+    year = {2016},
     url = {https://www.freertos.org/wp-content/uploads/2018/07/161204_Mastering_the_FreeRTOS_Real_Time_Kernel-A_Hands-On_Tutorial_Guide.pdf}
 }
-@manual{freertos_licence,
+@misc{freertos_licence,
     title = {Mastering the FreeRTOS™ Real Time Kernel},
+    author = {Amazon Web Services},
+    year = {2020},
     url = {https://www.freertos.org/a00114.html}
 }
 
 @manual{freertos_inner_workings,
     author = {Rich Goyette},
     title = {An Analysis and Description od the Inner Workings of the FreeRTOS Kernel},
+    year = {2007},
     url = {http://richardgoyette.com/Research/Papers/FreeRTOSPaper.pdf}
 }
 
 @manual{cortex_m4_reference,
-    institution = {ARM},
+    organization = {ARM},
+    year = {2020},
     title = {ARM Cortex M4 Processor - Technical Reference Manual},
     url = {https://developer.arm.com/documentation/100166/0001/}
 }
 
-@article{ipavic_lockstep,
+@report{ipavic_lockstep,
     author = {Ivan Pavić},
+    type={report},
     title = {Lockstep in the context of reliability and fault-tolerance of computer systems},
     year = {2019}
+}
+
+@misc{func_safety_explained,
+    author = {IEC - International Electrotechnical Comission},
+    title = {Functional Safety explained},
+    year = {2020},    
+    url = {https://www.iec.ch/functionalsafety/explained/}
+}
+
+@report{lockstep_analysis,
+    title={Lockstep analysis for safety critical embedded systems},
+    author={Stylianos Ganitis},
+    year={2015},
+    type={thesis},
+    language={english},
+    school={Aalborg university}
 }

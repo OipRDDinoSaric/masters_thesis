@@ -126,7 +126,7 @@
 \fi
 
 \if@langeng \RequirePackage[english]{babel}
-\else \RequirePackage[croatian]{babel}
+\else \RequirePackage[english]{babel}
 \fi
 \RequirePackage{graphicx} % Uključeno jer je često korišteno
 \RequirePackage{amssymb} % Uključeno jer je često korišteno
@@ -173,7 +173,7 @@
 
 % Promjena naziva poglavlja ``Bibliografija'' -> ``Literatura''
 \addto\captionscroatian{%
-  \def\bibname{Literatura}
+  \def\bibname{Bibliography}
 }
 
 % Podešavanje oznaka kod listi (1. razina je crtica, 2. puni krug) 

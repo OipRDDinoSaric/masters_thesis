@@ -21,9 +21,9 @@ The ARM Cortex M is also a family of 32-bit RISC processors. The cores are optim
 \subsection{Triple core lockstep}
 \todoi{dual code lockstep}
 
-\subsection{Example lockstep use case}
+\subsection{Example lockstep use case \citep{lockstep_analysis}}
 
-\todoi{od Ganitis-a uzmi primjer}
+A simplified example application is covered in this subsection to better explain the benefits of the lockstep. 
 
 \subsection{Sto jos dodaje Cortex R}
 

@@ -19,67 +19,47 @@ Reallocating 'name_of_file' (item size: 1) to 11 items.
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: fer.bst
 Database file #1: literatura.bib
-Warning--to sort, need author, organization, or key in stm32f407_ref_man
-Warning--to sort, need author or key in func_safety_brief
-Warning--to sort, need author, organization, or key in cortex_m4_reference
-Warning--to sort, need author, organization, or key in freertos_licence
-Warning--to sort, need author or key in bootloader_intro
-Warning--empty author in bootloader_intro
-Warning--empty journal in bootloader_intro
-Warning--empty year in bootloader_intro
-Warning--empty year in bootloader_intro
-Warning--empty year in cortex_m4_reference
-Warning--empty year in freertos_licence
-Warning--empty author in func_safety_brief
-Warning--empty journal in func_safety_brief
-Warning--empty year in func_safety_brief
-Warning--empty year in func_safety_brief
-Warning--empty year in stm32f407_ref_man
-Warning--empty journal in barr_c
-Warning--empty year in barr_c
-Warning--empty year in barr_c
-Warning--empty year in freertos_mastering
-Warning--empty year in freertos_inner_workings
-Warning--empty journal in ipavic_lockstep
-You've used 9 entries,
+Warning--entry type for "lockstep_analysis" isn't style-file defined
+--line 73 of file literatura.bib
+You've used 11 entries,
             2773 wiz_defined-function locations,
-            634 strings with 6432 characters,
-and the built_in function-call counts, 2402 in all, are:
-= -- 218
-> -- 40
-< -- 4
-+ -- 21
-- -- 12
-* -- 176
-:= -- 305
-add.period$ -- 22
-call.type$ -- 9
-change.case$ -- 26
-chr.to.int$ -- 9
-cite$ -- 45
-duplicate$ -- 161
-empty$ -- 267
-format.name$ -- 16
-if$ -- 509
-int.to.chr$ -- 1
+            651 strings with 6733 characters,
+and the built_in function-call counts, 3135 in all, are:
+= -- 285
+> -- 90
+< -- 9
++ -- 39
+- -- 27
+* -- 179
+:= -- 474
+add.period$ -- 32
+call.type$ -- 11
+change.case$ -- 38
+chr.to.int$ -- 10
+cite$ -- 22
+duplicate$ -- 180
+empty$ -- 326
+format.name$ -- 36
+if$ -- 663
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 48
-num.names$ -- 16
-pop$ -- 113
+missing$ -- 2
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 110
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 33
 quote$ -- 0
-skip$ -- 94
+skip$ -- 141
 stack$ -- 0
-substring$ -- 23
-swap$ -- 10
+substring$ -- 26
+swap$ -- 18
 text.length$ -- 0
-text.prefix$ -- 0
+text.prefix$ -- 2
 top$ -- 0
-type$ -- 99
-warning$ -- 22
-while$ -- 12
+type$ -- 116
+warning$ -- 0
+while$ -- 27
 width$ -- 0
-write$ -- 96
-(There were 22 warnings)
+write$ -- 137
+(There was 1 warning)

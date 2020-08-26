@@ -9,7 +9,7 @@
 \BOOKMARK [1][-]{section.2.3}{ARM Cortex-R5 processor lockstep}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.3.1}{Dual core lockstep}{section.2.3}% 10
 \BOOKMARK [2][-]{subsection.2.3.2}{Triple core lockstep}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.3}{Example lockstep use case}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Example lockstep use case lockstepanalysis}{section.2.3}% 12
 \BOOKMARK [2][-]{subsection.2.3.4}{Sto jos dodaje Cortex R}{section.2.3}% 13
 \BOOKMARK [0][-]{chapter.3}{FreeRTOS kernel}{}% 14
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 15
@@ -62,4 +62,4 @@
 \BOOKMARK [2][-]{subsection.5.7.14}{get-write-prot - Returns bit array of sector write protection.}{section.5.7}% 62
 \BOOKMARK [2][-]{subsection.5.7.15}{exit - Exits the bootloader and starts the user application.}{section.5.7}% 63
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 64
-\BOOKMARK [0][-]{chapter*.29}{Bibliography}{}% 65
+\BOOKMARK [0][-]{chapter*.28}{Bibliography}{}% 65
