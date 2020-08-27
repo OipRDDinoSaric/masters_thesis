@@ -1,7 +1,6 @@
-\contentsline {todo}{Functional safety terminology, SIL, SIF, SIS...}{2}{section*.6}%
-\contentsline {todo}{Procjena etc.}{2}{section*.7}%
-\contentsline {todo}{dual code lockstep, mention delayed lockstep CPU compare}{4}{section*.8}%
-\contentsline {todo}{dual code lockstep}{4}{section*.9}%
-\contentsline {todo}{Example}{4}{section*.10}%
-\contentsline {todo}{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages}{4}{section*.11}%
-\contentsline {todo}{section}{45}{section*.27}%
+\contentsline {todo}{stao na https://youtu.be/srwHBvEe9WA?t=1957}{4}{section*.8}%
+\contentsline {todo}{Add citations!}{4}{section*.9}%
+\contentsline {todo}{dual code lockstep, mention delayed lockstep CPU compare}{7}{section*.10}%
+\contentsline {todo}{dual code lockstep}{7}{section*.11}%
+\contentsline {todo}{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages}{7}{section*.12}%
+\contentsline {todo}{section}{48}{section*.28}%

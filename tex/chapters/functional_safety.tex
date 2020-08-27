@@ -19,16 +19,68 @@ Along with the more general standard, industry specific standards exist:
 
 Mentioned standards provide guidelines to assess rick and assign safety goals for safety-related systems of various industries. They provide frameworks for quantitative analysis of random failure rates and effectiveness of diagnostics to detect them. They also provide guidelines for maintenance of the safety-related systems after the deployment.
 
-IEC 61508 is a basic functional safety standard applicable to all kinds of industry. It defines functional safety as: “part of the overall safety relating to the EUC (Equipment Under Control) and the EUC control system which depends on the correct functioning of the Electrical/Electronic/Programmable Electronic Safety-related Systems (E/E/PE) safety-related systems, other technology safety-related systems and external risk reduction facilities.” The fundamental concept is that any safety-related system must work correctly or fail in a predictable (safe) way. Functional safety relies only on active systems, and safety measures that rely on passive systems are not functional safety. \citep{func_safety_explained}
+IEC 61508 is a umbrella functional safety standard applicable to all industries. It defines functional safety as: “part of the overall safety relating to the EUC (Equipment Under Control) and the EUC control system which depends on the correct functioning of the Electrical/Electronic/Programmable Electronic Safety-related Systems (E/E/PE) safety-related systems, other technology safety-related systems and external risk reduction facilities.” The fundamental concept is that any safety-related system must work correctly or fail in a predictable (safe) way. Functional safety relies only on active systems, and safety measures that rely on passive systems are not functional safety. \citep{func_safety_explained}
 
 \section{Terminology}
 
+IEC 61508 standard introduces a lot of three letter acronyms. This section shines a light on the most common ones.
 
-\todoi{Functional safety terminology, SIL, SIF, SIS...}
+\subsection{SIL}
+
+SIL or safety integrity level is a discrete level (one out of four) for specifying the safety integrity retirements of the safety instrumented functions (SIF) to be allocated to the safety instrumented system (SIS) e.i. SIL says how well the safety integrity function does its job. SIF and SIS are explained in \autoref{sec:sif}  and \autoref{sec:sis} respectfully. SIL of 1 marks lowest safety integrity level and level 4 signalizes the highest.  \autoref{fig:sil_level_chart} demonstrates that SIL is a function of frequency of a hazard and severity of the consequence. 
+
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.7\linewidth]{images/sil_level_chart.png}
+      \caption{Generic SIL chart as a function of severity and frequency}
+      \label{fig:sil_level_chart}
+    
+\end{figure}
+
+\subsection{SIF}
+\label{sec:sif}
+
+Safety instrumented function (SIF) is a set of equipment used to implement an automatic protection function. Safety function shall have a specified SIL to achieve functional safety. 
+Example of SIF is a number of sensors looking for the one \textbf{single} hazard scenario. Those sensors need to bring the system to the safe state if the hazard occurs. SIF are usually measured in how much risk can be removed. It is usually expressed in either in PFDaverage or in SIL. 
+
+\subsection{SIS}
+\label{sec:sis}
+
+SIS or safety instrumented system is a one or more safety functions put together to do the whole job. SIS can encompass multiple different functions and act in multiple different ways to overcome a number of hazard scenarios, as opposed to SIF that can only perform one action to overcome one hazard scenario.
 
 \section{Certification process}
 
-\todoi{Procjena etc.}
+
+First thing for the certification process is a system integrity level. SIL of a product is determined by three things:
+\begin{itemize}
+
+    \item The systematic capability rating,
+    \item The architectural constrains for the element and
+    \item The PFDaverage calculation.
+    
+\end{itemize}
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.7\linewidth]{images/sil_requirements.png}
+      \caption{SIL requirements}
+      \label{fig:sil_requirements}
+    
+\end{figure}
+
+Systematic Capability is achieved when the equipment used to implement any safety function is designed using procedures intended to prevent systematic design errors.  The rigor of the required procedure is a function of a Safety Integrity Level (SIL). This is evaluated through an assessment of the quality management system for suppliers of process control and instrumentation for safety against the requirements in IEC 61508.  If the QMS meets the requirements of 61508 a SIL Capability rating is issued. 
+
+Architectural constrains are estimated by the route 1H or route 2H as mentioned in IEC 61508. Route 1H is estimated by safe failure fraction(SFF). SFF is a percentage of safe failures in all failures. Route 2H is an assessment of the reliability data for the entire element according to IEC 61508. It is mostly based around the historical data of a device and is based on a method that demands 90 percent confidence in the data.  Instead of the SFF calculation, the Minimum Hardware Fault Tolerance is determined by a set of rules from IEC 61508.
+
+Probability of Failure on Demand average (PFDaverage) is the probability that a system will fail dangerously, and not be able to perform its safety function when required. PFD can be determined as an average probability or maximum probability over a time period.
+
+As mentioned before, a safety instrumented function needs to take risk out of the system. If there is no requirement to reduce risk than a function doesn't need a SIL rating or, for that matter, functional safety. When a function still needs to reduce risk after the process hazard assessment (PHA), SIL needs to be incorporated.
+
+\todoi{stao na https://youtu.be/srwHBvEe9WA?t=1957}
+\todoi{Add citations!}
 
 \section{Embedded processors redundancy - lockstep}
 
@@ -39,3 +91,42 @@ the original processing unit. Depending on number of processing units lockstep c
 fault-tolerance with more than two processing units in a system. \citep{ipavic_lockstep}
 
 Locksteped processors can get upto SIL3, but not SIL4 as a use of on-chip redundancy is limited by IEC 61508 standard to SIL3. Therefore, although it may seem, lockstep is certainly not panacea in all safety systems and certain amount of work is needed to justify its usage. Nevertheless, for all safety integrity levels, but SIL4 lockstep is often used extensively (e.g. automotive applications). \citep{ipavic_lockstep}
+
+\subsection{Example use case \citep{lockstep_analysis}}
+
+A simplified example application is covered in this subsection to better explain the benefits of the lockstep. It should be noted that without a prior functional-hazard analysis this is not an optimal use case.
+
+Beside the fact that the rate of aircraft engine failures have dramatically decreased,
+at the point that flight crews is most likely that will not ever meet one in their
+whole career, it still remains a possibility. Because of this infrequent occurrence
+of an engine failure the crew is not always able to identify and to handle such a
+malfunction. As a result, erroneous operations of the crew in such a case could
+lead to devastating consequences for them and for the passengers.
+
+The likely most complex and crucial component on an airplane is the engine. Main part of the safety relies on this component. In this example we will focus on the fire detection scenario of the engine. 
+In avionics, there is the principle of keeping the aircraft trajectory as
+the highest priority duty [9]. Thus, in case of an engine malfunction, the system
+should stabilize the aircraft trajectory first, before proceeding with further actions
+to resolve the engine problem. This could probably cause a larger damage to the
+engine but it would help to ensure the safety of humans and the aircraft itself.
+
+One of the functions of the engine's single-core MCU is to receive the raw values from temperature sensors, making sense of them and notifying the crew if the temperature is too high to prevent fire.  
+After taking the appropriate actions to stabilize the aircraft trajectory (i.e activate a redundant engine) the system sets the defective engine to idle state. In high
+altitude the level of radiation that occurs from cosmic rays is significantly high.
+Such a radiation can cause a bit flip in the core of the
+system that executes this temperature calculation. If the bit flip happens during the conversion of the raw values an spurious alarm could be raised. The erroneous calculation could end up in a non-realistic
+over-limit temperature value, leading to an undesirable deactivation of the engine
+and getting the flight crew into trouble. One can conclude, Single-core MCU can not detect an error in context of executing the commands.
+
+If in place of a single-core MCU, a lock-step MCU with two cores is placed such error would be detected and could temporarily set the system in safe-state. The
+two cores operating in Lockstep, most likely would not experience the same bit flip
+and they would produce divergent outputs. This discrepancy in the comparison of
+the output signals would generate an error.
+
+
+From the error detection, implementation differs according to the system requirements. For instance, if the system could handle to “wait” the time that is required for a
+soft-reset of the MCU, it could be determined if the error is temporal or permanent.
+In case of permanent error the system could finally set the engine idle and enable
+a redundant one. In case of a soft error, a reset of the system could be enough to
+continue operating efficiently.
+
