@@ -21,45 +21,45 @@ The style file: fer.bst
 Database file #1: literatura.bib
 Warning--entry type for "lockstep_analysis" isn't style-file defined
 --line 73 of file literatura.bib
-You've used 11 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            651 strings with 6733 characters,
-and the built_in function-call counts, 3135 in all, are:
-= -- 285
-> -- 90
-< -- 9
-+ -- 39
-- -- 27
-* -- 179
-:= -- 474
-add.period$ -- 32
-call.type$ -- 11
-change.case$ -- 38
-chr.to.int$ -- 10
-cite$ -- 22
-duplicate$ -- 180
-empty$ -- 326
-format.name$ -- 36
-if$ -- 663
+            655 strings with 6835 characters,
+and the built_in function-call counts, 3432 in all, are:
+= -- 311
+> -- 100
+< -- 10
++ -- 43
+- -- 30
+* -- 194
+:= -- 519
+add.period$ -- 35
+call.type$ -- 12
+change.case$ -- 42
+chr.to.int$ -- 11
+cite$ -- 24
+duplicate$ -- 195
+empty$ -- 358
+format.name$ -- 40
+if$ -- 727
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 2
-newline$ -- 62
-num.names$ -- 36
-pop$ -- 110
+newline$ -- 67
+num.names$ -- 40
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 36
 quote$ -- 0
-skip$ -- 141
+skip$ -- 155
 stack$ -- 0
-substring$ -- 26
-swap$ -- 18
+substring$ -- 28
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 116
+type$ -- 127
 warning$ -- 0
-while$ -- 27
+while$ -- 30
 width$ -- 0
-write$ -- 137
+write$ -- 149
 (There was 1 warning)

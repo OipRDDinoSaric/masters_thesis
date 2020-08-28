@@ -56,7 +56,7 @@
     url = {https://developer.arm.com/documentation/100166/0001/}
 }
 
-@report{ipavic_lockstep,
+@manual{ipavic_lockstep,
     author = {Ivan Pavić},
     type={report},
     title = {Lockstep in the context of reliability and fault-tolerance of computer systems},
@@ -70,11 +70,17 @@
     url = {https://www.iec.ch/functionalsafety/explained/}
 }
 
-@report{lockstep_analysis,
+@thesis{lockstep_analysis,
     title={Lockstep analysis for safety critical embedded systems},
     author={Stylianos Ganitis},
     year={2015},
-    type={thesis},
     language={english},
     school={Aalborg university}
+}
+
+@misc{func_safety_fundamentals,
+    author = {exida},
+    title = {Functional Safety fundamentals},
+    year = {2019},    
+    url = {https://www.youtube.com/watch?v=srwHBvEe9WA}
 }

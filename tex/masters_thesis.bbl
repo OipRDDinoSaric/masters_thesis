@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -34,6 +34,11 @@ IEC International~Electrotechnical Comission.
 IEC International~Electrotechnical Comission.
 \newblock Functional safety explained, 2020{\natexlab{b}}.
 \newblock URL \url{https://www.iec.ch/functionalsafety/explained/}.
+
+\bibitem[exida(2019)]{func_safety_fundamentals}
+exida.
+\newblock Functional safety fundamentals, 2019.
+\newblock URL \url{https://www.youtube.com/watch?v=srwHBvEe9WA}.
 
 \bibitem[Ganitis(2015)]{lockstep_analysis}
 Stylianos Ganitis.

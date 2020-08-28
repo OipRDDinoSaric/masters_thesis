@@ -4,7 +4,7 @@
 \BOOKMARK [2][-]{subsection.1.2.1}{SIL}{section.1.2}% 4
 \BOOKMARK [2][-]{subsection.1.2.2}{SIF}{section.1.2}% 5
 \BOOKMARK [2][-]{subsection.1.2.3}{SIS}{section.1.2}% 6
-\BOOKMARK [1][-]{section.1.3}{Certification process}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Certification}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.4}{Embedded processors redundancy - lockstep}{chapter.1}% 8
 \BOOKMARK [2][-]{subsection.1.4.1}{Example use case lockstepanalysis}{section.1.4}% 9
 \BOOKMARK [0][-]{chapter.2}{ARM Cortex R comparison with ARM cortex M}{}% 10
@@ -65,4 +65,4 @@
 \BOOKMARK [2][-]{subsection.5.7.14}{get-write-prot - Returns bit array of sector write protection.}{section.5.7}% 65
 \BOOKMARK [2][-]{subsection.5.7.15}{exit - Exits the bootloader and starts the user application.}{section.5.7}% 66
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 67
-\BOOKMARK [0][-]{chapter*.29}{Bibliography}{}% 68
+\BOOKMARK [0][-]{chapter*.30}{Bibliography}{}% 68

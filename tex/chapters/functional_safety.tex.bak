@@ -27,7 +27,7 @@ IEC 61508 standard introduces a lot of three letter acronyms. This section shine
 
 \subsection{SIL}
 
-SIL or safety integrity level is a discrete level (one out of four) for specifying the safety integrity retirements of the safety instrumented functions (SIF) to be allocated to the safety instrumented system (SIS) e.i. SIL says how well the safety integrity function does its job. SIF and SIS are explained in \autoref{sec:sif}  and \autoref{sec:sis} respectfully. SIL's level 1 marks lowest safety integrity level and level 4 signalizes the highest.  \autoref{fig:sil_level_chart} demonstrates that SIL is a function of frequency of a hazard and severity of the consequence. 
+SIL or safety integrity level is a discrete level (one out of four) for specifying the safety integrity retirements of the safety instrumented functions (SIF) to be allocated to the safety instrumented system (SIS) e.i. SIL says how well the safety integrity function does its job. SIF and SIS are explained in \autoref{sec:sif}  and \autoref{sec:sis} respectfully. SIL of 1 marks lowest safety integrity level and level 4 signalizes the highest.  \autoref{fig:sil_level_chart} demonstrates that SIL is a function of frequency of a hazard and severity of the consequence. 
 
 
 \begin{figure}[H]
@@ -50,15 +50,15 @@ Example of SIF is a number of sensors looking for the one \textbf{single} hazard
 
 SIS or safety instrumented system is a one or more safety functions put together to do the whole job. SIS can encompass multiple different functions and act in multiple different ways to overcome a number of hazard scenarios, as opposed to SIF that can only perform one action to overcome one hazard scenario.
 
-\section{Certification process}
+\section{Certification}
 
 
-First thing for the certification process is a system integrity level. SIL of a product is determined by three things:
+For the certification, system integrity level is determined. SIL of a product is determined by three things\citep{func_safety_fundamentals}:
 \begin{itemize}
 
-    \item The systematic capability rating
-    \item The architectural constrains for the element
-    \item The PFDaverage calculation
+    \item The systematic capability rating,
+    \item The architectural constrains for the element and
+    \item The PFDaverage calculation.
     
 \end{itemize}
 
@@ -73,14 +73,72 @@ First thing for the certification process is a system integrity level. SIL of a 
 
 Systematic Capability is achieved when the equipment used to implement any safety function is designed using procedures intended to prevent systematic design errors.  The rigor of the required procedure is a function of a Safety Integrity Level (SIL). This is evaluated through an assessment of the quality management system for suppliers of process control and instrumentation for safety against the requirements in IEC 61508.  If the QMS meets the requirements of 61508 a SIL Capability rating is issued. 
 
-Architectural constrains are estimated by the route 1H and route 2H as mentioned in IEC 61508. Route 1H is estimated by safe failure fraction(SFF). SFF is a percentage of safe failures of all failures. Route 2H is an assessment of the reliability data for the entire element according to IEC 61508. It is mostly based around the historical data of a device and is based on a method that demands 90 confidence in the data.  Instead of the SFF calculation, the Minimum Hardware Fault Tolerance is determined by a set of rules from IEC 61508.
+Architectural constrains are estimated by the route 1H or route 2H as mentioned in IEC 61508. Route 1H is estimated by safe failure fraction(SFF). SFF is a percentage of safe failures in all failures. Route 2H is an assessment of the reliability data for the entire element according to IEC 61508. It is mostly based around the historical data of a device and is based on a method that demands 90 percent confidence in the data.  Instead of the SFF calculation, the Minimum Hardware Fault Tolerance is determined by a set of rules from IEC 61508.
 
 Probability of Failure on Demand average (PFDaverage) is the probability that a system will fail dangerously, and not be able to perform its safety function when required. PFD can be determined as an average probability or maximum probability over a time period.
 
-As mentioned before, a safety instrumented function needs to take risk out of the system. If there is no requirement to reduce risk than a function doesn't need a SIL rating or functional safety. When a function still needs to reduce risk after the process hazard assessment (PHA), SIL needs to be incorporated.
+As mentioned before, a safety instrumented function needs to take risk out of the system. If there is no requirement to reduce risk than a function doesn't need a SIL rating or, for that matter, functional safety. When a function still needs to reduce risk after the process hazard assessment (PHA), SIL needs to be incorporated. Tables below give a link between SIL and expected safety.
 
-\todoi{stao na https://youtu.be/srwHBvEe9WA?t=1957}
-\todoi{Add citations!}
+PFD (probability of dangerous failure) and RRF (risk reduction factor) of low demand operation for different SILs as defined in IEC 61508 are shown in \autoref{tab:func_safety_table_low_demand}.
+
+\begin{table}[H]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\begin{tabular}{
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l }
+\hline
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{SIL}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{PFD}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{PFD (power)}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{RRF}}} \\ \hline
+{\color[HTML]{202122} 1} & {\color[HTML]{202122} 0.1-0.01}       & {\color[HTML]{202122} $10^{-1} - 10^{-2}$} & {\color[HTML]{202122} 10-100}         \\
+{\color[HTML]{202122} 2} & {\color[HTML]{202122} 0.01-0.001}     & {\color[HTML]{202122} $10^{-2} - 10^{-3}$} & {\color[HTML]{202122} 100-1000}       \\
+{\color[HTML]{202122} 3} & {\color[HTML]{202122} 0.001-0.0001}   & {\color[HTML]{202122} $10^{-3} - 10^{-4}$} & {\color[HTML]{202122} 1000-10,000}    \\
+{\color[HTML]{202122} 4} & {\color[HTML]{202122} 0.0001-0.00001} & {\color[HTML]{202122} $10^{-4} - 10^{-5}$} & {\color[HTML]{202122} 10,000-100,000} \\ \hline
+\end{tabular}%
+}
+\caption{Link between SIL, PFH and RRF for low demand operation}
+\label{tab:func_safety_table_low_demand}
+\end{table}
+
+For continuous operation, \autoref{tab:func_safety_table_continuous} is provided (PFH - Probability of dangerous failure per hour).
+
+\begin{table}[H]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\begin{tabular}{
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}l }
+\hline
+\multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{SIL}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{PFH}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{PFH (power)}}} &
+  \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{202122} \textbf{RRF}}} \\ \hline
+{\color[HTML]{202122} 1} & {\color[HTML]{202122} 0.00001-0.000001}       & {\color[HTML]{202122} $10^{-5} - 10^{-6}$} & {\color[HTML]{202122} 100,000-1,000,000}         \\
+{\color[HTML]{202122} 2} & {\color[HTML]{202122} 0.000001-0.0000001}     & {\color[HTML]{202122} $10^{-6} - 10^{-7}$} & {\color[HTML]{202122} 1,000,000-10,000,000}      \\
+{\color[HTML]{202122} 3} & {\color[HTML]{202122} 0.0000001-0.00000001}   & {\color[HTML]{202122} $10^{-7} - 10^{-8}$} & {\color[HTML]{202122} 10,000,000-100,000,000}    \\
+{\color[HTML]{202122} 4} & {\color[HTML]{202122} 0.00000001-0.000000001} & {\color[HTML]{202122} $10^{-8} - 10^{-9}$} & {\color[HTML]{202122} 100,000,000-1,000,000,000} \\ \hline
+\end{tabular}%
+}
+\caption{Link between SIL, PFH and RRF for continuous operation}
+\label{tab:func_safety_table_continuous}
+\end{table}
+
+When a safety instrumented function fulfills aforementioned SIL requirements a certificated can be assigned for the SIL. Example of a certificate is given in \autoref{fig:func_safety_certificate}.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.9\linewidth]{images/cortex_r_certificate.pdf}
+      \caption{ARM Cortex-R5 Processor  SIL 3 certificate}
+      \label{fig:func_safety_certificate}
+    
+\end{figure}
 
 \section{Embedded processors redundancy - lockstep}
 
@@ -92,7 +150,7 @@ fault-tolerance with more than two processing units in a system. \citep{ipavic_l
 
 Locksteped processors can get upto SIL3, but not SIL4 as a use of on-chip redundancy is limited by IEC 61508 standard to SIL3. Therefore, although it may seem, lockstep is certainly not panacea in all safety systems and certain amount of work is needed to justify its usage. Nevertheless, for all safety integrity levels, but SIL4 lockstep is often used extensively (e.g. automotive applications). \citep{ipavic_lockstep}
 
-\subsection{Example lockstep use case \citep{lockstep_analysis}}
+\subsection{Example use case \citep{lockstep_analysis}}
 
 A simplified example application is covered in this subsection to better explain the benefits of the lockstep. It should be noted that without a prior functional-hazard analysis this is not an optimal use case.
 
