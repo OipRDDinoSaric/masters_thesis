@@ -1,4 +1,5 @@
 \chapter{Conclusion}
-In this thesis a functional safety overview was presented.
 
-\todoi{section}
+This thesis explores the functional safety practices in embedded systems. Overview of functional safety and related standards is provided to help engineers without functional safety experience. The thesis clarifies how ARM Cortex R improves functional safety principles over ARM Cortex M. 
+
+A software is developed to achieve software redundancy in ARM Cortex M. Implemented software includes a bootloader and a modified FreeRTOS operating system.  The bootloader has the ability to load new applications and other memory manipulation related operations. The bootloader also supports permanent memory for communication between bootloader and the current application. The modified FreeRTOS operating system provides features of tracking the individual tasks execution time and task replication. Demonstratration of the functionality is available through examples in source code. Inner workings of FreeRTOS and the bootloader is provided in this thesis.

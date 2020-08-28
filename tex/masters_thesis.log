@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  28 AUG 2020 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  28 AUG 2020 23:02
 entering extended mode
 **./masters_thesis.tex
 (masters_thesis.tex
@@ -1150,12 +1150,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 (chapters/introduction.tex
-<images/texas_refinery.jpg, id=474, 505.89pt x 335.2525pt>
+<images/texas_refinery.jpg, id=472, 505.89pt x 335.2525pt>
 File: images/texas_refinery.jpg Graphic file (type jpg)
 <use images/texas_refinery.jpg>
 Package pdftex.def Info: images/texas_refinery.jpg  used on input line 8.
 (pdftex.def)             Requested size: 154.35553pt x 102.29022pt.
-<images/concorde_disaster.jpg, id=475, 233.37187pt x 146.04562pt>
+<images/concorde_disaster.jpg, id=473, 233.37187pt x 146.04562pt>
 File: images/concorde_disaster.jpg Graphic file (type jpg)
 <use images/concorde_disaster.jpg>
 Package pdftex.def Info: images/concorde_disaster.jpg  used on input line 14.
@@ -1173,13 +1173,13 @@ Chapter 1.
 
 
 ]
-<images/sil_level_chart.png, id=503, 1204.5pt x 566.115pt>
+<images/sil_level_chart.png, id=501, 1204.5pt x 566.115pt>
 File: images/sil_level_chart.png Graphic file (type png)
 <use images/sil_level_chart.png>
 Package pdftex.def Info: images/sil_level_chart.png  used on input line 36.
 (pdftex.def)             Requested size: 308.71106pt x 145.09598pt.
  [2 <./images/sil_level_chart.png>]
-<images/sil_requirements.png, id=511, 770.88pt x 578.16pt>
+<images/sil_requirements.png, id=509, 770.88pt x 578.16pt>
 File: images/sil_requirements.png Graphic file (type png)
 <use images/sil_requirements.png>
 Package pdftex.def Info: images/sil_requirements.png  used on input line 68.
@@ -1188,7 +1188,7 @@ Package pdftex.def Info: images/sil_requirements.png  used on input line 68.
 
 pdfTeX warning: pdflatex (file ./images/cortex_r_certificate.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<images/cortex_r_certificate.pdf, id=523, 597.50829pt x 845.0471pt>
+<images/cortex_r_certificate.pdf, id=521, 597.50829pt x 845.0471pt>
 File: images/cortex_r_certificate.pdf Graphic file (type pdf)
 <use images/cortex_r_certificate.pdf>
 Package pdftex.def Info: images/cortex_r_certificate.pdf  used on input line 13
@@ -1248,7 +1248,7 @@ Chapter 3.
 
 
 ] [11]
-<images/freertos_task_states.png, id=609, 625.58719pt x 460.72125pt>
+<images/freertos_task_states.png, id=607, 625.58719pt x 460.72125pt>
 File: images/freertos_task_states.png Graphic file (type png)
 <use images/freertos_task_states.png>
 Package pdftex.def Info: images/freertos_task_states.png  used on input line 90
@@ -1261,14 +1261,14 @@ be block-ing or non-blocking.
  []
 
 [12 <./images/freertos_task_states.png>]
-<images/freertos_scheduler_overview.png, id=618, 541.27219pt x 547.2947pt>
+<images/freertos_scheduler_overview.png, id=616, 541.27219pt x 547.2947pt>
 File: images/freertos_scheduler_overview.png Graphic file (type png)
 <use images/freertos_scheduler_overview.png>
 Package pdftex.def Info: images/freertos_scheduler_overview.png  used on input 
 line 126.
 (pdftex.def)             Requested size: 352.81552pt x 356.7478pt.
  [13]
-<images/freertos_scheduler_increment.png, id=626, 481.04718pt x 670.00313pt>
+<images/freertos_scheduler_increment.png, id=624, 481.04718pt x 670.00313pt>
 File: images/freertos_scheduler_increment.png Graphic file (type png)
 <use images/freertos_scheduler_increment.png>
 Package pdftex.def Info: images/freertos_scheduler_increment.png  used on input
@@ -1286,7 +1286,7 @@ Overfull \hbox (8.7305pt too wide) in paragraph at lines 157--158
 
 (chapters/freertos_modification.tex
 Chapter 4.
-<images/freertos_overflow_start.png, id=646, 1402.48969pt x 547.2947pt>
+<images/freertos_overflow_start.png, id=644, 1402.48969pt x 547.2947pt>
 File: images/freertos_overflow_start.png Graphic file (type png)
 <use images/freertos_overflow_start.png>
 Package pdftex.def Info: images/freertos_overflow_start.png  used on input line
@@ -1297,13 +1297,13 @@ Package pdftex.def Info: images/freertos_overflow_start.png  used on input line
 
 
 ]
-<images/freertos_overrrun_increment.png, id=653, 784.43062pt x 302.63063pt>
+<images/freertos_overrrun_increment.png, id=651, 784.43062pt x 302.63063pt>
 File: images/freertos_overrrun_increment.png Graphic file (type png)
 <use images/freertos_overrrun_increment.png>
 Package pdftex.def Info: images/freertos_overrrun_increment.png  used on input 
 line 34.
 (pdftex.def)             Requested size: 441.01773pt x 170.14618pt.
-<images/freertos_overrun_start.png, id=654, 877.77937pt x 338.01282pt>
+<images/freertos_overrun_start.png, id=652, 877.77937pt x 338.01282pt>
 File: images/freertos_overrun_start.png Graphic file (type png)
 <use images/freertos_overrun_start.png>
 Package pdftex.def Info: images/freertos_overrun_start.png  used on input line 
@@ -1311,19 +1311,19 @@ Package pdftex.def Info: images/freertos_overrun_start.png  used on input line
 (pdftex.def)             Requested size: 441.01773pt x 169.82605pt.
  [18 <./images/freertos_overflow_start.png> <./images/freertos_overrrun_increme
 nt.png>]
-<images/timed_example_overrun.png, id=664, 1011.78pt x 238.491pt>
+<images/timed_example_overrun.png, id=662, 1011.78pt x 238.491pt>
 File: images/timed_example_overrun.png Graphic file (type png)
 <use images/timed_example_overrun.png>
 Package pdftex.def Info: images/timed_example_overrun.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 441.01773pt x 103.9538pt.
-<images/timed_example_overflow.png, id=665, 794.97pt x 163.3302pt>
+<images/timed_example_overflow.png, id=663, 794.97pt x 163.3302pt>
 File: images/timed_example_overflow.png Graphic file (type png)
 <use images/timed_example_overflow.png>
 Package pdftex.def Info: images/timed_example_overflow.png  used on input line 
 64.
 (pdftex.def)             Requested size: 441.01773pt x 90.61194pt.
-<images/timed_example_reset.png, id=666, 1156.32pt x 236.3229pt>
+<images/timed_example_reset.png, id=664, 1156.32pt x 236.3229pt>
 File: images/timed_example_reset.png Graphic file (type png)
 <use images/timed_example_reset.png>
 Package pdftex.def Info: images/timed_example_reset.png  used on input line 73.
@@ -1334,7 +1334,7 @@ Package pdftex.def Info: images/timed_example_reset.png  used on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 97.
  [20 <./images/timed_example_reset.png>]
-<images/replicated_example.png, id=684, 722.7pt x 229.8186pt>
+<images/replicated_example.png, id=682, 722.7pt x 229.8186pt>
 File: images/replicated_example.png Graphic file (type png)
 <use images/replicated_example.png>
 Package pdftex.def Info: images/replicated_example.png  used on input line 114.
@@ -1445,13 +1445,13 @@ Chapter 5.
 
 
 ]
-<images/bootloader_flow.png, id=1088, 1084.7727pt x 585.387pt>
+<images/bootloader_flow.png, id=1086, 1084.7727pt x 585.387pt>
 File: images/bootloader_flow.png Graphic file (type png)
 <use images/bootloader_flow.png>
 Package pdftex.def Info: images/bootloader_flow.png  used on input line 54.
 (pdftex.def)             Requested size: 352.81552pt x 190.39143pt.
  [37]
-<images/bootloader_cmd_err.png, id=1093, 201.75375pt x 60.225pt>
+<images/bootloader_cmd_err.png, id=1091, 201.75375pt x 60.225pt>
 File: images/bootloader_cmd_err.png Graphic file (type png)
 <use images/bootloader_cmd_err.png>
 Package pdftex.def Info: images/bootloader_cmd_err.png  used on input line 61.
@@ -1510,25 +1510,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (masters_thesis.aux (chapters/introduction.aux)
 (chapters/functional_safety.aux) (chapters/cortex_r_additions.aux)
 (chapters/freertos_kernel.aux) (chapters/freertos_modification.aux)
-(chapters/custom_bootloader.aux) (chapters/conclusion.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+(chapters/custom_bootloader.aux) (chapters/conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `masters_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E126EFDA45ED85DB5212950A29D636A2;5591.
+(rerunfilecheck)             Checksum: BD06F670A9E36E137816EC0EA2EA3642;5591.
 runsystem(del masters_thesis.pyg)...executed.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 27495 strings out of 480790
- 506017 string characters out of 2907031
- 945096 words of memory out of 3000000
- 42021 multiletter control sequences out of 15000+200000
+ 27492 strings out of 480790
+ 505965 string characters out of 2907031
+ 945046 words of memory out of 3000000
+ 42019 multiletter control sequences out of 15000+200000
  627831 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,84p,969b,1945s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1552,9 +1547,9 @@ Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtto1
 0.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on masters_thesis.pdf (63 pages, 2049807 bytes).
+Output written on masters_thesis.pdf (63 pages, 2050388 bytes).
 PDF statistics:
- 1732 PDF objects out of 2073 (max. 8388607)
- 768 named destinations out of 1000 (max. 500000)
+ 1730 PDF objects out of 2073 (max. 8388607)
+ 767 named destinations out of 1000 (max. 500000)
  738 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -66,4 +66,4 @@
 \contentsline {subsection}{\numberline {5.7.14}get-write-prot - Returns bit array of sector write protection.}{49}{subsection.5.7.14}%
 \contentsline {subsection}{\numberline {5.7.15}exit - Exits the bootloader and starts the user application.}{49}{subsection.5.7.15}%
 \contentsline {chapter}{\numberline {6}Conclusion}{50}{chapter.6}%
-\contentsline {chapter}{Bibliography}{51}{chapter*.30}%
+\contentsline {chapter}{Bibliography}{51}{chapter*.29}%

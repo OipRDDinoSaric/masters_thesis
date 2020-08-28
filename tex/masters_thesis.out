@@ -65,4 +65,4 @@
 \BOOKMARK [2][-]{subsection.5.7.14}{get-write-prot - Returns bit array of sector write protection.}{section.5.7}% 65
 \BOOKMARK [2][-]{subsection.5.7.15}{exit - Exits the bootloader and starts the user application.}{section.5.7}% 66
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 67
-\BOOKMARK [0][-]{chapter*.30}{Bibliography}{}% 68
+\BOOKMARK [0][-]{chapter*.29}{Bibliography}{}% 68

@@ -60,7 +60,7 @@ breaklines=true
 
 Functional safety and functional safety standards overview is given, along with an example of functional safety in embedded systems. Explanation of how ARM Cortex-R improves functional safety over Cortex M is provided. Implemented software for redundancy on Cortex M. The software includes a bootloader and a modified FreeRTOS operating system. The bootloader supports the ability to load new applications and contains a command shell with accompanying functions. The modified FreeRTOS operating system provides features of tracking the individual tasks execution time and task replication. Demonstratration of the functionality is available through examples in source code.
 
-\keywords{Functional safety, IEC 61508,IEC 26262, bootloader, certification, ARM Cortex R, Cortex R, FreeRTOS, Cortex M, kernel}
+\keywords{Functional safety, IEC 61508,IEC 26262, bootloader, certification, ARM Cortex R, Cortex R, FreeRTOS, Cortex M, kernel, redudancy, lock-step}
 \end{abstract}
 
 \hrtitle{Programska i sklopovska arhitektura redundantnih ugradbenih računalnih sustava}
@@ -69,7 +69,7 @@ Functional safety and functional safety standards overview is given, along with 
 Opisana je funkcijska sigurnost i dan je pregled odgovarajućih standarda. Dodan je i primjer funkcijske sigurnosti u ugradbenim računalnim sustavima. Opisano je kako ARM Cortex R popravlja funkcijsku sigurnost u odnosu na ARM Cortex M.
 Implementirana je programska potpora za ostvarivanje redundancije na ARM Cortex M mikrokontroleru. Programska potpora za redundanciju sadržava bootloader i modificirani operacijski sustav FreeRTOS. Bootloader podržava mogućnost učitavanja novih aplikacija i naredbenu ljusku s odgovarajućim funkcijama. Modificirani operacijski sustav FreeRTOS ima mogućnost praćenja vremena izvođenja pojedinih zadataka i sposobnost repliciranja zadataka (engl. task replication). Demonstracija funkcionalnosti je dostupna kroz primjere u izvornom kodu.
 
-\kljucnerijeci{Funkocionalna sigurnost, IEC 61508,IEC 26262, bootloader, certifikacija, ARM, Cortex R, FreeRTOS, Cortex M, jezgra}
+\kljucnerijeci{Funkocionalna sigurnost, IEC 61508, IEC 26262, bootloader, certifikacija, ARM, Cortex R, FreeRTOS, Cortex M, jezgra, redundancija}
 \end{sazetak}
 
 \end{document}
