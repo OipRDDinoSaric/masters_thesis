@@ -23,7 +23,7 @@ Warning--entry type for "lockstep_analysis" isn't style-file defined
 --line 73 of file literatura.bib
 You've used 12 entries,
             2773 wiz_defined-function locations,
-            655 strings with 6835 characters,
+            654 strings with 6830 characters,
 and the built_in function-call counts, 3432 in all, are:
 = -- 311
 > -- 100

@@ -68,9 +68,9 @@ Amazon~Web Services.
 \newblock Mastering the freertos™ real time kernel, 2020.
 \newblock URL \url{https://www.freertos.org/a00114.html}.
 
-\bibitem[STM(20119)]{stm32f407_ref_man}
+\bibitem[STM(2019)]{stm32f407_ref_man}
 \emph{STM32F407 reference manual}.
-\newblock STMicroelectronics, 20119.
+\newblock STMicroelectronics, 2019.
 \newblock URL
   \url{https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf}.
 
