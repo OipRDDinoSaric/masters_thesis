@@ -6,64 +6,67 @@
 \contentsline {subsection}{\numberline {1.2.2}SIF}{2}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}SIS}{3}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Certification}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Embedded processors redundancy - lockstep}{5}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Example use case \citep {lockstep_analysis}}{6}{subsection.1.4.1}%
-\contentsline {chapter}{\numberline {2}ARM Cortex R comparison with ARM cortex M}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}ARM Cortex R introduction}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}ARM Cortex M introduction}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}ARM Cortex-R5 processor lockstep}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Dual core lockstep}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Triple core lockstep}{9}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Sto jos dodaje Cortex R}{9}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}FreeRTOS kernel}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Inner workings of the tasks}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Inner workings of the scheduler}{13}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Inner workings of the timers}{15}{section.3.4}%
-\contentsline {chapter}{\numberline {4}FreeRTOS functional safety additions}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Timed tasks addition}{17}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Introduction}{17}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Architecture}{17}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Limitiations}{20}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Replicated tasks}{20}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Introduction}{20}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Architecture}{21}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Limitiations}{21}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Command reference}{21}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}xTaskCreateTimed - Creates a timed task.}{22}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}vTaskTimedReset - Resets the timer of timed task.}{26}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}xTimerGetTaskHandle - Gets the corresponding timed task handle from the timer handle.}{26}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}xTaskCreateReplicated - Creates a replicated task.}{27}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}xTaskSetCompareValue - Sets a compare value for the calling task.}{30}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}vTaskSyncAndCompare - Syncronizes the replicated tasks and compares compare values.}{31}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}eTaskGetType - Get the type of the task.}{31}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}xTimerPause - Pauses the timer.}{32}{subsection.4.3.8}%
-\contentsline {subsection}{\numberline {4.3.9}xTimerPauseFromISR - Pauses the timer from interrupt service routine.}{32}{subsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.3.10}xTimerResume - Resumes the timer.}{33}{subsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.3.11}xTimerResumeFromISR - Resumes the timer from interrupt service routine.}{34}{subsection.4.3.11}%
-\contentsline {subsection}{\numberline {4.3.12}xTimerIsTimerActiveFromISR - Checks if timer is active from interrupt service routine.}{35}{subsection.4.3.12}%
-\contentsline {chapter}{\numberline {5}Secure bootloader}{36}{chapter.5}%
-\contentsline {section}{\numberline {5.1}What is a bootloader?}{36}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Developed bootloader overview}{36}{section.5.2}%
-\contentsline {section}{\numberline {5.3}The bootloader's architecture}{37}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Flash memory organization}{38}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Application boot record}{39}{section.5.5}%
-\contentsline {section}{\numberline {5.6}User application modifications}{40}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Command reference}{41}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}version - Gets a version of the bootloader.}{41}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}help - Makes life easier.}{42}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}reset - Resets the microcontroller.}{42}{subsection.5.7.3}%
-\contentsline {subsection}{\numberline {5.7.4}cid - Gets chip identification number.}{42}{subsection.5.7.4}%
-\contentsline {subsection}{\numberline {5.7.5}get-rdp-level - Gets read protection \cite [p.~93]{stm32f407_ref_man}}{43}{subsection.5.7.5}%
-\contentsline {subsection}{\numberline {5.7.6}jump-to - Jumps to a requested address.}{43}{subsection.5.7.6}%
-\contentsline {subsection}{\numberline {5.7.7}flash-erase - Erases flash memory.}{43}{subsection.5.7.7}%
-\contentsline {subsection}{\numberline {5.7.8}flash-write - Writes to flash memory.}{44}{subsection.5.7.8}%
-\contentsline {subsection}{\numberline {5.7.9}mem-read - Read bytes from memory.}{45}{subsection.5.7.9}%
-\contentsline {subsection}{\numberline {5.7.10}update-act - Updates active application from new application memory area.}{46}{subsection.5.7.10}%
-\contentsline {subsection}{\numberline {5.7.11}update-new - Updates new application.}{46}{subsection.5.7.11}%
-\contentsline {subsection}{\numberline {5.7.12}en-write-prot - Enables write protection per sector.}{48}{subsection.5.7.12}%
-\contentsline {subsection}{\numberline {5.7.13}dis-write-prot - Disables write protection per sector.}{48}{subsection.5.7.13}%
-\contentsline {subsection}{\numberline {5.7.14}get-write-prot - Returns bit array of sector write protection.}{49}{subsection.5.7.14}%
-\contentsline {subsection}{\numberline {5.7.15}exit - Exits the bootloader and starts the user application.}{49}{subsection.5.7.15}%
-\contentsline {chapter}{\numberline {6}Conclusion}{50}{chapter.6}%
-\contentsline {chapter}{Bibliography}{51}{chapter*.29}%
+\contentsline {section}{\numberline {1.4}Embedded processors redundancy - lockstep}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Introduction}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Delayed lockstep \citep {patent_delayed_lockstep}}{7}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Positional diversity}{8}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Example use case \citep {lockstep_analysis}}{8}{subsection.1.4.4}%
+\contentsline {chapter}{\numberline {2}ARM Cortex R comparison with ARM cortex M}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}ARM Cortex R introduction}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}ARM Cortex M introduction}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}ARM Cortex-R5 processor lockstep}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Dual core lockstep}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Triple core lockstep}{11}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Sto jos dodaje Cortex R}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {3}FreeRTOS kernel}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Inner workings of the tasks}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Inner workings of the scheduler}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Inner workings of the timers}{17}{section.3.4}%
+\contentsline {chapter}{\numberline {4}FreeRTOS functional safety additions}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Timed tasks addition}{19}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Introduction}{19}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Architecture}{19}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Limitiations}{22}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Replicated tasks}{22}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Introduction}{22}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Architecture}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Limitiations}{23}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Command reference}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}xTaskCreateTimed - Creates a timed task.}{24}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}vTaskTimedReset - Resets the timer of timed task.}{28}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}xTimerGetTaskHandle - Gets the corresponding timed task handle from the timer handle.}{28}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}xTaskCreateReplicated - Creates a replicated task.}{29}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}xTaskSetCompareValue - Sets a compare value for the calling task.}{32}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}vTaskSyncAndCompare - Syncronizes the replicated tasks and compares compare values.}{33}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}eTaskGetType - Get the type of the task.}{33}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}xTimerPause - Pauses the timer.}{34}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}xTimerPauseFromISR - Pauses the timer from interrupt service routine.}{34}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}xTimerResume - Resumes the timer.}{35}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}xTimerResumeFromISR - Resumes the timer from interrupt service routine.}{36}{subsection.4.3.11}%
+\contentsline {subsection}{\numberline {4.3.12}xTimerIsTimerActiveFromISR - Checks if timer is active from interrupt service routine.}{37}{subsection.4.3.12}%
+\contentsline {chapter}{\numberline {5}Secure bootloader}{38}{chapter.5}%
+\contentsline {section}{\numberline {5.1}What is a bootloader?}{38}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Developed bootloader overview}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}The bootloader's architecture}{39}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Flash memory organization}{40}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Application boot record}{41}{section.5.5}%
+\contentsline {section}{\numberline {5.6}User application modifications}{42}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Command reference}{43}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}version - Gets a version of the bootloader.}{43}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}help - Makes life easier.}{44}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}reset - Resets the microcontroller.}{44}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}cid - Gets chip identification number.}{44}{subsection.5.7.4}%
+\contentsline {subsection}{\numberline {5.7.5}get-rdp-level - Gets read protection \cite [p.~93]{stm32f407_ref_man}}{45}{subsection.5.7.5}%
+\contentsline {subsection}{\numberline {5.7.6}jump-to - Jumps to a requested address.}{45}{subsection.5.7.6}%
+\contentsline {subsection}{\numberline {5.7.7}flash-erase - Erases flash memory.}{45}{subsection.5.7.7}%
+\contentsline {subsection}{\numberline {5.7.8}flash-write - Writes to flash memory.}{46}{subsection.5.7.8}%
+\contentsline {subsection}{\numberline {5.7.9}mem-read - Read bytes from memory.}{47}{subsection.5.7.9}%
+\contentsline {subsection}{\numberline {5.7.10}update-act - Updates active application from new application memory area.}{48}{subsection.5.7.10}%
+\contentsline {subsection}{\numberline {5.7.11}update-new - Updates new application.}{48}{subsection.5.7.11}%
+\contentsline {subsection}{\numberline {5.7.12}en-write-prot - Enables write protection per sector.}{50}{subsection.5.7.12}%
+\contentsline {subsection}{\numberline {5.7.13}dis-write-prot - Disables write protection per sector.}{50}{subsection.5.7.13}%
+\contentsline {subsection}{\numberline {5.7.14}get-write-prot - Returns bit array of sector write protection.}{51}{subsection.5.7.14}%
+\contentsline {subsection}{\numberline {5.7.15}exit - Exits the bootloader and starts the user application.}{51}{subsection.5.7.15}%
+\contentsline {chapter}{\numberline {6}Conclusion}{52}{chapter.6}%
+\contentsline {chapter}{Bibliography}{53}{chapter*.32}%

@@ -84,3 +84,19 @@
     year = {2019},    
     url = {https://www.youtube.com/watch?v=srwHBvEe9WA}
 }
+
+@misc{patent_delayed_lockstep,
+    author = {Texas Instruments Deutschland GmbH},
+    title = {Delayed lock-step cpu compare},
+    year = {2008},    
+    url = {https://patents.google.com/patent/US20080244305A1/en}
+}
+
+@manual{safety_maual_tms570ls31x,
+    author = {Texasd Instruments},
+    title = {Safety Manual for TMS570LS31x and
+TMS570LS21x Hercules™ ARM®-Based Safety
+Critical Microcontrollers},
+    year = {2015},
+    url = {https://www.ti.com/lit/ug/spnu511d/spnu511d.pdf?ts=1598992005375}
+}

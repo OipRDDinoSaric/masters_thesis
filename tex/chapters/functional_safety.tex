@@ -142,13 +142,71 @@ When a safety instrumented function fulfills aforementioned SIL requirements a c
 
 \section{Embedded processors redundancy - lockstep}
 
+\subsection{Introduction}
+
 Consider a system with one processing unit. Such system is obviously non-redundant from the
 aspect of instruction execution. Lockstep is redundancy mechanism for increasing the system reliability
 by introducing at least one redundant processing unit. Redundant processing unit replicates the behavior of
 the original processing unit. Depending on number of processing units lockstep can provide fault-detection, if there are less than three processing units in a system, or both fault-detection and
-fault-tolerance with more than two processing units in a system. \citep{ipavic_lockstep}
+fault-tolerance with more than two processing units in a system. \citep{ipavic_lockstep} \autoref{fig:patent_not_delayed} shows CPU1 and CPU2 in lockstep. CCU or CPU compare unit compares the outputs from the CPUs and throws an error if there is a mismatch.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.9\linewidth]{images/patent_not_delayed.png}
+      \caption{Block diagram of two processors in lockstep}
+      \label{fig:patent_not_delayed}
+    
+\end{figure}
+
+One approach in categorizing errors detectable by lockstep is soft and hard errors. Soft errors describe errors that happen by temporary anomaly e.g. electrostatic discharge (ESD), radioactive decay, cosmic radiation. These errors lead to unintended transient signals or conditions in CPU or in peripherals. Their lifetime is usually 2 milliseconds or less. This kind of errors can affect an instruction execution or computation, but
+the next time that the same operation will be performed the error will not be reproducible. On the other hand, hard errors are permanent and are caused by a
+long term degradation of the silicon/logic over time. Hard errors may also occur
+by corrupted memory cells or other circuit components due to ionizing radiation,
+manufacturing inconsistencies, or exposure to high current which may cause
+metal migration. Generally, they are caused by physical defect of the hardware and
+they are not recoverable.
+
+Lockstep architecture can detect the aforementioned soft and hard faults. If three processors are lockestepped, they are also fault-tolerant. \citep{lockstep_analysis}
 
 Locksteped processors can get upto SIL3, but not SIL4 as a use of on-chip redundancy is limited by IEC 61508 standard to SIL3. Therefore, although it may seem, lockstep is certainly not panacea in all safety systems and certain amount of work is needed to justify its usage. Nevertheless, for all safety integrity levels, but SIL4 lockstep is often used extensively (e.g. automotive applications). \citep{ipavic_lockstep}
+
+\subsection{Delayed lockstep \citep{patent_delayed_lockstep}}
+ 
+To battle the transient errors (soft errors) e.g. cosmic radiation that lead the CPU or peripherals into unintended states delayed lockstep was invented by Texas Instruments. One of the CPUs' input is delayed, while other one's output is delayed ensuring that if a transient error happens it will not affect both CPUs on the same instructions. \autoref{fig:patent_delayed} visualizes the delayed lockstep.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.8\linewidth]{images/patent_delayed.png}
+      \caption{Block diagram of two processors in delayed lockstep}
+      \label{fig:patent_delayed}
+    
+\end{figure}
+
+\subsection{Positional diversity}
+
+When designing lockstep architecture positional diversity shall also be considered. Two cores shall be rotated 90 degrees and flipped in relation to each other. Atleast 100 um space is left in between them. Physical diversity gives some assurance of a different failure mechanism if
+there is a manufacturing flaw causing physical damage to the die. \autoref{fig:lockstep_cpu_position} visualizes an example of two cores on the silicon. ž
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.8\linewidth]{images/lockstep_cpu_position.png}
+      \caption{Typical orientation of the cores \citep{safety_maual_tms570ls31x}}
+      \label{fig:lockstep_cpu_position}
+    
+\end{figure}
+
+The common cause failures
+that physical diversity is called to restrict might be due to manufacturing flaws
+or even susceptibility to radiation due to the direction of some of the components
+used in the core design. A simple example for a potential manufacturing flaw that
+might be common to both cores without the physical diversity, suppose that there
+is a geometry of a certain component that was prone to collecting moisture and it was processed in a way that this component was traveling parallel to some chemical spray in the process. This might lead to trapped materials at this component
+in the silicon but if the components were rotated and flipped it would make the
+likelihood of trapping contaminates less likely. In this way, making the two cores
+physically diverse can keep both cores from having the same defective component. \citep{lockstep_analysis}
 
 \subsection{Example use case \citep{lockstep_analysis}}
 
