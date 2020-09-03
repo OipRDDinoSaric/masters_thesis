@@ -1,3 +1,2 @@
-\contentsline {todo}{dual code lockstep, mention delayed lockstep CPU compare}{11}{section*.14}%
-\contentsline {todo}{dual code lockstep}{11}{section*.15}%
-\contentsline {todo}{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages}{11}{section*.16}%
+\contentsline {todo}{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages, ram redundancy - parity. (cortex-R5 reference manual section 8.2)}{16}{section*.17}%
+\contentsline {todo}{Demonstration}{57}{section*.33}%

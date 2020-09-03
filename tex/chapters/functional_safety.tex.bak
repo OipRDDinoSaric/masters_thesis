@@ -56,9 +56,9 @@ SIS or safety instrumented system is a one or more safety functions put together
 For the certification, system integrity level is determined. SIL of a product is determined by three things\citep{func_safety_fundamentals}:
 \begin{itemize}
 
-    \item The systematic capability rating,
-    \item The architectural constrains for the element and
-    \item The PFDaverage calculation.
+    \item the systematic capability rating,
+    \item the architectural constrains for the element and
+    \item the PFDaverage calculation.
     
 \end{itemize}
 
@@ -187,7 +187,7 @@ To battle the transient errors (soft errors) e.g. cosmic radiation that lead the
 \subsection{Positional diversity}
 
 When designing lockstep architecture positional diversity shall also be considered. Two cores shall be rotated 90 degrees and flipped in relation to each other. Atleast 100 um space is left in between them. Physical diversity gives some assurance of a different failure mechanism if
-there is a manufacturing flaw causing physical damage to the die. \autoref{fig:lockstep_cpu_position} visualizes an example of two cores on the silicon.
+there is a manufacturing flaw causing physical damage to the die. \autoref{fig:lockstep_cpu_position} visualizes an example of two cores on the silicon. ž
 
 \begin{figure}[H]
 
@@ -197,6 +197,22 @@ there is a manufacturing flaw causing physical damage to the die. \autoref{fig:l
       \label{fig:lockstep_cpu_position}
     
 \end{figure}
+
+The common cause failures
+that physical diversity is called to restrict might be due to manufacturing flaws
+or even susceptibility to radiation due to the direction of some of the components
+used in the core design. A simple example for a potential manufacturing flaw that
+might be common to both cores without the physical diversity, suppose that there
+is a geometry of a certain component that was prone to collecting moisture and it was processed in a way that this component was traveling parallel to some chemical spray in the process. This might lead to trapped materials at this component
+in the silicon but if the components were rotated and flipped it would make the
+likelihood of trapping contaminates less likely. In this way, making the two cores
+physically diverse can keep both cores from having the same defective component. \citep{lockstep_analysis}
+
+\subsection{Debugging}
+
+During a debug session, where the execution of the code is halted, several asynchronous halting events occur, with a possibility to lead to a loss of Lockstep (indication of non-existing errors). For this reason, when halting debug events are
+detected, the compare unit is automatically disabled. In order to set the Lockstep
+mode on and the compare unit in operational state a CPU reset is required. \citep{TMS570LS31x21x_manual}
 
 \subsection{Example use case \citep{lockstep_analysis}}
 

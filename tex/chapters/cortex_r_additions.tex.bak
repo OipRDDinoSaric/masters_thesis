@@ -1,27 +1,99 @@
-\chapter{ARM Cortex R comparison with ARM cortex M}
+\chapter{ARM Cortex-R functional safety additions over ARM cortex-M}
 \label{cortex_r_additions}
 
-\section{ARM Cortex R introduction}
+\section{ARM Cortex-R introduction}
 
-The ARM Cortex R is a family of 32-bit RISC processors. The cores are optimized for hard real-time and safety-critical applications. Cortex R family consists of: ARM Cortex-R4(F), ARM Cortex-R5(F), ARM Cortex-R7(F), ARM Cortex-R8(F and ARM Cortex-R52(F).
+The ARM Cortex-R is a family of 32-bit RISC processors. The cores are optimized for hard real-time and safety-critical applications. Cortex-R family consists of: ARM Cortex-R4(F), ARM Cortex-R5(F), ARM Cortex-R7(F), ARM Cortex-R8(F and ARM Cortex-R52(F).
 
-The Cortex-R is suitable for use in computer-controlled systems where very low latency and/or a high level of safety is required. An example of a hard real-time, safety critical application would be a modern electronic braking system in an automobile. The system not only needs to be fast and responsive to a plethora of sensor data input, but is also responsible for human safety. A failure of such a system could lead to severe injury or loss of life. Other examples of hard real-time and safety critical applications include medical devices, electrionic control units (ECU), robotics etc.
+The Cortex-R is suitable for use in computer-controlled systems where very low latency and/or a high level of safety is required. An example of a hard real-time, safety critical application would be a modern electronic braking system in an automobile. The system not only needs to be fast and responsive to a plethora of sensor data input, but is also responsible for human safety. A failure of such a system could lead to severe injury or loss of life. Other examples of hard real-time and safety critical applications include medical devices, electronic control units (ECU), robotics etc.
 
 \section{ARM Cortex M introduction}
 
-The ARM Cortex M is also a family of 32-bit RISC processors. The cores are optimized for low-cost and energy-efficient microcontrollers. Theese cores are being used in tens of billions of consumer devices. The processors are intended for deeply embedded applications that require fast interrupt response features. \citep{cortex_m4_reference} The family consists of: Cortex-M0, Cortex-M0+, Cortex-M1, Cortex-M3, Cortex-M4, Cortex-M7, Cortex-M23, Cortex-M33, Cortex-M35P and Cortex-M55.
+The ARM Cortex M is also a family of 32-bit RISC processors. The cores are optimized for low-cost and energy-efficient microcontrollers. These cores are being used in tens of billions of consumer devices. The processors are intended for deeply embedded applications that require fast interrupt response features \citep{cortex_m4_reference}. The family consists of: Cortex-M0, Cortex-M0+, Cortex-M1, Cortex-M3, Cortex-M4, Cortex-M7, Cortex-M23, Cortex-M33, Cortex-M35P and Cortex-M55.
 
 
-\section{ARM Cortex-R5 processor lockstep}
+\section{ARM Cortex-R processor lockstep}
+
 
 \subsection{Dual core lockstep}
 
-\todoi{dual code lockstep, mention delayed lockstep CPU compare}
+A Cortex-R5 processor group has four configurations, as described in \citep{cortex_r5_reference_manual}:
+\begin{itemize}
+
+    \item single CPU,
+    \item twin CPU,
+    \item redundant CPU and
+    \item split/lock configuration.
+    
+\end{itemize}
+
+Twin CPU configuration includes two individual and decoupled CPUs. Each CPU has its own
+cache RAMs, debug logic and bus interfaces to the rest of the SoC. It
+offers higher performance than a standard single CPU configuration. 
+
+In redundant CPU configuration (lockstep), there is a functional CPU and a second redundant copy of the majority of the CPU logic. The redundant logic is driven by the same inputs as the functional logic.  In particular, the redundant CPU logic shares the same cache RAMs as the functional CPU. Therefore only one set of cache RAMs is required. The redundant logic
+operates in lock-step with the CPU, but does not directly affect the processor behavior in any way \citep{cortex_r5_reference_manual}. The CPU outputs to the cache RAMs are driven \textbf{exclusively} by the functional CPU. The comparison logic for comparing the outputs of the redundant logic and the functional logic can detect a single fault that occurs in either set of logic. ARM provides example comparison logic, but the developer can change it during the implementation. 
+
+Split/lock configuration is a combination of two previously mentioned configurations. This mode includes two processors. If a processor is in split mode the CPUs work in twin CPU configuration, and if the processor is in lock mode it is in redundant configuration.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=1\linewidth]{images/split_lock_configuration.png}
+      \caption{Split/lock configuration \citep{cortex_r8_reference_manual}}
+      \label{fig:tcls_architecture}
+    
+\end{figure}
 
 \subsection{Triple core lockstep}
-\todoi{dual code lockstep}
+
+ARM triple core lockstep architecture (TCLS) builds up on the industry success of the ARM Cortex-R5 dual-core lock-step (DCLS). The TCLS architecture adds a third redundant CPU unit to the DCLS Cortex-R5 system to achieve fail functional capabilities and hence increase the availability of the system \citep{TCLS_cortex_r}.
+
+Cores in triple lockstep have shared data and instruction cache, but each Cortex-R5 has its own clock tree. \autoref{fig:tcls_architecture} shows system level solution to mitigate soft errors occurring in the redundant CPUs. On the right side of the figure TCLS assist unit is visualized. TCLS assist unit supports the lockstep functioning of the CPUs and handles the error recovery process. The unit consists of a majority voter, error detection logic and synchronization logic.
+
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.7\linewidth]{images/tcls_architecture.png}
+      \caption{ARM triple core lockstep of Cortex-R5 \citep{TCLS_cortex_r}}
+      \label{fig:tcls_architecture}
+    
+\end{figure}
+
+At every clock cycle, the instructions to execute are read
+from the shared instruction cache or TCM (tightly coupled memory) and distributed to
+the triplicated CPUs. The outputs from the CPUs are majority voted and
+forwarded to the shared data cache, TCM, and I/O ports.
+Simultaneously, the Error Detection logic checks if there is any
+mismatch in the outputs delivered by the three CPUs. If there is
+a mismatch, all CPUs are interrupted and the Error Detection
+logic identifies whether it is a correctable error (i.e., only one
+of the CPUs delivers a different set of outputs) or an
+uncorrectable one (i.e., all CPUs deliver different outputs). If
+the error is correctable, the TCLS passes the control to the
+resynchronization logic to correct the architectural state of the
+erroneous CPU, that is, to resynchronize all the CPUs. Note
+here that the Majority Voter acts as an error propagation
+boundary, preventing correctable errors from propagating to
+memories and I/O ports. In the highly unlikely case that the
+error is uncorrectable, the TCLS transitions to a fail-safe
+operation state \citep{TCLS_cortex_r}.
+
+As mentioned in last paragraph, majority voter is in the critical path of the system, but the error detection logic is  out of the critical path and is pipelined to increase performance.
+
+\autoref{fig:tcls_resynchronization} show the flow diagram of the resynchronization logic. Upon a correctable error is detected, the resynchronization logic can immediately trigger the CPU resynchronization process. This action prevents the interruption of the critical real time tasks. It should be noted that the system can continue working on two remaining CPUs, which are in a functionally correct state. The third CPU is recovered from the two functioning CPUs. Unlike the dual core lock step the recovery of the triple core lockstep is automatic and transparent to the software \citep{TCLS_cortex_r}.
+
+\begin{figure}[H]
+
+      \centering
+      \includegraphics[width=0.9\linewidth]{images/tcls_resynchronization.png}
+      \caption{TCLS resynchronization finite state machine \citep{TCLS_cortex_r}}
+      \label{fig:tcls_resynchronization}
+    
+\end{figure}
 
 \section{Sto jos dodaje Cortex R}
 
-\todoi{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages}
+\todoi{data cache, instruction cache, atcm, btcm, preformance monitor unit, interrupt controller connected though porr, more pipeline stages, ram redundancy - parity. (cortex-R5 reference manual section 8.2)}
 

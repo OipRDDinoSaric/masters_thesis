@@ -30,6 +30,7 @@ The thesis is organized in the following way:
     \item Chapter \ref{freertos_kernel} gives overview of of FreeRTOS and inner workings of tasks, scheduler and timers.
     \item Chapter \ref{freertos_modification} gives overview of added safety functions to the FreeRTOS kernel.
     \item Chapter \ref{custom_bootloader} explains how the developed secure bootloader functions and its features.
+    \item Chapter \ref{demonstration} 
     
 \end{itemize}
    

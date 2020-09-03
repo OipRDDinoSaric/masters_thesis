@@ -320,7 +320,7 @@ Parameters:
  
       - "sha256" - Gives best protection (32 bytes), slowest, uses software implementation
            
-      - "crc32" - Medium protection (4 bytes), fast, uses hardware implementation. Settings in [Apendix A](#apend_a)
+      - "crc32" - Medium protection (4 bytes), fast, uses hardware implementation.
 
       - "no" - No protection, fastest
 
@@ -427,7 +427,7 @@ Parameters:
  
       - "sha256" - Gives best protection (32 bytes), slowest, uses software implementation
            
-      - "crc32" - Medium protection (4 bytes), fast, uses hardware implementation. Settings in [Apendix A](#apend_a)
+      - "crc32" - Medium protection (4 bytes), fast, uses hardware implementation.
 
       - "no" - No protection, fastest
 

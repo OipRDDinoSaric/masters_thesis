@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  1 SEP 2020 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.16)  3 SEP 2020 23:43
 entering extended mode
 **./masters_thesis.tex
 (masters_thesis.tex
@@ -942,8 +942,12 @@ File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__pdf_internal_box=\box72
 )
 (masters_thesis.aux (chapters/introduction.aux) (chapters/functional_safety.aux
-) (chapters/cortex_r_additions.aux) (chapters/freertos_kernel.aux)
-(chapters/freertos_modification.aux) (chapters/custom_bootloader.aux)
+) (chapters/cortex_r_additions.aux
+
+LaTeX Warning: Label `fig:tcls_architecture' multiply defined.
+
+) (chapters/freertos_kernel.aux) (chapters/freertos_modification.aux)
+(chapters/custom_bootloader.aux) (chapters/demonstration.aux)
 (chapters/conclusion.aux))
 \openout1 = `masters_thesis.aux'.
 
@@ -1150,12 +1154,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 (chapters/introduction.tex
-<images/texas_refinery.jpg, id=497, 505.89pt x 335.2525pt>
+<images/texas_refinery.jpg, id=517, 505.89pt x 335.2525pt>
 File: images/texas_refinery.jpg Graphic file (type jpg)
 <use images/texas_refinery.jpg>
 Package pdftex.def Info: images/texas_refinery.jpg  used on input line 8.
 (pdftex.def)             Requested size: 154.35553pt x 102.29022pt.
-<images/concorde_disaster.jpg, id=498, 233.37187pt x 146.04562pt>
+<images/concorde_disaster.jpg, id=518, 233.37187pt x 146.04562pt>
 File: images/concorde_disaster.jpg Graphic file (type jpg)
 <use images/concorde_disaster.jpg>
 Package pdftex.def Info: images/concorde_disaster.jpg  used on input line 14.
@@ -1173,13 +1177,13 @@ Chapter 1.
 
 
 ]
-<images/sil_level_chart.png, id=526, 1204.5pt x 566.115pt>
+<images/sil_level_chart.png, id=547, 1204.5pt x 566.115pt>
 File: images/sil_level_chart.png Graphic file (type png)
 <use images/sil_level_chart.png>
 Package pdftex.def Info: images/sil_level_chart.png  used on input line 36.
 (pdftex.def)             Requested size: 308.71106pt x 145.09598pt.
  [2 <./images/sil_level_chart.png>]
-<images/sil_requirements.png, id=534, 770.88pt x 578.16pt>
+<images/sil_requirements.png, id=555, 770.88pt x 578.16pt>
 File: images/sil_requirements.png Graphic file (type png)
 <use images/sil_requirements.png>
 Package pdftex.def Info: images/sil_requirements.png  used on input line 68.
@@ -1188,14 +1192,14 @@ Package pdftex.def Info: images/sil_requirements.png  used on input line 68.
 
 pdfTeX warning: pdflatex (file ./images/cortex_r_certificate.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<images/cortex_r_certificate.pdf, id=546, 597.50829pt x 845.0471pt>
+<images/cortex_r_certificate.pdf, id=567, 597.50829pt x 845.0471pt>
 File: images/cortex_r_certificate.pdf Graphic file (type pdf)
 <use images/cortex_r_certificate.pdf>
 Package pdftex.def Info: images/cortex_r_certificate.pdf  used on input line 13
 7.
 (pdftex.def)             Requested size: 396.91325pt x 561.34323pt.
 [4] [5 <./images/cortex_r_certificate.pdf>]
-<images/patent_not_delayed.png, id=593, 1154.06157pt x 800.9925pt>
+<images/patent_not_delayed.png, id=614, 1154.06157pt x 800.9925pt>
 File: images/patent_not_delayed.png Graphic file (type png)
 <use images/patent_not_delayed.png>
 Package pdftex.def Info: images/patent_not_delayed.png  used on input line 156.
@@ -1238,13 +1242,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `subscript' on input line 174.
 
-<images/patent_delayed.png, id=603, 1154.06157pt x 982.42032pt>
+<images/patent_delayed.png, id=624, 1154.06157pt x 982.42032pt>
 File: images/patent_delayed.png Graphic file (type png)
 <use images/patent_delayed.png>
 Package pdftex.def Info: images/patent_delayed.png  used on input line 181.
 (pdftex.def)             Requested size: 352.81552pt x 300.33482pt.
 [7 <./images/patent_delayed.png>]
-<images/lockstep_cpu_position.png, id=609, 487.8225pt x 217.5628pt>
+<images/lockstep_cpu_position.png, id=630, 487.8225pt x 217.5628pt>
 File: images/lockstep_cpu_position.png Graphic file (type png)
 <use images/lockstep_cpu_position.png>
 Package pdftex.def Info: images/lockstep_cpu_position.png  used on input line 1
@@ -1253,58 +1257,80 @@ Package pdftex.def Info: images/lockstep_cpu_position.png  used on input line 1
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 211.
+(hyperref)                removing `\begingroup' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 211.
+(hyperref)                removing `\let' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 211.
+(hyperref)                removing `\<let>-command' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 211.
+(hyperref)                removing `\NAT@ctype' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 211.
+(hyperref)                removing `\z@' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 211.
+(hyperref)                removing `\let' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 211.
+(hyperref)                removing `\new@ifnextchar' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 211.
+(hyperref)                removing `subscript' on input line 217.
 
-[8 <./images/lockstep_cpu_position.png>]) [9]
+[8 <./images/lockstep_cpu_position.png>] [9]) [10]
 \openout2 = `chapters/cortex_r_additions.aux'.
 
- (chapters/cortex_r_additions.tex
+
+(chapters/cortex_r_additions.tex
 Chapter 2.
+[11
+
+
+
+]
+<images/split_lock_configuration.png, id=659, 457.71pt x 531.48563pt>
+File: images/split_lock_configuration.png Graphic file (type png)
+<use images/split_lock_configuration.png>
+Package pdftex.def Info: images/split_lock_configuration.png  used on input lin
+e 42.
+(pdftex.def)             Requested size: 441.01773pt x 512.1262pt.
+ [12] [13 <./images/split_lock_configuration.png>]
+<images/tcls_architecture.png, id=674, 450.18187pt x 492.33937pt>
+File: images/tcls_architecture.png Graphic file (type png)
+<use images/tcls_architecture.png>
+Package pdftex.def Info: images/tcls_architecture.png  used on input line 58.
+(pdftex.def)             Requested size: 308.71106pt x 337.63356pt.
+ [14 <./images/tcls_architecture.png>]
+<images/tcls_resynchronization.png, id=685, 526.96875pt x 581.92406pt>
+File: images/tcls_resynchronization.png Graphic file (type png)
+<use images/tcls_resynchronization.png>
+Package pdftex.def Info: images/tcls_resynchronization.png  used on input line 
+90.
+(pdftex.def)             Requested size: 396.91325pt x 438.32442pt.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 19.
-[10
-
-
-
-]) [11]
+ine 98.
+) [15 <./images/tcls_resynchronization.png>] [16]
 \openout2 = `chapters/freertos_kernel.aux'.
 
- (chapters/freertos_kernel.tex
+
+(chapters/freertos_kernel.tex
 Chapter 3.
-[12
+[17
 
 
 
-] [13]
-<images/freertos_task_states.png, id=652, 625.58719pt x 460.72125pt>
+] [18]
+<images/freertos_task_states.png, id=716, 625.58719pt x 460.72125pt>
 File: images/freertos_task_states.png Graphic file (type png)
 <use images/freertos_task_states.png>
 Package pdftex.def Info: images/freertos_task_states.png  used on input line 90
@@ -1316,87 +1342,87 @@ Overfull \hbox (0.5815pt too wide) in paragraph at lines 102--107
 be block-ing or non-blocking.
  []
 
-[14 <./images/freertos_task_states.png>]
-<images/freertos_scheduler_overview.png, id=661, 541.27219pt x 547.2947pt>
+[19 <./images/freertos_task_states.png>]
+<images/freertos_scheduler_overview.png, id=725, 541.27219pt x 547.2947pt>
 File: images/freertos_scheduler_overview.png Graphic file (type png)
 <use images/freertos_scheduler_overview.png>
 Package pdftex.def Info: images/freertos_scheduler_overview.png  used on input 
 line 126.
 (pdftex.def)             Requested size: 352.81552pt x 356.7478pt.
- [15]
-<images/freertos_scheduler_increment.png, id=670, 481.04718pt x 670.00313pt>
+ [20]
+<images/freertos_scheduler_increment.png, id=733, 481.04718pt x 670.00313pt>
 File: images/freertos_scheduler_increment.png Graphic file (type png)
 <use images/freertos_scheduler_increment.png>
 Package pdftex.def Info: images/freertos_scheduler_increment.png  used on input
  line 145.
 (pdftex.def)             Requested size: 352.81552pt x 491.4087pt.
- [16 <./images/freertos_scheduler_overview.png>]
+ [21 <./images/freertos_scheduler_overview.png>]
 Overfull \hbox (8.7305pt too wide) in paragraph at lines 157--158
 \T1/lmr/m/n/12 timer dae-mon ser-vice (its pri-or-ity is mod-i-fi-able with con
 -fig-TIMER_TASK_PRIORITY).
  []
 
-[17 <./images/freertos_scheduler_increment.png>]) [18]
+[22 <./images/freertos_scheduler_increment.png>]) [23]
 \openout2 = `chapters/freertos_modification.aux'.
 
 
 (chapters/freertos_modification.tex
 Chapter 4.
-<images/freertos_overflow_start.png, id=689, 1402.48969pt x 547.2947pt>
+<images/freertos_overflow_start.png, id=753, 1402.48969pt x 547.2947pt>
 File: images/freertos_overflow_start.png Graphic file (type png)
 <use images/freertos_overflow_start.png>
 Package pdftex.def Info: images/freertos_overflow_start.png  used on input line
  23.
 (pdftex.def)             Requested size: 441.01773pt x 172.0981pt.
-[19
+[24
 
 
 
 ]
-<images/freertos_overrrun_increment.png, id=696, 784.43062pt x 302.63063pt>
+<images/freertos_overrrun_increment.png, id=760, 784.43062pt x 302.63063pt>
 File: images/freertos_overrrun_increment.png Graphic file (type png)
 <use images/freertos_overrrun_increment.png>
 Package pdftex.def Info: images/freertos_overrrun_increment.png  used on input 
 line 34.
 (pdftex.def)             Requested size: 441.01773pt x 170.14618pt.
-<images/freertos_overrun_start.png, id=697, 877.77937pt x 338.01282pt>
+<images/freertos_overrun_start.png, id=761, 877.77937pt x 338.01282pt>
 File: images/freertos_overrun_start.png Graphic file (type png)
 <use images/freertos_overrun_start.png>
 Package pdftex.def Info: images/freertos_overrun_start.png  used on input line 
 43.
 (pdftex.def)             Requested size: 441.01773pt x 169.82605pt.
- [20 <./images/freertos_overflow_start.png> <./images/freertos_overrrun_increme
+ [25 <./images/freertos_overflow_start.png> <./images/freertos_overrrun_increme
 nt.png>]
-<images/timed_example_overrun.png, id=707, 1011.78pt x 238.491pt>
+<images/timed_example_overrun.png, id=771, 1011.78pt x 238.491pt>
 File: images/timed_example_overrun.png Graphic file (type png)
 <use images/timed_example_overrun.png>
 Package pdftex.def Info: images/timed_example_overrun.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 441.01773pt x 103.9538pt.
-<images/timed_example_overflow.png, id=708, 794.97pt x 163.3302pt>
+<images/timed_example_overflow.png, id=772, 794.97pt x 163.3302pt>
 File: images/timed_example_overflow.png Graphic file (type png)
 <use images/timed_example_overflow.png>
 Package pdftex.def Info: images/timed_example_overflow.png  used on input line 
 64.
 (pdftex.def)             Requested size: 441.01773pt x 90.61194pt.
-<images/timed_example_reset.png, id=709, 1156.32pt x 236.3229pt>
+<images/timed_example_reset.png, id=773, 1156.32pt x 236.3229pt>
 File: images/timed_example_reset.png Graphic file (type png)
 <use images/timed_example_reset.png>
 Package pdftex.def Info: images/timed_example_reset.png  used on input line 73.
 
 (pdftex.def)             Requested size: 441.01773pt x 90.13177pt.
- [21 <./images/freertos_overrun_start.png> <./images/timed_example_overrun.png>
+ [26 <./images/freertos_overrun_start.png> <./images/timed_example_overrun.png>
  <./images/timed_example_overflow.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 97.
- [22 <./images/timed_example_reset.png>]
-<images/replicated_example.png, id=728, 722.7pt x 229.8186pt>
+ [27 <./images/timed_example_reset.png>]
+<images/replicated_example.png, id=792, 722.7pt x 229.8186pt>
 File: images/replicated_example.png Graphic file (type png)
 <use images/replicated_example.png>
 Package pdftex.def Info: images/replicated_example.png  used on input line 114.
 
 (pdftex.def)             Requested size: 441.01773pt x 140.24524pt.
- [23 <./images/replicated_example.png>]
+ [28 <./images/replicated_example.png>]
 \openout3 = `masters_thesis.pyg'.
 
 
@@ -1411,13 +1437,13 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 183.
  ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd"
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [24]
-[25]
+) [29]
+[30]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/05318CDB3B2D6FABF3221DF630D41BE7175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex [26] [27])
+F3AFA5ABE.pygtex [31] [32])
 \openout3 = `masters_thesis.pyg'.
 
 
@@ -1432,17 +1458,17 @@ F3AFA5ABE.pygtex)
 
 
 (_minted-masters_thesis/100AF403CC73D2C0DFAD0442205BF21D175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex) [28]
+F3AFA5ABE.pygtex) [33]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/7E90995811690054D62FD5A2A9EB9275175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex) [29] [30]
+F3AFA5ABE.pygtex) [34] [35]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/C00BC612297A4FD4BCABBDD512D083B3175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex [31])
+F3AFA5ABE.pygtex [36])
 \openout3 = `masters_thesis.pyg'.
 
 
@@ -1456,7 +1482,7 @@ Overfull \hbox (16.75157pt too wide) in paragraph at lines 503--503
 
 
 (_minted-masters_thesis/2C9D8F50D4DB4B070E5736201772FD80175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex [32])
+F3AFA5ABE.pygtex [37])
 \openout3 = `masters_thesis.pyg'.
 
 
@@ -1471,43 +1497,43 @@ F3AFA5ABE.pygtex)
 
 
 (_minted-masters_thesis/EE8909D0B647385C8AF0186F5B6D9DF4175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex [33])
+F3AFA5ABE.pygtex [38])
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/21A973ACD83A7C7F3C3389E5AC956EFC175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex) [34]
+F3AFA5ABE.pygtex) [39]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/D3BB05EE0E6AEB2AD188A69EBC954A0A175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex) [35]
+F3AFA5ABE.pygtex) [40]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/BA921C191F95C83CD169E455F16175AE175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex) [36]
+F3AFA5ABE.pygtex) [41]
 \openout3 = `masters_thesis.pyg'.
 
 
 (_minted-masters_thesis/A506964FF581F5580709073BB0DC06DE175DEE501D52ECFAC97802C
-F3AFA5ABE.pygtex)) [37]
+F3AFA5ABE.pygtex)) [42]
 \openout2 = `chapters/custom_bootloader.aux'.
 
  (chapters/custom_bootloader.tex
 Chapter 5.
-[38
+[43
 
 
 
 ]
-<images/bootloader_flow.png, id=1131, 1084.7727pt x 585.387pt>
+<images/bootloader_flow.png, id=1195, 1084.7727pt x 585.387pt>
 File: images/bootloader_flow.png Graphic file (type png)
 <use images/bootloader_flow.png>
 Package pdftex.def Info: images/bootloader_flow.png  used on input line 54.
 (pdftex.def)             Requested size: 352.81552pt x 190.39143pt.
- [39]
-<images/bootloader_cmd_err.png, id=1137, 201.75375pt x 60.225pt>
+ [44]
+<images/bootloader_cmd_err.png, id=1200, 201.75375pt x 60.225pt>
 File: images/bootloader_cmd_err.png Graphic file (type png)
 <use images/bootloader_cmd_err.png>
 Package pdftex.def Info: images/bootloader_cmd_err.png  used on input line 61.
@@ -1517,69 +1543,83 @@ Overfull \hbox (12.32036pt too wide) in paragraph at lines 71--92
 [][] 
  []
 
-[40 <./images/bootloader_flow.png> <./images/bootloader_cmd_err.png>] [41]
-[42] [43] [44] [45] [46] [47] [48] [49] [50]) [51]
+[45 <./images/bootloader_flow.png> <./images/bootloader_cmd_err.png>] [46]
+[47] [48] [49] [50] [51] [52] [53] [54] [55]) [56]
+\openout2 = `chapters/demonstration.aux'.
+
+ (chapters/demonstration.tex
+Chapter 6.
+) [57
+
+
+
+]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex
-Chapter 6.
-) [52
+Chapter 7.
+) [58
 
 
 
 ] (masters_thesis.bbl
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-2.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+6.
  ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 21--25
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
 \T1/lmtt/m/n/12 / / www . freertos . org / wp-[]content / uploads / 2018 / 07 /
  161204 _ Mastering _ the _
  []
 
-[53
+[59
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
+Underfull \hbox (badness 10000) in paragraph at lines 110--114
 []\T1/lmr/m/it/12 STM32F407 ref-er-ence man-ual\T1/lmr/m/n/12 .  STMi-cro-elec-
 tron-ics, 2019.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
+Underfull \hbox (badness 10000) in paragraph at lines 110--114
 \T1/lmr/m/n/12 URL []$\T1/lmtt/m/n/12 https : / / www . st . com / resource / e
 n / reference _ manual /
  []
 
 
-Overfull \hbox (338.29652pt too wide) in paragraph at lines 84--88
+Overfull \hbox (338.29652pt too wide) in paragraph at lines 110--114
 \T1/lmtt/m/n/12 dm00031020-[]stm32f405-[]415-[]stm32f407-[]417-[]stm32f427-[]43
 7-[]and-[]stm32f429-[]439-[]advanced-[]arm-[]based-[]32-[]bit-[]mcus-[]stmicroe
 lectronics .
  []
 
-) [54] [55]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+) [60] [61]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
  (masters_thesis.aux (chapters/introduction.aux)
 (chapters/functional_safety.aux) (chapters/cortex_r_additions.aux)
 (chapters/freertos_kernel.aux) (chapters/freertos_modification.aux)
-(chapters/custom_bootloader.aux) (chapters/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+(chapters/custom_bootloader.aux) (chapters/demonstration.aux)
+(chapters/conclusion.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `masters_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 12678B580FF3FDB733294BF5B7A702D7;5816.
+(rerunfilecheck)             Checksum: 20777B915996838448C706E97EFDC2F2;5966.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 runsystem(del masters_thesis.pyg)...executed.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 27533 strings out of 480790
- 507008 string characters out of 2907031
- 945360 words of memory out of 3000000
- 42047 multiletter control sequences out of 15000+200000
+ 27589 strings out of 480790
+ 508650 string characters out of 2907031
+ 946532 words of memory out of 3000000
+ 42079 multiletter control sequences out of 15000+200000
  627831 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,84p,969b,1945s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1603,9 +1643,9 @@ Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtto1
 0.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on masters_thesis.pdf (65 pages, 2106177 bytes).
+Output written on masters_thesis.pdf (71 pages, 2657897 bytes).
 PDF statistics:
- 1780 PDF objects out of 2073 (max. 8388607)
- 777 named destinations out of 1000 (max. 500000)
- 777 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1857 PDF objects out of 2073 (max. 8388607)
+ 791 named destinations out of 1000 (max. 500000)
+ 808 words of extra memory for PDF output out of 10000 (max. 10000000)
 

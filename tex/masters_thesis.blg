@@ -13,6 +13,8 @@ Reallocating 'name_of_file' (item size: 1) to 35 items.
 A level-1 auxiliary file: chapters/freertos_modification.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: chapters/custom_bootloader.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: chapters/demonstration.aux
 Reallocating 'name_of_file' (item size: 1) to 24 items.
 A level-1 auxiliary file: chapters/conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 11 items.
@@ -21,45 +23,45 @@ The style file: fer.bst
 Database file #1: literatura.bib
 Warning--entry type for "lockstep_analysis" isn't style-file defined
 --line 73 of file literatura.bib
-You've used 14 entries,
+You've used 18 entries,
             2773 wiz_defined-function locations,
-            663 strings with 7180 characters,
-and the built_in function-call counts, 4010 in all, are:
-= -- 363
-> -- 120
-< -- 12
-+ -- 51
-- -- 36
-* -- 226
-:= -- 610
-add.period$ -- 41
-call.type$ -- 14
-change.case$ -- 49
-chr.to.int$ -- 13
-cite$ -- 28
-duplicate$ -- 227
-empty$ -- 415
-format.name$ -- 48
-if$ -- 847
-int.to.chr$ -- 2
+            678 strings with 7734 characters,
+and the built_in function-call counts, 5138 in all, are:
+= -- 467
+> -- 160
+< -- 16
++ -- 68
+- -- 48
+* -- 298
+:= -- 794
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 61
+chr.to.int$ -- 16
+cite$ -- 36
+duplicate$ -- 295
+empty$ -- 515
+format.name$ -- 64
+if$ -- 1071
+int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 2
-newline$ -- 77
-num.names$ -- 48
-pop$ -- 141
+newline$ -- 97
+num.names$ -- 64
+pop$ -- 169
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 54
 quote$ -- 0
-skip$ -- 182
+skip$ -- 231
 stack$ -- 0
-substring$ -- 32
-swap$ -- 22
+substring$ -- 40
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 149
+type$ -- 193
 warning$ -- 0
-while$ -- 36
+while$ -- 48
 width$ -- 0
-write$ -- 173
+write$ -- 221
 (There was 1 warning)

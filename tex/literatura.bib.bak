@@ -93,10 +93,40 @@
 }
 
 @manual{safety_maual_tms570ls31x,
-    author = {Texasd Instruments},
+    author = {Texas Instruments},
     title = {Safety Manual for TMS570LS31x and
 TMS570LS21x Hercules™ ARM®-Based Safety
 Critical Microcontrollers},
     year = {2015},
     url = {https://www.ti.com/lit/ug/spnu511d/spnu511d.pdf?ts=1598992005375}
+}
+
+@manual{TMS570LS31x21x_manual,
+    author = {Texas Instruments},
+    title = {Technical reference manual for TMS570LS31x/21x},
+    year = {2018},
+    url = {https://www.ti.com/lit/ug/spnu499c/spnu499c.pdf?ts=1598992969037}
+}
+
+@manual{TCLS_cortex_r,
+    author = {ARM Research},
+    title = {A Triple Core Lock-Step (TCLS)
+ARM® Cortex®-R5 Processor for
+Safety-Critical and Ultra-Reliable Applications},
+    year = {2016},
+    url = {https://ieeexplore.ieee.org/abstract/document/7575387}
+}
+
+@manual{cortex_r5_reference_manual,
+    author = {ARM },
+    title = {Cortex-R5 technical reference manual Revision: r1p2},
+    year = {2011},
+    url = {https://static.docs.arm.com/ddi0460/d/ddi0460d_cortex_r5_r1p2_trm.pdf}
+}
+
+@manual{cortex_r8_reference_manual,
+    author = {ARM },
+    title = {Cortex-R5 technical reference manual Revision: r1p2},
+    year = {2011},
+    url = {https://static.docs.arm.com/ddi0460/d/ddi0460d_cortex_r5_r1p2_trm.pdf}
 }
