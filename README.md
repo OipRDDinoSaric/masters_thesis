@@ -1,6 +1,6 @@
 # Master's thesis - Software and Hardware Architecture for Redundant Embedded Systems
 
-Super project containing subprojects I worked on and pdf document that is my master's thesis.
+Superproject containing projects I worked on and pdf document that is my master's thesis.
 
 ## Abstract
 
