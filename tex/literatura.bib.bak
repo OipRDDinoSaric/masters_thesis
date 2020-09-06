@@ -118,14 +118,14 @@ Safety-Critical and Ultra-Reliable Applications},
 }
 
 @manual{cortex_r5_reference_manual,
-    author = {ARM },
+    author = {ARM},
     title = {Cortex-R5 technical reference manual Revision: r1p2},
     year = {2011},
     url = {https://static.docs.arm.com/ddi0460/d/ddi0460d_cortex_r5_r1p2_trm.pdf}
 }
 
 @manual{cortex_r8_reference_manual,
-    author = {ARM },
+    author = {ARM},
     title = {Cortex-R5 technical reference manual Revision: r1p2},
     year = {2011},
     url = {https://static.docs.arm.com/ddi0460/d/ddi0460d_cortex_r5_r1p2_trm.pdf}

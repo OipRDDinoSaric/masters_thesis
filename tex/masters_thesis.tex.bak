@@ -53,6 +53,7 @@ Thanks to my mentor izv. prof. dr. sc. Hrvoje Džapo and his assistant Ivan Pavi
 \include{chapters/freertos_kernel}
 \include{chapters/freertos_modification}
 \include{chapters/custom_bootloader}
+\include{chapters/demonstration}
 \include{chapters/conclusion}
 
 \bibliography{literatura}

@@ -13,21 +13,21 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces ARM triple core lockstep of Cortex-R5 \citep {TCLS_cortex_r}\relax }}{14}{figure.caption.15}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces TCLS resynchronization finite state machine \citep {TCLS_cortex_r}\relax }}{15}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces FreeRTOS file structure\relax }}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces FreeRTOS task states\citep [p~10]{freertos_inner_workings}\relax }}{19}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Scheduler algorithm\citep [p~20]{freertos_inner_workings}\relax }}{21}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces vTaskIncrementTick algorithm\citep [p~31]{freertos_inner_workings}\relax }}{22}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces FreeRTOS file structure\relax }}{19}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces FreeRTOS task states\citep [p~10]{freertos_inner_workings}\relax }}{20}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Scheduler algorithm\citep [p~20]{freertos_inner_workings}\relax }}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces vTaskIncrementTick algorithm\citep [p~31]{freertos_inner_workings}\relax }}{23}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Starting of the overflow timer from the file task.c\relax }}{25}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Incrementing of the overrun timer from the file task.c\relax }}{25}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Starting of the overrun timer from the file task.c\relax }}{26}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Timed task with overrun timeout of 30 ms\relax }}{26}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Timed task with overflow timeout of 20 ms\relax }}{26}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Timed task with both timers that resets in time\relax }}{27}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Replicated task with redundancy\relax }}{28}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Starting of the overflow timer from the file task.c\relax }}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Incrementing of the overrun timer from the file task.c\relax }}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Starting of the overrun timer from the file task.c\relax }}{27}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Timed task with overrun timeout of 30 ms\relax }}{27}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Timed task with overflow timeout of 20 ms\relax }}{27}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Timed task with both timers that resets in time\relax }}{28}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Replicated task with redundancy\relax }}{29}{figure.caption.27}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{44}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces State machine of the bootloader\relax }}{45}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of an error from error state\relax }}{45}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Bootloader file structure for STM32F4007 microcontroller\relax }}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces State machine of the bootloader\relax }}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of an error from error state\relax }}{46}{figure.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
