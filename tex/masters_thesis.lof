@@ -1,6 +1,6 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Texas refinery disaster\relax }}{ix}{figure.caption.5}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Air France Concorde disaster\relax }}{ix}{figure.caption.5}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Texas refinery disaster\relax }}{x}{figure.caption.5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Air France Concorde disaster\relax }}{x}{figure.caption.5}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Generic SIL chart as a function of severity and frequency\relax }}{2}{figure.caption.6}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces SIL requirements\relax }}{3}{figure.caption.7}%
@@ -30,4 +30,9 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces State machine of the bootloader\relax }}{46}{figure.caption.29}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Example of an error from error state\relax }}{46}{figure.caption.30}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Bootloader boot-up when no update is needed\relax }}{59}{figure.caption.32}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Bootloader version command\relax }}{59}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Replicated tasks example output\relax }}{61}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces New application loading output\relax }}{63}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Timed tasks example output\relax }}{65}{figure.caption.38}%
 \addvspace {10\p@ }

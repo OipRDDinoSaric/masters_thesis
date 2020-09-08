@@ -70,6 +70,11 @@
 \BOOKMARK [2][-]{subsection.5.7.13}{dis-write-prot - Disables write protection per sector.}{section.5.7}% 70
 \BOOKMARK [2][-]{subsection.5.7.14}{get-write-prot - Returns bit array of sector write protection.}{section.5.7}% 71
 \BOOKMARK [2][-]{subsection.5.7.15}{exit - Exits the bootloader and starts the user application.}{section.5.7}% 72
-\BOOKMARK [0][-]{chapter.6}{Demonstration of developed software}{}% 73
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 74
-\BOOKMARK [0][-]{chapter*.33}{Bibliography}{}% 75
+\BOOKMARK [0][-]{chapter.6}{Developed software demonstration}{}% 73
+\BOOKMARK [1][-]{section.6.1}{Overview}{chapter.6}% 74
+\BOOKMARK [1][-]{section.6.2}{Bootloader boot-up}{chapter.6}% 75
+\BOOKMARK [1][-]{section.6.3}{Replicated tasks example}{chapter.6}% 76
+\BOOKMARK [1][-]{section.6.4}{New application loading}{chapter.6}% 77
+\BOOKMARK [1][-]{section.6.5}{Timed tasks example}{chapter.6}% 78
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 79
+\BOOKMARK [0][-]{chapter*.39}{Bibliography}{}% 80

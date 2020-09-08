@@ -1,4 +1,240 @@
-\chapter{Demonstration of developed software}
+\chapter{Developed software demonstration}
 \label{demonstration}
 
-\todoi{Demonstration}
+\section{Overview}
+
+This chapter showcases how the FreeRTOS modifications and the developed secure bootloader work together. Firstly, the boot-up of the bootloader is shown. After the bootloader, the example from the FreeRTOS source code demonstrating the replicated tasks is demonstrated. Next up, microcontroller is restarted and update of the user application is requested. The process of loading a new application is showcased. Loaded new application is actually an example of the timed tasks. Finally, after the load, bootloader jumps to an example of the timed tasks from the FreeRTOS modifications.
+
+\section{Bootloader boot-up}
+
+On boot-up, bootloader firstly checks if the blue button is pressed on the STM32F407 DISC1 development board. If the button is not pressed, bootloader checks whether the update of the user application is needed i.e. it checks the application boot record where the meta data of the current and new applications are stored.
+
+\autoref{fig:bootloader_bootup} shows the feedback to the user on the boot-up. Firstly the preable is printed, followed up by the \code{No update needed for user application} which is printed after the application boot record is checked. Finally, \code{>} is printed and bootloader is awaiting the user's command and the blue LED is turned on.
+
+\begin{figure}[H]
+\begin{changemargin}{1cm}{1cm}
+\begin{lstlisting}[escapeinside={(*}{*)}, numbers=left, numberstyle=\tiny, stepnumber=1]
+*********************************************
+Custom bootloader for STM32F4 Discovery board
+*********************************************
+*********************************************
+                     v1.1
+*********************************************
+               Master's thesis
+                  Dino Saric
+            University of Zagreb
+                     2020
+*********************************************
+          If confused type "help"          
+*********************************************
+No update needed for user application
+
+OK
+
+>
+\end{lstlisting}  
+\end{changemargin}
+\caption{Bootloader boot-up when no update is needed}
+\label{fig:bootloader_bootup}
+\end{figure}
+
+\autoref{fig:bootloader_version} showcases the version command of the bootloader.
+
+\begin{figure}[H]
+\begin{changemargin}{1cm}{1cm}
+\begin{lstlisting}[escapeinside={(*}{*)}, numbers=left, numberstyle=\tiny, stepnumber=1]
+> (*\color{orange}{version}*)
+v1.1
+
+OK
+
+>  
+\end{lstlisting}  
+\end{changemargin}
+\caption{Bootloader version command}
+\label{fig:bootloader_version}
+\end{figure}
+
+\section{Replicated tasks example}
+
+This example is run by setting the \code{EXAMPLE\textunderscore REPLICATED} in \code{FreeRTOS\textunderscore demonstration/\\example/Inc/example.h} on line 20 to 1 and disabling timed and default example. Source code that will make the demonstration easier to follow is located in \\\code{FreeRTOS\textunderscore modification/example/src/example\textunderscore replicated.c}. In the demonstration four replicated tasks are present. All of them with different configuration. \autoref{tab:replicated_task_list} lists all tasks in the demonstration.
+
+\begin{table}[H]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\hline
+Task name & \begin{tabular}[c]{@{}c@{}}Replicated recovery\\ (number of sub-tasks)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Always same\\ compare values\end{tabular} \\ \hline
+Repl recov ok       & true (3)  & true  \\
+Repl recov fail     & true (3)  & false \\
+Repl non-recov ok   & false (2) & true  \\
+Repl non-recov fail & false (2) & false \\ \hline
+\end{tabular}%
+}
+\caption{All replicated tasks in demonstration}
+\label{tab:replicated_task_list}
+\end{table}
+
+\autoref{fig:replicated_tasks_example_print} shows the first 11 seconds of the replicated tasks example. Number before the \code{':'} is time elapsed from the FreeRTOS start. First, task \code{Repl recov ok} arrives to the \code{vTaskSyncAndCompare}. There are three print-outs because three sub-tasks exist and are going over the same code. When the last sub-tasks arrives to the \code{vTaskSyncAndCompare} all tasks are compared. Their value matches and no callback is called, rather the tasks are unblocked and enter the 5 second delay.
+
+Line 6, which is printed after 2 seconds of execution, shows \code{Repl non-recov ok} task which enters the sync and compare function. After the comparison both sub tasks resume, as their compare values match. On line 8, aforementioned \code{Repl recov ok} again arrives to the compare point where it is again compared. Its compare value matches and the task is resumed.
+
+After 6 seconds, task \code{Repl recov fail} arrives to the compare point. After all three tasks have arrived they are compared. Comparison shows that not all compare values match. Two values are 0, but one is a 1. Next line shows that the software successfully deduced with voting logic that the correct result is 0 (line 16).
+
+Right after the task \code{Repl recov fail} is done, task \code{Repl non-recov fail} arrives at the compare point. Like the last task before, the compare values don't match (line 20). The difference is that no result could be deduced this time as there are only two sub-tasks.
+
+After the last task is finished, task \code{Repl non-recov ok} again comes to the compare function and the logic is repeated. All tasks are periodic with period of 5.
+
+\begin{figure}[H]
+\begin{changemargin}{1cm}{1cm}
+\begin{lstlisting}[escapeinside={(*}{*)}, numbers=left, numberstyle=\tiny, stepnumber=1]
+Jumping to user application :)
+FreeRTOS Modification.
+0:Task "Repl recov ok" is waiting for comparison.
+4:Task "Repl recov ok" is waiting for comparison.
+9:Task "Repl recov ok" is waiting for comparison.
+2001:Task "Repl non-recov ok" is waiting for comparison.
+2006:Task "Repl non-recov ok" is waiting for comparison.
+5014:Task "Repl recov ok" is waiting for comparison.
+5019:Task "Repl recov ok" is waiting for comparison.
+5024:Task "Repl recov ok" is waiting for comparison.
+6027:Task "Repl recov fail" is waiting for comparison.
+6032:Task "Repl recov fail" is waiting for comparison.
+6037:Task "Repl recov fail" is waiting for comparison.
+6042:Task "Repl recov fail" compare failed.
+6047:Compare values are: 0 0 1 
+6050:Deduced result is 0.
+6052:Task "Repl non-recov fail" is waiting for comparison.
+6058:Task "Repl non-recov fail" is waiting for comparison.
+6063:Task "Repl non-recov fail" compare failed.
+6068:Compare values are: 0 1 
+6071:Result could not be deduced.
+7011:Task "Repl non-recov ok" is waiting for comparison.
+7016:Task "Repl non-recov ok" is waiting for comparison.
+10029:Task "Repl recov ok" is waiting for comparison.
+10034:Task "Repl recov ok" is waiting for comparison.
+10039:Task "Repl recov ok" is waiting for comparison.
+11053:Task "Repl recov fail" is waiting for comparison.
+11058:Task "Repl recov fail" is waiting for comparison.
+11063:Task "Repl recov fail" is waiting for comparison.
+11069:Task "Repl recov fail" compare failed.
+11073:Compare values are: 1 1 0 
+11076:Deduced result is 1.
+\end{lstlisting}  
+\end{changemargin}
+\caption{Replicated tasks example output}
+\label{fig:replicated_tasks_example_print}
+\end{figure}
+
+\section{New application loading}
+
+\autoref{fig:new_application_loading} demonstrates the application flow when the user requests a user application update. To update the application user enters the function \code{update-new}, more about the function at its reference \autoref{bl_cmd:update-new}. Line 1 shows an erroneous call of the function, bootloader returns a descriptive error to the user. After the second call, all the required parameters are entered correctly. Device erases the chunks that are needed by the application, turning the blue LED signalizing that flash is being deleted.
+
+After erasing, bootloader returns the total number of chunks the file will need to be split into. Following, on line 9, chunk 0 information is printed. Finally, \code{ready} is printed, signalizing the bootloader is ready to receive 5120 bytes. While writing the data sent by the user, the blue LED is turned on emphasizing that the flash memory is being written into. After the data is transmitted bootloader returns \code{chunk OK} to signalize that the sent bytes were successfully written into flash. The procedure is repeated for the rest of the chunks.  
+
+When all the chunks have been written  into flash, if the checksum was specified in the function call,  it is awaited by the bootloader. This process is seen on the line 12. When the 32 bytes have been entered, inputted and calculated checksums are compared and \code{OK} is printed.
+
+After the successful checksum, the microcontroller is automatically restarted. On the restart, it works out that the user application needs an update and it updates the user application by copying the bytes from new application (as described in \autoref{tab:bootloader_flash}) into the current application flash area.
+
+\begin{figure}[H]
+\begin{changemargin}{1cm}{1cm}
+\begin{lstlisting}[escapeinside={(*}{*)}, numbers=left, numberstyle=\tiny, stepnumber=1]
+> (*\color{orange}{update-new count=757720 type=hex cksum=sha256}*)
+ERROR: New app is too long. Aborting
+> (*\color{orange}{update-new count=75772 type=hex cksum=sha256}*)
+chunks:15
+chunk:0|length:5120|address:0x08080000
+ready
+chunk OK
+(*\color{orange}{<chunks 1 - 13>}*)
+chunk:14|length:4092|address:0x08091800
+ready
+chunk OK
+checksum|length:32
+ready
+(*\color{orange}{<32 checksum bytes>}*)
+OK
+Restarting...
+*********************************************
+Custom bootloader for STM32F4 Discovery board
+*********************************************
+*********************************************
+                     v1.1
+*********************************************
+               Master's thesis
+                  Dino Saric
+            University of Zagreb
+                     2020
+*********************************************
+          If confused type "help"          
+*********************************************
+Update for user application available
+Updating user application
+OK
+> 
+\end{lstlisting}  
+\end{changemargin}
+\caption{New application loading output}
+\label{fig:new_application_loading}
+\end{figure}
+
+\section{Timed tasks example}
+
+After the successful update of the user application, timed task example is loaded into the flash. Timed example demonstrates how overrun and overflow timer work. Overrun timer increments only when the timed task is active. Overflow timer increments asynchronously to the task, i.e. it increments regardless if the timed task is active. 
+
+\autoref{fig:timed_tasks_example_print} shows how the first 30 seconds of the example from \code{FreeRTOS\textunderscore modification/\\example/src/example\textunderscore timed.c}. The matching output is achieved by setting the \code{EXAMPLE\textunderscore TIMED} to 1 on line 19 in \code{FreeRTOS\textunderscore demonstration/example/Inc/example.h}. \autoref{tab:timed_task_list} shows all the tasks in the example.
+
+\begin{table}[H]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Task name &
+  \begin{tabular}[c]{@{}c@{}}Overflow\\ timeout (s)\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Overrun\\ timeout (s)\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Period\\ (ms)\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Priority, higher is\\ more important\end{tabular} \\ \hline
+Oflow task ok              & 6 & - & 5900 & 3 \\
+Oflow task fail            & 6 & - & -    & 2 \\
+Oflow task fail and del    & 6 & - & -    & 3 \\
+Orun task ok               & - & 5 & 4900 & 3 \\
+Orun task fail             & - & 5 & -    & 2 \\
+Orun task fail and dele    & - & 5 & -    & 3 \\ \hline
+\end{tabular}%
+}
+\caption{All timed tasks in demonstration}
+\label{tab:timed_task_list}
+\end{table}
+
+In \autoref{fig:timed_tasks_example_print}, first task that resets the timers using the function \code{vTaskTimedReset} is the \code{Orun task ok}, it resets the timers before the overflow timer triggers so no callback is called. Next task that resets its timers is \code{Oflow task ok}, it also resets the timers before the overrun timer triggers and the callback is not called. On line 10, overflow timer from task \code{Oflow task fail and del} overflows and it deletes itself from the callback. Right after, overflow timer from task \code{Oflow task fail} triggers.
+
+On line 12, first overrun timer is triggered. The callback deletes the task after it has been triggered. This trigger is made possible using the \code{HAL_Delay()} function inside the task with timeout larger than the overrun timeout. On line 16, the overrun timer of the task \code{Orun task fail} triggers. Signalizing that the task was in running state for 5 seconds, whilewhich .
+
+\begin{figure}[H]
+\begin{changemargin}{1cm}{1cm}
+\begin{lstlisting}[escapeinside={(*}{*)}, numbers=left, numberstyle=\tiny, stepnumber=1]
+> (*\color{orange}{exit}*)
+
+OK
+Exiting
+
+Jumping to user application :)
+FreeRTOS Modification.
+4900:Task "Orun task ok" is reseting the timer.
+5900:Task "Oflow task ok" is reseting the timer.
+6000:Task "Oflow task fail and del" overflowed. Deleting task.
+6006:Task "Oflow task fail" overflowed. This happens every 6 s.
+8120:Task "Orun task fail and dele" overran. Deleting task.
+9808:Task "Orun task ok" is reseting the timer.
+11809:Task "Oflow task ok" is reseting the timer.
+12000:Task "Oflow task fail" overflowed. This happens every 6 s.
+12239:Task "Orun task fail" overran. This happens after 5 s of runtime.
+14712:Task "Orun task ok" is reseting the timer.
+17713:Task "Oflow task ok" is reseting the timer.
+18000:Task "Oflow task fail" overflowed. This happens every 6 s.
+18258:Task "Orun task fail" overran. This happens after 5 s of runtime.
+\end{lstlisting}  
+\end{changemargin}
+\caption{Timed tasks example output}
+\label{fig:timed_tasks_example_print}
+\end{figure}

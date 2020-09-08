@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Jumping} \PYG{n}{to} \PYG{n}{user} \PYG{n+nl}{application} \PYG{p}{:)}
+\PYG{n}{FreeRTOS} \PYG{n}{Modification}\PYG{p}{.}
+\PYG{l+m+mi}{0}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{4}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{9}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{2001}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{2006}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{5014}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{5019}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{5024}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6027}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6032}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6037}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6042}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{compare} \PYG{n}{failed}\PYG{p}{.}
+\PYG{l+m+mi}{6047}\PYG{o}{:}\PYG{n}{Compare} \PYG{n}{values} \PYG{n+nl}{are}\PYG{p}{:} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{6050}\PYG{o}{:}\PYG{n}{Deduced} \PYG{n}{result} \PYG{n}{is} \PYG{l+m+mf}{0.}
+\PYG{l+m+mi}{6052}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6058}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{6063}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{compare} \PYG{n}{failed}\PYG{p}{.}
+\PYG{l+m+mi}{6068}\PYG{o}{:}\PYG{n}{Compare} \PYG{n}{values} \PYG{n+nl}{are}\PYG{p}{:} \PYG{l+m+mi}{0} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{6071}\PYG{o}{:}\PYG{n}{Result} \PYG{n}{could} \PYG{n}{not} \PYG{n}{be} \PYG{n}{deduced}\PYG{p}{.}
+\PYG{l+m+mi}{7011}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{7016}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{10029}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{10034}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{10039}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov ok\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11053}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11058}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11063}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11069}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl recov fail\PYGZdq{}} \PYG{n}{compare} \PYG{n}{failed}\PYG{p}{.}
+\PYG{l+m+mi}{11073}\PYG{o}{:}\PYG{n}{Compare} \PYG{n}{values} \PYG{n+nl}{are}\PYG{p}{:} \PYG{l+m+mi}{1} \PYG{l+m+mi}{1} \PYG{l+m+mi}{0}
+\PYG{l+m+mi}{11076}\PYG{o}{:}\PYG{n}{Deduced} \PYG{n}{result} \PYG{n}{is} \PYG{l+m+mf}{1.}
+\PYG{l+m+mi}{11079}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11084}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{is} \PYG{n}{waiting} \PYG{k}{for} \PYG{n}{comparison}\PYG{p}{.}
+\PYG{l+m+mi}{11090}\PYG{o}{:}\PYG{n}{Task} \PYG{l+s}{\PYGZdq{}Repl non\PYGZhy{}recov fail\PYGZdq{}} \PYG{n}{compare} \PYG{n}{failed}\PYG{p}{.}
+\PYG{l+m+mi}{11095}\PYG{o}{:}\PYG{n}{Compare} \PYG{n}{values} \PYG{n+nl}{are}\PYG{p}{:} \PYG{l+m+mi}{0} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{11098}\PYG{o}{:}\PYG{n}{Result} \PYG{n}{could} \PYG{n}{not} \PYG{n}{be} \PYG{n}{deduced}\PYG{p}{.}
+\end{Verbatim}
