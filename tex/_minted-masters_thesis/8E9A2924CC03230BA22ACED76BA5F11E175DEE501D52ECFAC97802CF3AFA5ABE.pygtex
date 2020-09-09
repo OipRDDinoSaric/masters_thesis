@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{eTaskType} \PYG{n}{eTaskGetType}\PYG{p}{(} \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{pxTaskHandle} \PYG{p}{)}
-\end{Verbatim}

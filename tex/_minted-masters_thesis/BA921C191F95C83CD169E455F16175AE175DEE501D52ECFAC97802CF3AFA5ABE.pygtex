@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
- \PYG{n}{BaseType\PYGZus{}t} \PYG{n}{xTimerResumeFromISR}\PYG{p}{(}  \PYG{n}{TimerHandle\PYGZus{}t} \PYG{n}{xTimer}\PYG{p}{,}
-                                  \PYG{n}{BaseType\PYGZus{}t} \PYG{o}{*}\PYG{n}{pxHigherPriorityTaskWoken} \PYG{p}{)}
-\end{Verbatim}
