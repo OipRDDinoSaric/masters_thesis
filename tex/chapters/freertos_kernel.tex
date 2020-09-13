@@ -1,46 +1,46 @@
-\chapter{FreeRTOS kernel}
+\chapter{FreeRTOS kernel} % Grammarly OK
 \label{freertos_kernel}
 
 \section{Introduction}
 
-FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller pletforms and has MIT open source licence hence the free in the name. \citep{freertos_licence}
+FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller platforms and has MIT open source license hence the free in the name  \citep{freertos_licence}.
 
-Operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for the scheduler routines.
+The operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for the scheduler routines.
 
-FreeRTOS is ideally suited for deeply embedded real-time applications that use
+FreeRTOS is ideally suited for embedded real-time applications that use
 microcontrollers or small microprocessors. This type of application normally includes a mix of
-both hard and soft real-time requirements. \citep{freertos_mastering}
+both hard and soft real-time requirements \citep{freertos_mastering}.
 
 Soft real-time requirements are those that state a time deadline—but breaching the deadline
 would not render the system useless. For example, responding to keystrokes too slowly might
-make a system seem annoyingly unresponsive without actually making it unusable. \citep{freertos_mastering}
+make a system seem annoyingly unresponsive without actually making it unusable \citep{freertos_mastering}.
 
 Hard real-time requirements are those that state a time deadline—and breaching the deadline
 would result in absolute failure of the system. For example, a driver’s airbag has the potential
-to do more harm than good if it responded to crash sensor inputs too slowly. \citep{freertos_mastering}
+to do more harm than good if it responded to crash sensor inputs too slowly \citep{freertos_mastering}.
 
 \noindent FreeRTOS features:
 
 \begin{itemize}
     
-    \item Pre-emptive or co-operative operation
-    \item Very flexible task priority assignment
-    \item Flexible, fast and light weight task notification mechanism
-    \item Queues
-    \item Binary and counting semaphores
-    \item Mutexes
-    \item Recursive mutexes
-    \item Software timers
-    \item Event groups
-    \item Tick hook functions
-    \item Idle hook functions
-    \item Stack overflow checking
-    \item Trace recording
-    \item Task run-time statistics gathering
-    \item Optional comemercial licensing and support
-    \item Full interrupt nesting model (on some architectures)
-    \item Tick-less capability for extreme low power applications
-    \item Software manages interrrupt stack when appropriate (could save RAM space)
+    \item Pre-emptive or co-operative operation,
+    \item Very flexible task priority assignment,
+    \item Flexible, fast and lightweight task notification mechanism,
+    \item Queues,
+    \item Binary and counting semaphores,
+    \item Mutexes,
+    \item Recursive mutexes,
+    \item Software timers,
+    \item Event groups,
+    \item Tick hook functions,
+    \item Idle hook functions,
+    \item Stack overflow checking,
+    \item Trace recording,
+    \item Task run-time statistics gathering,
+    \item Optional commercial licensing and support,
+    \item Full interrupt nesting model (on some architectures),
+    \item Tick-less capability for extremely low power applications and
+    \item Software manages interrupt stack when appropriate (could save RAM space).
     
 \end{itemize}
 
@@ -63,7 +63,7 @@ to do more harm than good if it responded to crash sensor inputs too slowly. \ci
 .2 portable.
 .3 [compiler] e.g{. GCC}.
 .4 [architecture] e.g{. ARM\textunderscore CM4F}.
-.5 port.c - Architecture and compiler specific.
+.5 port.c - Architecture and compiler-specific.
 .5 portmacro.c.
 .3 MemMang.
 .4 heap\textunderscore X.c - X is a heap number used.
@@ -79,10 +79,10 @@ to do more harm than good if it responded to crash sensor inputs too slowly. \ci
 \label{fig:freertos_structure}
 \end{figure}
 
-\section{Inner workings of the tasks}
+\section{Architecture of the tasks}
  
 
-Every FreeRTOS task has a stack and a task control block, or short TCB. Kernel uses the TCB to manage tasks. A TCB contains all information necessary to completely describe the state of a task. \citep{freertos_inner_workings} A FreeRTOS task can exist in five states: running, blocked, ready, suspended and deleted. A state diagram is shown in \autoref{fig:freertos_task_states}.
+Every FreeRTOS task has a stack and a task control block, or short TCB. The kernel uses tack control blocks to manage tasks. A TCB contains all information necessary to completely describe the state of a task  \citep{freertos_inner_workings}. A FreeRTOS task can exist in five states: running, blocked, ready, suspended and deleted. A state diagram is shown in \autoref{fig:freertos_task_states}.
 
 \begin{figure}[H]
 
@@ -95,30 +95,30 @@ Every FreeRTOS task has a stack and a task control block, or short TCB. Kernel u
 
 When a new task is created its TCB is populated. New tasks are immediately placed in a ready list. Whole scheduling is comprised of a lot of lists.
 
-Ready list is arranged in order of priority with tasks of equal priority being serviced round robin. Ready list is not actually  a single list, rather a configMAX\textunderscore PRIORITIES number of lists. Each priority level has a list for it. When scheduler looks for the next task it walks from the tasks with highest priority to the one with the lowest. Variable pxCurrentTCB points to a process in the ready list that is currently running.
+The ready list is arranged in order of priority with tasks of equal priority being serviced round-robin. The ready list is not single, rather a \code{configMAX\textunderscore PRIORITIES} number of lists. Each priority level has a list for it. When the scheduler looks for the next task, it searches from the tasks with the highest priority to the one with the lowest. Variable \code{pxCurrentTCB} points to a process in the ready list that is currently running.
 
 The tasks in FreeRTOS can be blocked when accessing a resource that is not currently available. The scheduler blocks the tasks when they attempt to read from an empty container or write into a full one. This is also true for the semaphores, as they are a queue of size one in the background.
 
 As indicated earlier, access attempts against queues can be blocking or non-blocking.
-The distinction is made via the xTicksToWait variable which is passed into the queue
-access request as an argument. If xTicksToWait is 0, and the queue is empty/full, the
-task does not block. Otherwise, the task will block for a period of xTicksToWait
+The distinction is made via the \code{xTicksToWait} variable which is passed into the queue
+access request as an argument. If \code{xTicksToWait} is 0, and the queue is empty/full, the
+task does not block. Otherwise, the task will block for a period of \code{xTicksToWait}
 scheduler ticks or until an event on the queue frees up the resource.
 
-Tasks can also be blocked without a use of containers. FreeRTOS provied vTaskDelay and vTaskDelayUntil functions for this purpose. When a task is delayed it is put onto a delay list. On every tick, scheduler checks if one of the tasks from the delay lists are unblocked. If they are, they are moved to the ready list.
+Tasks can also be blocked without the use of containers. FreeRTOS provides \code{vTaskDelay} and \code{vTaskDelayUntil} functions for this purpose. When a task is delayed it is put onto a delay list. On every tick, the scheduler checks if one of the tasks from the delay lists is unblocked. If they are, they are moved to the ready list.
 
-Any task or, in fact, all tasks except the one currently running (and those servicing ISRs)
-can be placed in the Suspended state indefinitely. Tasks that are placed in this state are
+Any task or, in fact, all tasks except the one currently running (and those servicing interrupt service routines)
+can be placed in the suspended state indefinitely. Tasks that are placed in this state are
 not waiting on events and do not consume any resource or kernel attention until they are
 moved out of the Suspended state. When unsuspended, they are returned to the Ready state.
 
-Finally, tasks can also be deleted. When delete is requested task is put in a deleted state. Deleted state is required because tasks are not deleted immediately after the call. Rather tasks are deleted, and its resources released, from the IDLE task. IDLE task has the lowest possible priority so this job may take some time.
+Finally, tasks can also be deleted. When delete is requested task is put in a deleted state. A deleted state is required because tasks are not deleted immediately after the call. Rather tasks are deleted, and its resources are released, from the IDLE task. The IDLE task has the lowest possible priority so this job may take some time.
 
-\section{Inner workings of the scheduler}
+\section{Scheduler's architecture}
 
 This section gives a brief overview of a FreeRTOS scheduler.
 
-\autoref{fig:freertos_scheduler_overview} shows an overview of the scheduler algorithm. The scheduler operates as a timer interrupt service routine that is called once every tick. Tick period is defined by configTICK\textunderscore RATE\textunderscore HZ. 
+\autoref{fig:freertos_scheduler_overview} shows an overview of the scheduler algorithm. The scheduler operates as a timer interrupt service routine that is called once every tick. Tick period is defined by \code{configTICK\textunderscore RATE\textunderscore HZ}. 
 
 \begin{figure}[H]
 
@@ -129,13 +129,13 @@ This section gives a brief overview of a FreeRTOS scheduler.
     
 \end{figure}
 
-Context saving is done for the current task. Needed registers are saved on top of the task's stack. It is worth noting, when a task is first created its task is artificially filled. After saving the context scheduler increments the tick and checks if any other task with higher priority has been unblocked, or there is a task with same priority ready. Finally, context is restored and scheduler returns from the interrupt.  
+Context saving is done for the current task. Needed registers are saved on top of the task's stack. It is worth noting when a task is first created its task is artificially filled. After saving the context scheduler increments the tick and checks if any other task with higher priority has been unblocked, or there is a task with the same priority ready. Finally, context is restored and the scheduler returns from the interrupt.  
 
-\autoref{fig:freertos_scheduler_increment} shows the algorithm for vTaskIncrementTisk. vTaskIncrementTick is called once each clock tick by the HAL (whenever the timer ISR occurs). The right hand
-branch of the algorithm deals with normal scheduler operation while the left hand branch
-executes when the scheduler is suspended. As discussed earlier, the right hand branch
+\autoref{fig:freertos_scheduler_increment} shows the algorithm for \code{vTaskIncrementTick}. \code{vTaskIncrementTick} is called once each clock tick by the hardware abstraction level i.e. whenever the timer ISR occurs. The right-hand
+branch of the algorithm deals with normal scheduler operation while the left-hand branch
+executes when the scheduler is suspended. As discussed earlier, the right-hand branch
 simply increments the tick count and then checks to see if the clock has overflowed. If
-that’s the case, then the DelayedTask and OverflowDelayedTask list pointers are
+that is the case, then the \code{DelayedTask} and \code{OverflowDelayedTask} list pointers are
 swapped and a global counter tracking the number of overflows is incremented. An
 increase in the tick count may have caused a delayed task to wake so check is performed.
 
@@ -143,17 +143,18 @@ increase in the tick count may have caused a delayed task to wake so check is pe
 
       \centering
       \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_increment.png}
-      \caption{vTaskIncrementTick algorithm\citep[p~31]{freertos_inner_workings}}
+      \caption{\code{vTaskIncrementTick} algorithm\citep[p~31]{freertos_inner_workings}}
       \label{fig:freertos_scheduler_increment}
     
 \end{figure}
 
 More about the scheduler can be found in \citep{freertos_inner_workings}.
 
-\section{Inner workings of the timers}
+\section{Architecture of the timers}
 
-Similarly to tasks, FreeRTOS timers have a control block. Timer's control block contains timers period, name, does it auto reload and list item. Active timers are stored in current timer list in order of expiry time, first element is the one that will expire first.
+Similarly to tasks, FreeRTOS timers have a control block. The timer's control block contains timers period, name, does it auto-reload and a list item. Active timers are stored in the current timer list in order of expiry time, the first element is the one that will expire first.
 
-When timers are included from the configuration, scheduler on start up  creates the timer daemon service (its priority is modifiable with configTIMER\textunderscore TASK\textunderscore PRIORITY). Timer daemon has a job of processing the expired timers and receiving the commands. All commands controlling the timers the commands are not sent directly to the requested timer, rather all commands are sent to the queue to be later processed by the timer's daemon.
+When timers are included from the configuration, the scheduler creates the timer daemon service on start-up (its priority is modifiable with \code{configTIMER\textunderscore TASK\textunderscore PRIORITY}). Timer daemon has a job of processing the expired timers and receiving the commands. All commands controlling the timers are not sent directly to the requested timer, rather all commands are sent to the queue to be later processed by the timer's daemon.
 
-Timer daemon normally just waits for unblocking of the next timer or a new commands from the queue. When a timer expires daemon is woken up, it processes the timer, checks again for received commands and goes back to waiting. If a new commands has arrived the same is expected, first the commands is processed than the task goes back to waiting.
+Timer daemon normally just waits for the unblocking of the next timer or a new commands from the queue. When a timer expires daemon is woken up, it processes the timer, checks again for received commands and goes back to waiting. If a new command has arrived the same is expected, first, the commands are processed than the task goes back to waiting.
+

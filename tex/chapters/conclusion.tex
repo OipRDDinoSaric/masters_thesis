@@ -1,7 +1,15 @@
 \chapter{Conclusion}
 
-This thesis explores the functional safety practices in embedded systems. Overview of functional safety and related standards is provided to help engineers without functional safety experience. The thesis clarifies how ARM Cortex R improves functional safety principles over ARM Cortex M. 
+This thesis explores the functional safety practices in embedded systems. An overview of functional safety and related standards is provided to help engineers without functional safety experience. The thesis clarifies how ARM Cortex-R improves functional safety principles over ARM Cortex-M. 
 
-A software is developed to achieve software redundancy in ARM Cortex M. Implemented software includes a bootloader and a modified FreeRTOS operating system.  The bootloader has the ability to load new applications and other memory manipulation related operations. The bootloader also supports permanent memory for communication between bootloader and the current application. To aid security for loading of a  new application support for HEX and SREC format is provided, along with additional checksum appended to the data.
+A software is developed to achieve software redundancy in ARM Cortex M. Implemented software includes a bootloader and a modified FreeRTOS operating system.  The bootloader can load new applications and other memory manipulation related operations. The bootloader also supports permanent memory for communication between the bootloader and the current application. To aid security for loading of new application support for HEX and SREC format is provided, along with additional checksum appended to the data.
 
-The modified FreeRTOS operating system provides features of tracking the individual tasks execution time and task replication. Tasks tracking their time have two timers, one for overrun and one for overflow. Overrun timers count only when task is active. Overflow timer always counts regardless of the task's state. Replicated tasks can have two or three redundant tasks, when three tasks are used replicated task is fault tolerant. Demonstratration of the functionality is available through examples in source code. Inner workings of FreeRTOS and the bootloader is provided in this thesis.
+The modified FreeRTOS operating system provides features of tracking the individual tasks execution time and task replication. Tasks tracking their time have two timers, one for overrun and one for overflow. Overrun timers count only when the task is active. The overflow timer always counts regardless of the task's state. Replicated tasks can have two or three redundant tasks, when three tasks are used replicated task is fault-tolerant. The architecture and demonstration of FreeRTOS and the bootloader are provided in this thesis.
+
+
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[15pt]
+  \end{tabular}}
+
+\vspace*{\fill} \noindent \hfill \namesigdate{Dino Šarić}
