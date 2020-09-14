@@ -3,19 +3,13 @@
 
 \section{Introduction}
 
-FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller platforms and has MIT open source license hence the free in the name  \citep{freertos_licence}.
-
-The operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for the scheduler routines.
-
-FreeRTOS is ideally suited for embedded real-time applications that use
+FreeRTOS is a real-time operating system kernel (RTOS) for embedded devices. It has been ported to 35 microcontroller platforms and has MIT open source license hence the free in the name  \citep{freertos_licence}. The operating system (OS) is designed to be small and simple. The kernel itself has only three C files. It is written mostly in C with some assembly code included for the scheduler routines. FreeRTOS is ideally suited for embedded real-time applications that use
 microcontrollers or small microprocessors. This type of application normally includes a mix of
 both hard and soft real-time requirements \citep{freertos_mastering}.
 
 Soft real-time requirements are those that state a time deadline—but breaching the deadline
 would not render the system useless. For example, responding to keystrokes too slowly might
-make a system seem annoyingly unresponsive without actually making it unusable \citep{freertos_mastering}.
-
-Hard real-time requirements are those that state a time deadline—and breaching the deadline
+make a system seem annoyingly unresponsive without actually making it unusable \citep{freertos_mastering}. Hard real-time requirements are those that state a time deadline—and breaching the deadline
 would result in absolute failure of the system. For example, a driver’s airbag has the potential
 to do more harm than good if it responded to crash sensor inputs too slowly \citep{freertos_mastering}.
 
@@ -23,24 +17,24 @@ to do more harm than good if it responded to crash sensor inputs too slowly \cit
 
 \begin{itemize}
     
-    \item Pre-emptive or co-operative operation,
-    \item Very flexible task priority assignment,
-    \item Flexible, fast and lightweight task notification mechanism,
-    \item Queues,
-    \item Binary and counting semaphores,
-    \item Mutexes,
-    \item Recursive mutexes,
-    \item Software timers,
-    \item Event groups,
-    \item Tick hook functions,
-    \item Idle hook functions,
-    \item Stack overflow checking,
-    \item Trace recording,
-    \item Task run-time statistics gathering,
-    \item Optional commercial licensing and support,
-    \item Full interrupt nesting model (on some architectures),
-    \item Tick-less capability for extremely low power applications and
-    \item Software manages interrupt stack when appropriate (could save RAM space).
+    \item pre-emptive or co-operative operation,
+    \item very flexible task priority assignment,
+    \item flexible, fast and lightweight task notification mechanism,
+    \item queues,
+    \item binary and counting semaphores,
+    \item mutexes,
+    \item recursive mutexes,
+    \item software timers,
+    \item event groups,
+    \item tick hook functions,
+    \item idle hook functions,
+    \item stack overflow checking,
+    \item trace recording,
+    \item task run-time statistics gathering,
+    \item optional commercial licensing and support,
+    \item full interrupt nesting model (on some architectures),
+    \item tick-less capability for extremely low power applications and
+    \item software manages interrupt stack when appropriate (could save RAM space).
     
 \end{itemize}
 
@@ -114,7 +108,7 @@ moved out of the Suspended state. When unsuspended, they are returned to the Rea
 
 Finally, tasks can also be deleted. When delete is requested task is put in a deleted state. A deleted state is required because tasks are not deleted immediately after the call. Rather tasks are deleted, and its resources are released, from the IDLE task. The IDLE task has the lowest possible priority so this job may take some time.
 
-\section{Scheduler's architecture}
+\section{Architecture of the scheduler}
 
 This section gives a brief overview of a FreeRTOS scheduler.
 

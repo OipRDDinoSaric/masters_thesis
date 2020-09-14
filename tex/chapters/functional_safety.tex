@@ -25,7 +25,7 @@ IEC 61508 is an umbrella functional safety standard applicable to all industries
 
 IEC 61508 standard introduces a lot of three-letter acronyms. This section covers the most common ones.
 
-\subsection{SIL}
+\subsection{Safety integrity level}
 
 SIL or safety integrity level is a discrete level (one out of four) for specifying the safety integrity retirements of the safety instrumented functions (SIF) to be allocated to the safety instrumented system (SIS) i.e. SIL says how well the safety integrity function does its job. SIF and SIS are explained in \autoref{sec:sif}  and \autoref{sec:sis} respectfully. SIL of 1 marks the lowest safety integrity level and level 4 denotes the highest.  \autoref{fig:sil_level_chart} demonstrates that SIL is a function of the frequency of a hazard and the severity of the consequence. 
 
@@ -39,13 +39,13 @@ SIL or safety integrity level is a discrete level (one out of four) for specifyi
     
 \end{figure}
 
-\subsection{SIF}
+\subsection{Safety instrumented function}
 \label{sec:sif}
 
 Safety instrumented function (SIF) is a set of equipment used to implement an automatic protection function. Safety function shall have a specified SIL to achieve functional safety. 
 An example of SIF is several sensors looking for the \textbf{single} hazard scenario. Those sensors need to bring the system to a safe state if the hazard occurs. SIF is usually measured in how much risk can be removed. It is usually expressed in either in PFDaverage or in SIL. 
 
-\subsection{SIS}
+\subsection{Safety instrumented system}
 \label{sec:sis}
 
 SIS or safety instrumented system is one or more safety functions put together to do the whole job. SIS can encompass multiple different functions and act in multiple different ways to overcome a number of hazard scenarios, as opposed to SIF that can only perform one action to overcome one hazard scenario.
@@ -71,9 +71,9 @@ For the certification, the system integrity level is determined. SIL of a produc
     
 \end{figure}
 
-Systematic Capability is achieved when the equipment used to implement any safety function is designed using procedures intended to prevent systematic design errors.  The rigor of the required procedure is a function of a Safety Integrity Level (SIL). This is evaluated through an assessment of the quality management system (QMS) for suppliers of process control and instrumentation for safety against the requirements in IEC 61508.  If the QMS meets the requirements of IEC 61508 a SIL capability rating is issued. 
+Systematic capability is achieved when the equipment used to implement any safety function is designed using procedures intended to prevent systematic design errors.  The rigor of the required procedure is a function of a Safety Integrity Level (SIL). This is evaluated through an assessment of the quality management system (QMS) for suppliers of process control and instrumentation for safety against the requirements in IEC 61508.  If the QMS meets the requirements of IEC 61508 a SIL capability rating is issued. 
 
-Architectural constraints are estimated by the route 1H or route 2H as mentioned in IEC 61508. Route 1H is estimated by safe failure fraction(SFF). SFF is a percentage of safe failures in all failures. Route 2H is an assessment of the reliability data for the entire element according to IEC 61508. It is mostly based around the historical data of a device and is based on a method that demands 90 percent confidence in the data.  Instead of the SFF calculation, the Minimum Hardware Fault Tolerance is determined by a set of rules from IEC 61508.
+Architectural constraints are estimated by the route 1H or route 2H as mentioned in IEC 61508. Route 1H is estimated by safe failure fraction (SFF). SFF is a percentage of safe failures in all failures. Route 2H is an assessment of the reliability data for the entire element according to IEC 61508. It is mostly based around the historical data of a device and is based on a method that demands 90 percent confidence in the data.  Instead of the SFF calculation, the Minimum Hardware Fault Tolerance is determined by a set of rules from IEC 61508.
 
 Probability of Failure on Demand average (PFDaverage) is the probability that a system will fail dangerously, and not be able to perform its safety function when required. PFD can be determined as an average probability or maximum probability over a time period.
 
@@ -83,6 +83,8 @@ PFD (probability of dangerous failure) and RRF (risk reduction factor) of low de
 
 \begin{table}[H]
 \centering
+\caption{Link between SIL, PFH and RRF for low demand operation}
+\label{tab:func_safety_table_low_demand}
 \resizebox{0.7\textwidth}{!}{%
 \begin{tabular}{
 >{\columncolor[HTML]{FFFFFF}}l 
@@ -100,14 +102,14 @@ PFD (probability of dangerous failure) and RRF (risk reduction factor) of low de
 {\color[HTML]{202122} 4} & {\color[HTML]{202122} 0.0001-0.00001} & {\color[HTML]{202122} $10^{-4} - 10^{-5}$} & {\color[HTML]{202122} 10,000-100,000} \\ \hline
 \end{tabular}%
 }
-\caption{Link between SIL, PFH and RRF for low demand operation}
-\label{tab:func_safety_table_low_demand}
 \end{table}
 
 For continuous operation, \autoref{tab:func_safety_table_continuous} is provided (PFH - Probability of dangerous failure per hour).
 
 \begin{table}[H]
 \centering
+\caption{Link between SIL, PFH and RRF for continuous operation}
+\label{tab:func_safety_table_continuous}
 \resizebox{0.9\textwidth}{!}{%
 \begin{tabular}{
 >{\columncolor[HTML]{FFFFFF}}l 
@@ -125,8 +127,6 @@ For continuous operation, \autoref{tab:func_safety_table_continuous} is provided
 {\color[HTML]{202122} 4} & {\color[HTML]{202122} 0.00000001-0.000000001} & {\color[HTML]{202122} $10^{-8} - 10^{-9}$} & {\color[HTML]{202122} 100,000,000-1,000,000,000} \\ \hline
 \end{tabular}%
 }
-\caption{Link between SIL, PFH and RRF for continuous operation}
-\label{tab:func_safety_table_continuous}
 \end{table}
 
 When a safety instrumented function fulfills the aforementioned SIL requirements a certified can be assigned for the SIL. Example of a certificate is given in \autoref{fig:func_safety_certificate}.
@@ -135,7 +135,7 @@ When a safety instrumented function fulfills the aforementioned SIL requirements
 
       \centering
       \includegraphics[width=0.9\linewidth]{images/cortex_r_certificate.pdf}
-      \caption{ARM Cortex-R5 Processor  SIL 3 certificate}
+      \caption{ARM Cortex-R5 Processor  SIL 3 certificate \citep{func_safety_certificate}}
       \label{fig:func_safety_certificate}
     
 \end{figure}
