@@ -62,6 +62,8 @@ The bootloader has 3 states: Operation, error and exit. Operation state flow is 
 When using the bootloader the flash module is organized a shown in \autoref{tab:bootloader_flash}. 
 
 \begin{table}[H]
+\caption{STM32F407 flash memory organization}
+\label{tab:bootloader_flash}
 \begin{tabular}{lllll}
 \textbf{Block} & \textbf{Used by} & \textbf{Name} & \textbf{Block base addresses} & \textbf{Size} \\
  & \cellcolor[HTML]{D9D9D9} & \cellcolor[HTML]{D9D9D9}Sector   0 & \cellcolor[HTML]{D9D9D9}0x0800   0000 - 0x0800 3FFF & \cellcolor[HTML]{D9D9D9}16   Kbytes \\
@@ -83,8 +85,6 @@ When using the bootloader the flash module is organized a shown in \autoref{tab:
 \rowcolor[HTML]{D9D9D9} 
 \multicolumn{3}{l}{\cellcolor[HTML]{D9D9D9}Option bytes} & 0x1FFF   C000 - 0x1FFF C00F & 16   bytes
 \end{tabular}
-\caption{STM32F407 flash memory organization}
-\label{tab:bootloader_flash}
 \end{table}
 
 

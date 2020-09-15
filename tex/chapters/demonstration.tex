@@ -61,6 +61,8 @@ This example is run by setting the \code{EXAMPLE\textunderscore REPLICATED} in \
 
 \begin{table}[H]
 \centering
+\caption{All replicated tasks in demonstration}
+\label{tab:replicated_task_list}
 \resizebox{0.7\textwidth}{!}{%
 \begin{tabular}{|c|c|c|}
 \hline
@@ -71,8 +73,6 @@ Repl non-recov ok   & false (2) & true  \\
 Repl non-recov fail & false (2) & false \\ \hline
 \end{tabular}%
 }
-\caption{All replicated tasks in demonstration}
-\label{tab:replicated_task_list}
 \end{table}
 
 \autoref{fig:replicated_tasks_example_print} shows the first 11 seconds of the replicated tasks example. Number before the \code{':'} is time elapsed from the FreeRTOS start. First, task \code{Repl recov ok} arrives to the \code{vTaskSyncAndCompare}. There are three print-outs because three sub-tasks exist and are going over the same code. When the last sub-tasks arrives to the \code{vTaskSyncAndCompare} all tasks are compared. Their value matches and no callback is called, rather the tasks are unblocked and enter the 5 second delay.
@@ -186,6 +186,8 @@ After the successful update of the user application, timed task example is loade
 
 \begin{table}[H]
 \centering
+\caption{All timed tasks in demonstration}
+\label{tab:timed_task_list}
 \resizebox{0.8\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -202,8 +204,6 @@ Orun task fail             & - & 5 & -    & 2 \\
 Orun task fail and dele    & - & 5 & -    & 3 \\ \hline
 \end{tabular}%
 }
-\caption{All timed tasks in demonstration}
-\label{tab:timed_task_list}
 \end{table}
 
 In \autoref{fig:timed_tasks_example_print}, first task that resets the timers using the function \code{vTaskTimedReset} is the \code{Orun task ok}, it resets the timers before the overflow timer triggers so no callback is called. Next task that resets its timers is \code{Oflow task ok}, it also resets the timers before the overrun timer triggers and the callback is not called. On line 10, overflow timer from task \code{Oflow task fail and del} overflows and it deletes itself from the callback. Right after, overflow timer from task \code{Oflow task fail} triggers.

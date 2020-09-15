@@ -130,13 +130,7 @@ The overrun timer is only a variable in the task control block. It is incremente
     
 \end{figure}
 
-\code{vTaskDelete} function is changed so that deleting tasks also deletes their timers.
-
-\subsection{Limitiations}
-
-The static creation of the function is not available.
-
-Timer callback functions are called by the timer daemon and its priority determines when the callback will be called. It is recommended that the timer daemon has the highest priority.
+Timer callback functions are called by the timer daemon and its priority determines when the callback will be called. It is recommended that the timer daemon has the highest priority. \code{vTaskDelete} function is changed so that deleting tasks also deletes their timers. 
 
 \section{Replicated tasks}
 
@@ -170,9 +164,6 @@ Replicated tasks can detect errors using at least two tasks performing identical
     
 \end{figure}
 
-Comparison logic is not a new task for itself. It is done within one of the tasks. Whichever arrives last. \code{vTaskDelete} function was modified so that when one of the replicated sub-tasks delete is requested all linked will be deleted. Tasks are linked over the TCBs\footnote{TCB - Task control block}.
+Comparison logic is not a new task for itself. It is done within one of the tasks, whichever arrives last. \code{vTaskDelete} function was modified so that when one of the replicated sub-tasks delete is requested all linked will be deleted. Tasks are linked over the TCBs\footnote{TCB - Task control block}.
 
-\subsection{Limitiations}
-
-The static creation of the timed tasks is not available.
 
