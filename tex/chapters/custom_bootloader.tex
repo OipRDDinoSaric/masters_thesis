@@ -93,9 +93,9 @@ When using the bootloader the flash module is organized a shown in \autoref{tab:
 
 Application boot record is used to store metadata about the current user's application and new user's application. Metadata consists of: 
 \begin{itemize}
-    \item Checksum used for transmission,
-    \item Application type used while transmitting,
-    \item Length of application during transmission.
+    \item checksum used for transmission,
+    \item application type used while transmitting and
+    \item length of application during transmission.
 \end{itemize}
 The boot record is also used to signalize that update of the application is needed to the bootloader. The flag is set when a new application is successfully transmitted.
 
@@ -133,7 +133,7 @@ SEC3 (rx)		: ORIGIN = 0x800C000, LENGTH = 16K
 
 At the start of every STM32F407 program is a vector table. The vector table contains numerous interrupt and exception vectors. List of all vectors is available in \citep[p.~372]{stm32f407_ref_man}. On startup the program calls the vector on the address 4, the name of that vector is fittingly Reset handler. But before calling the reset handler main stack pointer(MSP) is set from the address 0. 
 
-Because the program expects the main stack pointer and resets handler vector to be on the start of the program vector offset register (VTOR) is available. The vector offset register is simply added onto the flash memory base address to allow multiple programs in the same flash memory. Perfect for writing a bootloader!
+Because the program expects the main stack pointer and reset handler vector to be at the start of the program, vector offset register (VTOR) is available. The vector offset register is simply added onto the flash memory base address to allow multiple programs in the same flash memory.
 
-To sum up, before the bootloader jumps to the user application it must set the MSP to one of the user's application then it jumps to the application's reset handler. A vector offset register can be set by the bootloader or in the user's application, former is chosen in this project.
+To sum up, before the bootloader jumps to the user application it must set the MSP to one of the user's application then it jumps to the application's reset handler. A vector offset register can be set in the user's application or by the bootloader, former is chosen in this project.
 

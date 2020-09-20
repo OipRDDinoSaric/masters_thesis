@@ -43,7 +43,7 @@ SIL or safety integrity level is a discrete level (one out of four) for specifyi
 \label{sec:sif}
 
 Safety instrumented function (SIF) is a set of equipment used to implement an automatic protection function. Safety function shall have a specified SIL to achieve functional safety. 
-An example of SIF is several sensors looking for the \textbf{single} hazard scenario. Those sensors need to bring the system to a safe state if the hazard occurs. SIF is usually measured in how much risk can be removed. It is usually expressed in either in PFDaverage or in SIL. 
+An example of SIF is several sensors looking for the \textbf{single} hazard scenario. Those sensors need to bring the system to a safe state if the hazard occurs. SIF is usually measured in how much risk can be removed. It is usually expressed in either in PFDaverage (explained in \autoref{sec:certification}) or in SIL. 
 
 \subsection{Safety instrumented system}
 \label{sec:sis}
@@ -51,7 +51,7 @@ An example of SIF is several sensors looking for the \textbf{single} hazard scen
 SIS or safety instrumented system is one or more safety functions put together to do the whole job. SIS can encompass multiple different functions and act in multiple different ways to overcome a number of hazard scenarios, as opposed to SIF that can only perform one action to overcome one hazard scenario.
 
 \section{Certification}
-
+\label{sec:certification}
 
 For the certification, the system integrity level is determined. SIL of a product is determined by three things \citep{func_safety_fundamentals}:
 \begin{itemize}
@@ -238,10 +238,10 @@ altitude the level of radiation that occurs from cosmic rays is significantly hi
 Such radiation can cause a bit flip in the core of the
 system that executes this temperature calculation. If the bit flip happens during the conversion of the raw values a spurious alarm could be raised. The erroneous calculation could end up in a non-realistic
 over-limit temperature value, leading to an undesirable deactivation of the engine
-and getting the flight crew into trouble. One can conclude, Single-core MCU can not detect an error in the context of executing the commands  \citep{lockstep_analysis}.
+and getting the flight crew into trouble. One can conclude, single-core MCU can not detect an error in the context of executing the commands  \citep{lockstep_analysis}.
 
 If in place of a single-core MCU, a lock-step MCU with two cores is placed such error would be detected and could temporarily set the system in a safe-state. The
-two cores operating in Lockstep, most likely would not experience the same bit-flip
+two cores operating in lockstep, most likely would not experience the same bit-flip
 and they would produce divergent outputs. This discrepancy in the comparison of
 the output signals would generate an error.
 

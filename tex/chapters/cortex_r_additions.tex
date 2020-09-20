@@ -38,7 +38,7 @@ Split/lock configuration is a combination of two previously mentioned configurat
 \begin{figure}[H]
 
       \centering
-      \includegraphics[width=1\linewidth]{images/split_lock_configuration.png}
+      \includegraphics[width=1\linewidth]{images/split_lock_configuration.pdf}
       \caption{Split/lock configuration \citep{cortex_r8_reference_manual}}
       \label{fig:split_lock_configuration}
     
@@ -73,7 +73,7 @@ uncorrectable one (i.e., all CPUs deliver different outputs). If
 the error is correctable, the TCLS passes the control to the
 resynchronization logic to correct the architectural state of the
 erroneous CPU, that is, to resynchronize all the CPUs. Note
-here that the Majority Voter acts as an error propagation
+here that the majority voter acts as an error propagation
 boundary, preventing correctable errors from propagating to
 memories and I/O ports. In the highly unlikely case that the
 error is uncorrectable, the TCLS transitions to a fail-safe

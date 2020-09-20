@@ -104,7 +104,7 @@ Tasks can also be blocked without the use of containers. FreeRTOS provides \code
 Any task or, in fact, all tasks except the one currently running (and those servicing interrupt service routines)
 can be placed in the suspended state indefinitely. Tasks that are placed in this state are
 not waiting on events and do not consume any resource or kernel attention until they are
-moved out of the Suspended state. When unsuspended, they are returned to the Ready state.
+moved out of the suspended state. When unsuspended, they are returned to the Ready state.
 
 Finally, tasks can also be deleted. When delete is requested task is put in a deleted state. A deleted state is required because tasks are not deleted immediately after the call. Rather tasks are deleted, and its resources are released, from the IDLE task. The IDLE task has the lowest possible priority so this job may take some time.
 
@@ -117,7 +117,7 @@ This section gives a brief overview of a FreeRTOS scheduler.
 \begin{figure}[H]
 
       \centering
-      \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_overview.png}
+      \includegraphics[width=0.8\linewidth]{images/freertos_scheduler_overview.pdf}
       \caption{Scheduler algorithm\citep[p~20]{freertos_inner_workings}}
       \label{fig:freertos_scheduler_overview}
     

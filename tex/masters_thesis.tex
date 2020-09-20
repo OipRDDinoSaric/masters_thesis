@@ -65,18 +65,17 @@ Thanks to my mentor izv. prof. dr. sc. Hrvoje Džapo and his assistant Ivan Pavi
 
 \begin{abstract}
 
-Functional safety and functional safety standards overview is given, along with an example of functional safety in embedded systems. Explanation of how ARM Cortex-R improves functional safety over Cortex M is provided. Implemented software for redundancy on Cortex M. The software includes a bootloader and a modified FreeRTOS operating system. The bootloader supports the ability to load new applications and contains a command shell with accompanying functions. The modified FreeRTOS operating system provides features of tracking the individual tasks execution time and task replication. The demonstration of the functionality is also contained.  % Gramarly OK
+In this thesis, an overview of functional safety and relevant standards for system development was presented. Particular emphasis was on the functional safety in embedded systems. The ARM Cortex-R architecture mechanisms for functional safety improvements over the ARM Cortex-M architecture were described. Software for redundancy implementation on an ARM Cortex-M microcontroller was developed. The software encompasses a custom-developed bootloader and a modified FreeRTOS operating system. The bootloader allows the loading of new applications and a command shell with accompanying functions. The modified FreeRTOS operating system includes the capability of tracking individual tasks execution time and the ability to replicate tasks. The implemented software functionality was demonstrated in examples.  % Gramarly OK
 
-\keywords{Functional safety, IEC 61508,IEC 26262, bootloader, certification, ARM Cortex R, Cortex R, FreeRTOS, Cortex M, kernel, redudancy, lock-step} % Gramarly OK
+\keywords{Functional safety, IEC 61508, IEC 26262, bootloader, certification, ARM, Cortex R, FreeRTOS, Cortex M, kernel, redudancy, lock-step} % Gramarly OK
 \end{abstract}
 
 \hrtitle{Programska i sklopovska arhitektura redundantnih ugradbenih računalnih sustava}
 \begin{sazetak}
 
-Opisana je funkcijska sigurnost i dan je pregled odgovarajućih standarda. Dodan je i primjer funkcijske sigurnosti u ugradbenim računalnim sustavima. Opisano je kako ARM Cortex R popravlja funkcijsku sigurnost u odnosu na ARM Cortex M.
-Implementirana je programska potpora za ostvarivanje redundancije na ARM Cortex M mikrokontroleru. Programska potpora za redundanciju sadržava bootloader i modificirani operacijski sustav FreeRTOS. Bootloader podržava mogućnost učitavanja novih aplikacija i naredbenu ljusku s odgovarajućim funkcijama. Modificirani operacijski sustav FreeRTOS ima mogućnost praćenja vremena izvođenja pojedinih zadataka i sposobnost repliciranja zadataka (engl. task replication). Demonstracija funkcionalnosti je isto dostupna.
+U radu je prikazan pregled problematike funkcijske sigurnosti te su ukratko opisani odgovarajući standardi razvoja funkcijsko sigurnih sustava. Posebna pažnja posvećena je funkcijskoj sigurnosti u ugradbenim računalnim sustavima. Opisani su mehanizmi kojima ARM Cortex-R arhitektura unapređuje funkcijsku sigurnost u odnosu na ARM Cortex-M arhitekturu. Razvijena je programska potpora za ostvarivanje redundancije na mikrokontroleru s ARM Cortex-M arhitekturom. Programska potpora sadržava vlastito razvijeni bootloader i modificirani operacijski sustav FreeRTOS. Bootloader omogućuje učitavanje novih aplikacija i naredbenu ljusku s odgovarajućim funkcijama. Modificirani operacijski sustav FreeRTOS ima mogućnost praćenja vremena izvođenja pojedinih zadataka i sposobnost repliciranja zadataka (engl. task replication). Implementirana funkcionalnost je demonstrirana u primjerima.
 
-\kljucnerijeci{Funkcijska sigurnost, IEC 61508, IEC 26262, bootloader, certifikacija, ARM, Cortex R, FreeRTOS, Cortex M, jezgra, redundancija}
+\kljucnerijeci{Funkcijska sigurnost, IEC 61508, IEC 26262, bootloader, certifikacija, ARM, Cortex R, FreeRTOS, Cortex M, jezgra, redundancija, repliciranje zadataka}
 \end{sazetak}
 
 \begin{appendices}

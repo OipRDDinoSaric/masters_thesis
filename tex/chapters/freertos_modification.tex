@@ -45,11 +45,11 @@ taskSELECT_HIGHEST_PRIORITY_TASK();
 #endif /* INCLUDE_xTaskCreateTimed == 1 */
 \end{lstlisting}  
 \end{changemargin}
-\caption{Starting of the overflow timer from the file task.c}
+\caption{Starting of the overflow timer from the file \code{task.c}}
 \label{fig:freertos_overflow_start}
 \end{figure}
 
-The overrun timer is only a variable in the task control block. It is incremented every tick while the timed task is running. When the overrun timer is about to expire (1 tick before) a software timer is started. Next tick, the software timer triggers the overrun callback. Code for incrementing (\autoref{fig:freertos_overrun_increment}) is called from the function xTaskIncrementTick which itself is called from the tick interrupt. Overrun timer (of period 1 tick) is started from the context switch function, with code shown in \autoref{fig:freertos_overrun_start}.
+The overrun timer is only a variable in the task control block. It is incremented every tick while the timed task is running. When the overrun timer is about to expire (1 tick before) a software timer is started. Next tick, the software timer triggers the overrun callback. Code for incrementing (\autoref{fig:freertos_overrun_increment}) is called from the function \code{xTaskIncrementTick} which itself is called from the tick interrupt. Overrun timer (of period 1 tick) is started from the context switch function, with code shown in \autoref{fig:freertos_overrun_start}.
 
 \begin{figure}[H]
 \begin{changemargin}{1cm}{1cm}
@@ -72,7 +72,7 @@ The overrun timer is only a variable in the task control block. It is incremente
 \end{lstlisting}  
 \end{changemargin}
 
-\caption{Incrementing of the overrun timer from the file task.c}
+\caption{Incrementing of the overrun timer from the file \code{task.c}}
 \label{fig:freertos_overrun_increment}
     
 \end{figure}
@@ -95,7 +95,7 @@ The overrun timer is only a variable in the task control block. It is incremente
 #endif /* INCLUDE_xTaskCreateTimed == 1 */
 \end{lstlisting}  
 \end{changemargin}
-\caption{Starting of the overrun timer from the file task.c}
+\caption{Starting of the overrun timer from the file \code{task.c}}
 \label{fig:freertos_overrun_start}
     
 \end{figure}
